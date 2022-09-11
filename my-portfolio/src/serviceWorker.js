@@ -1,6 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable no-magic-numbers */
-/* eslint-disable react-func/max-lines-per-function */
 /* eslint-disable no-console */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-use-before-define */

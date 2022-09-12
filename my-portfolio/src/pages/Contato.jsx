@@ -1,14 +1,15 @@
-// página principal
+// Cria uma página para exibir os contatos
+
 import React from 'react';
 import Header from '../components/Header';
 
-function Principal() {
+function Contato() {
   return (
     <div>
       <Header />
-      <h1>Principal</h1>
+      <h1>Contato</h1>
     </div>
   );
 }
 
-export default Principal;
+export default Contato;

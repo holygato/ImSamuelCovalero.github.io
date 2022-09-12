@@ -1,13 +1,11 @@
-// Cria uma página para exibir os projetos
-
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Carousel from 'react-multi-carousel';
 import Header from '../../components/Header';
 import 'react-multi-carousel/lib/styles.css';
-import DivS from './Style';
+import ProjectCardS from './Style';
 
-function Projetos(/* { deviceType } */) {
+function Projetos({ deviceType }) {
   // Cria um carrousel para exibir os projetos
   // Cria uma array com os 5 projetos
   const projetos = [
@@ -48,13 +46,13 @@ function Projetos(/* { deviceType } */) {
       <h1>Projetos</h1>
       <Carousel
         customTransition="all .5"
-        transitionDuration={5000}
-        removeArrowOnDeviceType={['tablet', 'mobile']}
+        transitionDuration={500}
+        // removeArrowOnDeviceType={['tablet', 'mobile']}
         rewindWithAnimation
         additionalTransfrom={0}
         arrows
-        // autoPlay={deviceType !== 'mobile'}
-        // autoPlaySpeed={8000}
+        autoPlay={deviceType !== 'mobile'}
+        autoPlaySpeed={10000}
         centerMode={false}
         className=""
         containerClass="carousel-container"
@@ -100,19 +98,19 @@ function Projetos(/* { deviceType } */) {
         }}
       >
         {projetos.map((projeto) => (
-          <DivS key={projeto.id}>
+          <ProjectCardS key={projeto.id}>
             <h2>{projeto.nome}</h2>
             <p>{projeto.descricao}</p>
             <img src={projeto.imagem} alt={projeto.nome} />
-          </DivS>
+          </ProjectCardS>
         ))}
       </Carousel>
     </div>
   );
 }
 
-// Projetos.propTypes = {
-//   deviceType: PropTypes.string.isRequired,
-// };
+Projetos.propTypes = {
+  deviceType: PropTypes.string.isRequired,
+};
 
 export default Projetos;

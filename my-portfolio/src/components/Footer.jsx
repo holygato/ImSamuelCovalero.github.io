@@ -5,7 +5,8 @@ import React from 'react';
 function Footer() {
   return (
     <div>
-      <h1>Footer</h1>
+      <h3>Transformação pela informação e evolução pela tecnologia</h3>
+      <p>Fazer ou não fazer, tentativa não há</p>
     </div>
   );
 }

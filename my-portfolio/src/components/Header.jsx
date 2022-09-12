@@ -1,13 +1,13 @@
-// Cria uma header para navegar pela página principal, sobre, contato e projetos
-
 import React, { useContext } from 'react';
 import PortfolioContext from '../context/PortfolioContext';
 // import { useNavigate } from 'react-router-dom';
+import HeaderS from './Style';
 
 function Header() {
   const { mode, setMode } = useContext(PortfolioContext);
   return (
-    <div>
+    <HeaderS>
+      <p>Samuel Reis</p>
       <div>
         <a href="/">Principal</a>
         <a href="/sobre">Sobre</a>
@@ -25,7 +25,7 @@ function Header() {
           Mode
         </button>
       </div>
-    </div>
+    </HeaderS>
   );
 }
 

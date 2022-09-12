@@ -1,8 +1,6 @@
-// deixa o projeto no centro da div
-
 import styled from 'styled-components';
 
-const DivS = styled.div`
+const ProjectCardS = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,4 +9,4 @@ const DivS = styled.div`
   height: 100%;
 `;
 
-export default DivS;
+export default ProjectCardS;

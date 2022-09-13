@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import PortfolioContext from '../context/PortfolioContext';
 // import { useNavigate } from 'react-router-dom';
-import HeaderS from './Style';
+import { HeaderS } from './Style';
 
 function Header() {
   const { mode, setMode } = useContext(PortfolioContext);

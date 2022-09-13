@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 
-const HeaderS = styled.div`
+export const HeaderS = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
@@ -13,4 +13,10 @@ const HeaderS = styled.div`
   justify-content: space-around;
 `;
 
-export default HeaderS;
+export const FooterS = styled.div`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+`;
+
+// export default HeaderS;

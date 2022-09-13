@@ -4,6 +4,7 @@ import Carousel from 'react-multi-carousel';
 import Header from '../../components/Header';
 import 'react-multi-carousel/lib/styles.css';
 import ProjectCardS from './Style';
+import Footer from '../../components/Footer';
 
 function Projetos({ deviceType }) {
   // Cria um carrousel para exibir os projetos
@@ -105,6 +106,7 @@ function Projetos({ deviceType }) {
           </ProjectCardS>
         ))}
       </Carousel>
+      <Footer phrase="Fazer ou não fazer, tentativa não há" />
     </div>
   );
 }

@@ -31,7 +31,7 @@ function Principal() {
           width: '100%',
         }}
       >
-        <Footer />
+        <Footer phrase="Transformação pela informação, evolução pela tecnologia" />
       </div>
     </div>
   );

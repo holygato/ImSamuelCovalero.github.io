@@ -1,5 +1,4 @@
 // Estiliza o header
-
 import styled from 'styled-components';
 
 export const HeaderS = styled.div`
@@ -14,7 +13,6 @@ export const HeaderS = styled.div`
 `;
 
 export const FooterS = styled.div`
-  position: fixed;
   bottom: 0;
   width: 100%;
 `;

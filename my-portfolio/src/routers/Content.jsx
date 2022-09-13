@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Principal from '../pages/Principal';
-import Sobre from '../pages/Sobre';
+import Sobre from '../pages/Sobre/Sobre';
 import Projetos from '../pages/Projetos/Projetos';
 import Contato from '../pages/Contato';
 

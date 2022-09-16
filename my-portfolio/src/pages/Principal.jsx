@@ -14,6 +14,7 @@ function Principal() {
           alignItems: 'center',
           flexDirection: 'column',
           height: '100vh',
+          // marginLeft: '25%',
         }}
       >
         <p>Olá, meu nome é Samuel Covalero dos Reis, seja muito bem vindo (a) ao meu Portfólio</p>

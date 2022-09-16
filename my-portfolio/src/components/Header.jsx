@@ -8,7 +8,7 @@ function Header() {
   return (
     <HeaderS>
       <p>Samuel Reis</p>
-      <div>
+      <div id="navegation">
         <a href="/">Principal</a>
         <a href="/sobre">Sobre</a>
         <a href="/projetos">Projetos</a>

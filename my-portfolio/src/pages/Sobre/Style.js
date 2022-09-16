@@ -5,12 +5,12 @@ import styled from 'styled-components';
 export const DivExterna = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   align-items: center;
 `;
 
-export const SobreS = styled.div`
+export const SobreS = styled.div`  
   border: 1px solid red;
   margin-top: 45px;
   width: 100%;
@@ -18,6 +18,7 @@ export const SobreS = styled.div`
   justify-content: center;
   justify-items: center;
   #tecnologias {
+    /* margin-left:25%; */
     border: 1px solid blue;
     display: flex;
     padding: 10px;

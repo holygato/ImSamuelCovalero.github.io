@@ -34,6 +34,8 @@ function Sobre() {
     { nome: 'Mocha', imagem: 'https://img.shields.io/badge/Mocha-8D6748?style=for-the-badge&logo=mocha&logoColor=white' },
     { nome: 'Chai', imagem: 'https://img.shields.io/badge/Chai-A30701?style=for-the-badge&logo=chai&logoColor=white' },
     { nome: 'Rest', imagem: 'https://img.shields.io/badge/REST-000000?style=for-the-badge&logo=rest&logoColor=white' },
+    { nome: 'TypeScript', imagem: 'https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white' },
+    { nome: 'OOP', imagem: 'https://img.shields.io/badge/OOP-000000?style=for-the-badge&logo=oop&logoColor=white' },
   ];
 
   const tecnologiesLearningSoon = [
@@ -114,7 +116,16 @@ function Sobre() {
             ))}
           </div> */}
         </div>
-        <Footer phrase="Seja a mudança que quer ver no mundo, tudo muda quando a gente muda" />
+        {/* Para testar a visualização do header e do footer quando a página estiver maior
+        <h4>Tecnologias que conheço:</h4>
+        {tecnologiesAlreadyKnowed.map((tecnology) => (
+          <div key={tecnology.nome}>
+            <abbr title={tecnology.nome}>
+              <img src={tecnology.imagem} alt={tecnology.nome} />
+            </abbr>
+          </div>
+        ))} */}
+        <Footer id="footer" phrase="Seja a mudança que quer ver no mundo, tudo muda quando a gente muda" />
       </SobreS>
     </DivExterna>
   );

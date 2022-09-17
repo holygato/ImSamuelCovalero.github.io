@@ -8,7 +8,7 @@ export const DivExterna = styled.div`
   align-items: center;
 `;
 
-export const ProjetosS = styled.div`  
+export const PrincipalS = styled.div`  
   border: 1px solid red;
   margin-top: 45px;
   width: 100%;
@@ -16,14 +16,11 @@ export const ProjetosS = styled.div`
   align-items: center;
   justify-content: center;
   justify-items: center;
-`;
-
-export const ProjectCardS = styled.div`
-  border: 1px solid blue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 80vh;
+  #principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
 `;

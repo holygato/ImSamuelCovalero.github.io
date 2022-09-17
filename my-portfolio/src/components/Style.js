@@ -45,6 +45,26 @@ export const HeaderS = styled.div`
   /* flex-direction: column; */
   align-items: center;
   justify-content: space-around;
+  #navegation {
+    display: flex;
+    gap: 20px;
+    /* flex-direction: column; */
+  }
+  #navegation a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  #navegation a:hover {
+    color: #f1f1f1;
+  }
+  #navegation a.active {
+    color: #f1f1f1;
+  }
+  #navegation a.active:hover {
+    color: #f1f1f1;
+  }
 `;
 
 export const FooterS = styled.div`

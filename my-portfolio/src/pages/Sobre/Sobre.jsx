@@ -61,8 +61,9 @@ function Sobre() {
         <Header />
         <h1>Sobre Mim:</h1>
         <p>
-          Sou formado em Engenharia da Computação e atualmente estudo Desenvolvimento Web na
-          Trybe, buscando atuar como desenvolvedor Full Stack.
+          Oĺa, meu nome é Samuel Covalero dos Reis, sou formado em Engenharia da Computação e
+          atualmente estudo Desenvolvimento Web na Trybe, buscando atuar como desenvolvedor
+          Full Stack.
           Sempre me interessei por tencologia e inovação, e me fascina a possibilidade de impactar
           positivamente a vida das pessoas através da tecnologia, transformando o mundo em um lugar
           mais próspero e justo.

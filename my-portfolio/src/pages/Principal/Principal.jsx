@@ -20,7 +20,7 @@ function Principal() {
           }}
           id="principal"
         >
-          <p>Olá, meu nome é Samuel Covalero dos Reis, seja muito bem vindo (a) ao meu Portfólio</p>
+          <p>Olá, eu sou Samuel dos Reis, seja muito bem vindo (a) ao meu Portfólio</p>
           <br />
           <p>
             Aqui você conhecerá um pouco sobre mim e aonde me encontrar, as tecnologias que conheço

@@ -1,14 +1,11 @@
-// Cria uma página para exibir a informação sobre mim
+// Página para exibir as minhas Skills
 
 import React from 'react';
-import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { DivExterna, SobreS } from './Style';
-import curriculum from '../../data/curriculum.pdf';
+import { DivExterna, SkillsS } from './Style';
 
-function Sobre() {
-  // cria uma array de objetos das tecnologias que já conheço
+function MySkills() {
   const tecnologiesAlreadyKnowed = [
     { nome: 'HTML5', imagem: 'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white' },
     { nome: 'CSS3', imagem: 'https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white' },
@@ -44,44 +41,11 @@ function Sobre() {
     { nome: 'C#', imagem: 'https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white' },
     { nome: 'Python', imagem: 'https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white' },
   ];
-
-  // const tecnologiesImages = [
-  //   { nome: 'Redux', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg' },
-  //   { nome: 'RTL', imagem: 'https://external-preview.redd.it/ipDqIMGooKjcZY8gvo-SKMjV23dXdO4szBpoFFsSZQA.jpg?auto=webp&s=64fa5d043dc6b4f0dc9e3b40e0b8e221ceb7af5d' },
-  //   { nome: 'Styled Components', imagem: 'https://avatars.githubusercontent.com/u/20658825?s=200&v=4' },
-  //   { nome: 'JWT', imagem: 'https://img.icons8.com/color/480/java-web-token.png' },
-  //   { nome: 'Joi', imagem: 'https://joi.dev/img/joiLogo.jpg' },
-  //   { nome: 'Express', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
-  //   { nome: 'Sequelize', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg' },
-  //   { nome: 'Chai', imagem: 'https://avatars.githubusercontent.com/u/1515293?s=280&v=4' },
-  //   { nome: 'Mocha', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg' },
-  //   { nome: 'NodeJS', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-  // ];
   return (
     <DivExterna>
-      <SobreS>
+      <SkillsS>
         <Header />
-        <h1>Sobre Mim:</h1>
-        <p>
-          Oĺa, meu nome é Samuel Covalero dos Reis, sou formado em Engenharia da Computação e
-          atualmente estudo Desenvolvimento Web na Trybe, buscando atuar como desenvolvedor
-          Full Stack.
-          Sempre me interessei por tencologia e inovação, e me fascina a possibilidade de impactar
-          positivamente a vida das pessoas através da tecnologia, transformando o mundo em um lugar
-          mais próspero e justo.
-          Eu acredito no pensamento surpreendente, no improvável e na melhora da realidade atual.
-          E a forma com que contribuo para isto é através da criatividade, da constância e da
-          busca pela excelência em meus códigos.
-        </p>
-        <div id="curriculum">
-          <a href={curriculum} target="_blank" rel="noreferrer">
-            <button type="button">
-              <AiOutlineDownload />
-              Currículum
-            </button>
-          </a>
-        </div>
-        <br />
+        <h1>Minhas Skills</h1>
         <div id="tecnologias">
           {/* <h3>Tecnologias:</h3> */}
           <div id="tecnologiesPosition">
@@ -114,33 +78,11 @@ function Sobre() {
               </div>
             ))}
           </div>
-          {/* <div>
-            <h4>Imagens de Tecnologias:</h4>
-            {tecnologiesImages.map((tecnology) => (
-              <ImagesS
-                key={tecnology.nome}
-              >
-                <abbr title={tecnology.nome}>
-                  <img src={tecnology.imagem} alt={tecnology.nome} />
-                </abbr>
-              </ImagesS>
-            ))}
-          </div> */}
         </div>
-        {/* Para testar a visualização do header e do footer quando a página estiver maior
-        <h4>Tecnologias que conheço:</h4>
-        {tecnologiesAlreadyKnowed.map((tecnology) => (
-          <div key={tecnology.nome}>
-            <abbr title={tecnology.nome}>
-              <img src={tecnology.imagem} alt={tecnology.nome} />
-            </abbr>
-          </div>
-        ))} */}
-        {/* create a new div to open a curriculum pdf file on a new tab */}
-        <Footer id="footer" phrase="Seja a mudança que quer ver no mundo, tudo muda quando a gente muda" />
-      </SobreS>
+        <Footer phrase="O bom as vezes é inimigo do melhor" />
+      </SkillsS>
     </DivExterna>
   );
 }
 
-export default Sobre;
+export default MySkills;

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { AiOutlineMail } from 'react-icons/ai';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { DivExterna, ContatoS } from './Style';
@@ -28,6 +29,15 @@ function Contato() {
             {' '}
             <a href="https://github.com/holygato" target="_blank" rel="noreferrer">
               <FaGithub />
+            </a>
+          </label>
+        </div>
+        <div>
+          <label htmlFor="email">
+            Email:
+            {' '}
+            <a href="mailto: reis_samuel@hotmail.com" target="_blank" rel="noreferrer">
+              <AiOutlineMail />
             </a>
           </label>
         </div>

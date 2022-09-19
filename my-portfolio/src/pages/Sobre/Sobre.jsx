@@ -67,7 +67,7 @@ function Sobre() {
           atualmente estudo Desenvolvimento Web na Trybe, buscando atuar como desenvolvedor
           Full Stack.
           Sempre me interessei por tencologia e inovação, e me fascina a possibilidade de impactar
-          positivamente a vida das pessoas através da tecnologia, transformando o mundo em um lugar
+          positivamente a vida das pessoas através das mesmas, transformando o mundo em um lugar
           mais próspero e justo.
           Eu acredito no pensamento surpreendente, no improvável e na melhora da realidade atual.
           E a forma com que contribuo para isto é através da criatividade, da constância e da
@@ -82,39 +82,41 @@ function Sobre() {
           </a>
         </div>
         <br />
-        <div id="tecnologias">
-          {/* <h3>Tecnologias:</h3> */}
-          <div id="tecnologiesPosition">
-            <h4>Tecnologias que conheço:</h4>
-            {tecnologiesAlreadyKnowed.map((tecnology) => (
-              <div key={tecnology.nome}>
-                <abbr title={tecnology.nome}>
-                  <img src={tecnology.imagem} alt={tecnology.nome} />
-                </abbr>
-              </div>
-            ))}
-          </div>
-          <div id="tecnologiesPosition">
-            <h4>Tecnologias que estou estudando:</h4>
-            {tecnologiesLearning.map((tecnology) => (
-              <div key={tecnology.nome}>
-                <abbr title={tecnology.nome}>
-                  <img src={tecnology.imagem} alt={tecnology.nome} />
-                </abbr>
-              </div>
-            ))}
-          </div>
-          <div id="tecnologiesPosition">
-            <h4>Tecnologias que pretendo estudar:</h4>
-            {tecnologiesLearningSoon.map((tecnology) => (
-              <div key={tecnology.nome}>
-                <abbr title={tecnology.nome}>
-                  <img src={tecnology.imagem} alt={tecnology.nome} />
-                </abbr>
-              </div>
-            ))}
-          </div>
-          {/* <div>
+        <div>
+          <h1 id="skillsTitle">Minhas Skills:</h1>
+          <div id="tecnologias">
+            {/* <h3>Tecnologias:</h3> */}
+            <div id="tecnologiesPosition">
+              <h4>Tecnologias que conheço:</h4>
+              {tecnologiesAlreadyKnowed.map((tecnology) => (
+                <div key={tecnology.nome}>
+                  <abbr title={tecnology.nome}>
+                    <img src={tecnology.imagem} alt={tecnology.nome} />
+                  </abbr>
+                </div>
+              ))}
+            </div>
+            <div id="tecnologiesPosition">
+              <h4>Tecnologias que estou estudando:</h4>
+              {tecnologiesLearning.map((tecnology) => (
+                <div key={tecnology.nome}>
+                  <abbr title={tecnology.nome}>
+                    <img src={tecnology.imagem} alt={tecnology.nome} />
+                  </abbr>
+                </div>
+              ))}
+            </div>
+            <div id="tecnologiesPosition">
+              <h4>Tecnologias que pretendo estudar:</h4>
+              {tecnologiesLearningSoon.map((tecnology) => (
+                <div key={tecnology.nome}>
+                  <abbr title={tecnology.nome}>
+                    <img src={tecnology.imagem} alt={tecnology.nome} />
+                  </abbr>
+                </div>
+              ))}
+            </div>
+            {/* <div>
             <h4>Imagens de Tecnologias:</h4>
             {tecnologiesImages.map((tecnology) => (
               <ImagesS
@@ -126,8 +128,8 @@ function Sobre() {
               </ImagesS>
             ))}
           </div> */}
-        </div>
-        {/* Para testar a visualização do header e do footer quando a página estiver maior
+          </div>
+          {/* Para testar a visualização do header e do footer quando a página estiver maior
         <h4>Tecnologias que conheço:</h4>
         {tecnologiesAlreadyKnowed.map((tecnology) => (
           <div key={tecnology.nome}>
@@ -136,7 +138,8 @@ function Sobre() {
             </abbr>
           </div>
         ))} */}
-        {/* create a new div to open a curriculum pdf file on a new tab */}
+          {/* create a new div to open a curriculum pdf file on a new tab */}
+        </div>
         <Footer id="footer" phrase="Seja a mudança que quer ver no mundo, tudo muda quando a gente muda" />
       </SobreS>
     </DivExterna>

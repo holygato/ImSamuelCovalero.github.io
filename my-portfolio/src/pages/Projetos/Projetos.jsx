@@ -66,7 +66,7 @@ function Projetos({ deviceType }) {
           keyBoardControl
           minimumTouchDrag={50}
           renderButtonGroupOutside
-          renderDotsOutside
+          renderDotsOutside={false}
           showDots
           sliderClass=""
           slidesToSlide={1}

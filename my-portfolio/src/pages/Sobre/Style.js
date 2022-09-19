@@ -17,6 +17,12 @@ export const SobreS = styled.div`
   align-items: center;
   justify-content: center;
   justify-items: center;
+  h1 {
+    font-size: 30px;
+  }
+  #skillsTitle {
+    text-align: center;
+  }
   #tecnologias {
     /* margin-left:25%; */
     border: 1px solid blue;

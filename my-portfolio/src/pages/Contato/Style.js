@@ -16,4 +16,6 @@ export const ContatoS = styled.div`
   align-items: center;
   justify-content: center;
   justify-items: center;
+  display: flex;
+  flex-direction: column;
 `;

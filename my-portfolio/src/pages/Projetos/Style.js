@@ -16,6 +16,7 @@ export const ProjetosS = styled.div`
   align-items: center;
   justify-content: center;
   justify-items: center;
+  text-align: center;
 `;
 
 export const ProjectCardS = styled.div`

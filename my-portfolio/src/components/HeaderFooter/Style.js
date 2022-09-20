@@ -68,7 +68,8 @@ export const HeaderS = styled.div`
 `;
 
 export const FooterS = styled.div`
-  position: fixed;
+  // recebe isWheelActive como propriedade e caso seja true deixa a posição relativa
+  position: ${(props) => (props.isWheelActive ? 'relative' : 'fixed')};
   bottom: 0;
   width: 100%;
 `;

@@ -1,16 +1,12 @@
-// Cria uma página para exibir os contatos
-
 import React, { useState } from 'react';
 import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
 import copy from 'copy-to-clipboard';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import Header from '../../components/HeaderFooter/Header';
+import Footer from '../../components/HeaderFooter/Footer';
 import { DivExterna, ContatoS } from './Style';
 
 function Contato() {
-  // const [isCopiedEmail, setIsCopiedEmail] = useState(false);
-  // const [isCopiedWhats, setIsCopiedWhats] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   const [copyMessage, setCopyMessage] = useState('');
 
@@ -41,14 +37,12 @@ function Contato() {
       },
       2000,
     );
-    // executar window.opne após 3 segundos
     setTimeout(
       () => {
         window.open('https://api.whatsapp.com/send?phone=5511984478895', '_blank');
       },
       2000,
     );
-    // window.open('https://wa.me/5511984478895', '_blank');
   };
 
   return (
@@ -86,7 +80,6 @@ function Contato() {
               </a>
             </abbr>
           </label>
-          {/* Cria uma label para compartilhar o whatsapp */}
           <label htmlFor="whatsapp">
             {' '}
             <abbr title="https://api.whatsapp.com/send?phone=5511984478895">

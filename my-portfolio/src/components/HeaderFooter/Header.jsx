@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import PortfolioContext from '../context/PortfolioContext';
+import PortfolioContext from '../../context/PortfolioContext';
 // import { useNavigate } from 'react-router-dom';
 import { HeaderS } from './Style';
 
@@ -11,9 +11,9 @@ function Header() {
       <div id="navegation">
         <a href="/">Principal</a>
         <a href="/projetos">Projetos</a>
-        <a href="/sobre">Sobre</a>
+        <a href="/about">Sobre</a>
         <a href="/skills">Skills</a>
-        <a href="/contato">Contato</a>
+        <a href="/contact">Contato</a>
       </div>
       {console.log(mode)}
       <div>

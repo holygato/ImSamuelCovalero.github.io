@@ -1,9 +1,9 @@
-// Página para exibir as minhas Skills
-
 import React from 'react';
-import Header from '../../components/HeaderFooter/Header';
-import Footer from '../../components/HeaderFooter/Footer';
-import { DivExterna, SkillsS } from './Style';
+import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
+import curriculum from '../data/curriculum.pdf';
+// import {
+//   DivExterna, PrincipalS, ProjectCardS, ContatoS, SkillsS,
+// } from './Style';
 
 function MySkills() {
   const tecnologiesAlreadyKnowed = [
@@ -41,47 +41,59 @@ function MySkills() {
     { nome: 'C#', imagem: 'https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white' },
     { nome: 'Python', imagem: 'https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white' },
   ];
+
   return (
-    <DivExterna>
-      <SkillsS>
-        <Header />
-        <h1>Minhas Skills</h1>
-        <div id="tecnologias">
-          {/* <h3>Tecnologias:</h3> */}
-          <div id="tecnologiesPosition">
-            <h4>Tecnologias que conheço:</h4>
-            {tecnologiesAlreadyKnowed.map((tecnology) => (
-              <div key={tecnology.nome}>
-                <abbr title={tecnology.nome}>
-                  <img src={tecnology.imagem} alt={tecnology.nome} />
-                </abbr>
-              </div>
-            ))}
-          </div>
-          <div id="tecnologiesPosition">
-            <h4>Tecnologias que estou estudando:</h4>
-            {tecnologiesLearning.map((tecnology) => (
-              <div key={tecnology.nome}>
-                <abbr title={tecnology.nome}>
-                  <img src={tecnology.imagem} alt={tecnology.nome} />
-                </abbr>
-              </div>
-            ))}
-          </div>
-          <div id="tecnologiesPosition">
-            <h4>Tecnologias que pretendo estudar:</h4>
-            {tecnologiesLearningSoon.map((tecnology) => (
-              <div key={tecnology.nome}>
-                <abbr title={tecnology.nome}>
-                  <img src={tecnology.imagem} alt={tecnology.nome} />
-                </abbr>
-              </div>
-            ))}
-          </div>
+    <div>
+      {/* cria uma div com um botão para direcionar para a página sobre mim */}
+      <div>
+        <h1>Saiba mais sobre mim...</h1>
+        <a href="/about">
+          <button type="button">Sobre mim</button>
+        </a>
+      </div>
+      <div id="curriculum">
+        <a href={curriculum} target="_blank" rel="noreferrer">
+          <button type="button">
+            <AiOutlineDownload />
+            Currículum
+          </button>
+        </a>
+      </div>
+      <h1>Minhas Skills</h1>
+      <div id="tecnologias">
+        {/* <h3>Tecnologias:</h3> */}
+        <div id="tecnologiesPosition">
+          <h4>Tecnologias que conheço:</h4>
+          {tecnologiesAlreadyKnowed.map((tecnology) => (
+            <div key={tecnology.nome}>
+              <abbr title={tecnology.nome}>
+                <img src={tecnology.imagem} alt={tecnology.nome} />
+              </abbr>
+            </div>
+          ))}
         </div>
-        <Footer phrase="O bom as vezes é inimigo do melhor" />
-      </SkillsS>
-    </DivExterna>
+        <div id="tecnologiesPosition">
+          <h4>Tecnologias que estou estudando:</h4>
+          {tecnologiesLearning.map((tecnology) => (
+            <div key={tecnology.nome}>
+              <abbr title={tecnology.nome}>
+                <img src={tecnology.imagem} alt={tecnology.nome} />
+              </abbr>
+            </div>
+          ))}
+        </div>
+        <div id="tecnologiesPosition">
+          <h4>Tecnologias que pretendo estudar:</h4>
+          {tecnologiesLearningSoon.map((tecnology) => (
+            <div key={tecnology.nome}>
+              <abbr title={tecnology.nome}>
+                <img src={tecnology.imagem} alt={tecnology.nome} />
+              </abbr>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 

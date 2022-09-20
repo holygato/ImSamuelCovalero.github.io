@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import Header from '../../components/HeaderFooter/Header';
+import Footer from '../../components/HeaderFooter/Footer';
 import { DivExterna, SobreS } from './Style';
 import curriculum from '../../data/curriculum.pdf';
 

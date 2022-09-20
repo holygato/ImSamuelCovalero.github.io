@@ -12,7 +12,6 @@ function Header() {
         <a href="/">Principal</a>
         <a href="/projetos">Projetos</a>
         <a href="/about">Sobre</a>
-        <a href="/skills">Skills</a>
         <a href="/contact">Contato</a>
       </div>
       {console.log(mode)}

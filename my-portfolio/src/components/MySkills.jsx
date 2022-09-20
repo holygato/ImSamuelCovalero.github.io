@@ -1,6 +1,6 @@
 import React from 'react';
-import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
-import curriculum from '../data/curriculum.pdf';
+// import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
+// import curriculum from '../data/curriculum.pdf';
 // import {
 //   DivExterna, PrincipalS, ProjectCardS, ContatoS, SkillsS,
 // } from './Style';
@@ -45,7 +45,7 @@ function MySkills() {
   return (
     <div>
       {/* cria uma div com um botão para direcionar para a página sobre mim */}
-      <div>
+      {/* <div>
         <h1>Saiba mais sobre mim...</h1>
         <a href="/about">
           <button type="button">Sobre mim</button>
@@ -58,7 +58,7 @@ function MySkills() {
             Currículum
           </button>
         </a>
-      </div>
+      </div> */}
       <h1>Minhas Skills</h1>
       <div id="tecnologias">
         {/* <h3>Tecnologias:</h3> */}

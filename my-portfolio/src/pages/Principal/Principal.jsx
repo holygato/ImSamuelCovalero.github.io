@@ -1,5 +1,7 @@
 // página principal
 import React, { useState, useEffect }/* , { useState } */ from 'react';
+import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
+import curriculum from '../../data/curriculum.pdf';
 // import Carousel from 'react-multi-carousel';
 // import 'react-multi-carousel/lib/styles.css';
 // import PropTypes from 'prop-types';
@@ -194,6 +196,20 @@ function Principal() {
           { }
         </div>
         <SkillsS onWheel={handleOnWheel}>
+          <div>
+            <h1>Saiba mais sobre mim...</h1>
+            <a href="/about">
+              <button type="button">Sobre mim</button>
+            </a>
+          </div>
+          <div id="curriculum">
+            <a href={curriculum} target="_blank" rel="noreferrer">
+              <button type="button">
+                <AiOutlineDownload />
+                Currículum
+              </button>
+            </a>
+          </div>
           <MySkills />
         </SkillsS>
         <ProjetosS onWheel={handleOnWheel}>

@@ -97,9 +97,6 @@ export const SkillsS = styled.div`
       width: 50px;
     }
   }
-  // cria uma animação para exibir as imagens das skills circulando na tela formando um circulo 3D
-  // as imagens devem cirular em sentido horário
-  // as imagens devem ser organizadas em um círculo 3D com 3 camadas
   #skills {
     display: flex;
     align-items: center;
@@ -110,13 +107,13 @@ export const SkillsS = styled.div`
     align-self: center;
     width: 100%;
     height: 100%;
-    animation: rotate 10s infinite linear;
+    animation: rotate 15s infinite linear;
     animation-fill-mode: forwards;
     animation-delay: 0s;
     animation-name: spincircle;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 20s;
+    animation-duration: 25s;
     transform-style: preserve-3d;
     transform-origin: 50px 50px 0;
     width: 50px;
@@ -133,7 +130,6 @@ export const SkillsS = styled.div`
     }
     
     div {
-      // circle div
       position: absolute;
       margin-top: 150px;
       width: 50px;
@@ -263,15 +259,15 @@ export const ProjetosS = styled.div`
   text-align: center;
 `;
 
-export const ProjectCardS = styled.div`
-  border: 1px solid blue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 80vh;
-`;
+// export const ProjectCardS = styled.div`
+//   border: 1px solid blue;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100vw;
+//   height: 80vh;
+// `;
 
 export const ContatoS = styled.div`  
   border: 1px solid red;

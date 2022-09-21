@@ -26,5 +26,9 @@ export const ProjectCardS = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
+  img {
+    width: 350px;
+    height: 300px;
+  }
 `;

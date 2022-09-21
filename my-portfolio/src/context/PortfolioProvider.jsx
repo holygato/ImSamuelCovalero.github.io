@@ -4,8 +4,15 @@ import PortfolioContext from './PortfolioContext';
 
 export function PortfolioProvider({ children }) {
   const [mode, setMode] = useState('light');
+  const [project, setProject] = useState({});
 
-  const contextValue = useMemo(() => ({ mode, setMode }), [mode]);
+  // console.log('projeto', projeto);
+  //   ProjectDetails({ projeto });
+  //   navigate(`/projetos/${projeto.id}`);
+
+  const contextValue = useMemo(() => ({
+    mode, setMode, project, setProject,
+  }), [mode]);
 
   return (
     <PortfolioContext.Provider value={contextValue}>

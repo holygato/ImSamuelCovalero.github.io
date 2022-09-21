@@ -1,63 +1,63 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import { ProjectCardS } from '../pages/Projetos/Style';
-// import {
-//   DivExterna, PrincipalS, ProjectCardS, ContatoS, SkillsS,
-// } from './Style';
+import project1 from '../images/trybetunes.png';
+import PortfolioContext from '../context/PortfolioContext';
 
 function Projects({ deviceType, isFromMain }) {
+  const { setProject } = useContext(PortfolioContext);
+  const navigate = useNavigate();
   // Recebe a props isFromMain e cria um objeto com o número de exibições dependendo de onde veio
   const projectNumber = isFromMain
-    ? { desktop: 5, tablet: 3, mobile: 3 }
+    ? { desktop: 5, tablet: 2, mobile: 1 }
     : { desktop: 1, tablet: 1, mobile: 1 };
-  // if (isFromMain) {
-  //   const projectNumber = {
-  //     desktop: 5,
-  //     mobile: 3,
-  //     tablet: 4,
-  //   };
-  // } else {
-  //   const projectNumber = {
-  //     desktop: 1,
-  //     mobile: 1,
-  //     tablet: 1,
-  //   };
-  //   return projectNumber;
-  // }
+
   const projetos = [
     {
       id: 1,
-      nome: 'Projeto 1',
-      descricao: 'Descrição do projeto 1',
-      imagem: 'https://picsum.photos/200/300',
+      nome: 'Trybetunes',
+      descricao: 'Projeto de player de músicas',
+      imagem: project1,
+      link: 'https://project-tryetunes.vercel.app/',
     },
     {
       id: 2,
       nome: 'Projeto 2',
       descricao: 'Descrição do projeto 2',
       imagem: 'https://picsum.photos/200/300',
+      link: 'https://project-tryetunes.vercel.app/',
     },
     {
       id: 3,
       nome: 'Projeto 3',
       descricao: 'Descrição do projeto 3',
       imagem: 'https://picsum.photos/200/300',
+      link: 'https://project-tryetunes.vercel.app/',
     },
     {
       id: 4,
       nome: 'Projeto 4',
       descricao: 'Descrição do projeto 4',
       imagem: 'https://picsum.photos/200/300',
+      link: 'https://project-tryetunes.vercel.app/',
     },
     {
       id: 5,
       nome: 'Projeto 5',
       descricao: 'Descrição do projeto 5',
       imagem: 'https://picsum.photos/200/300',
+      link: 'https://project-tryetunes.vercel.app/',
     },
   ];
+
+  const HandleNavigate = (projeto) => {
+    // envia para a rota de detalhes do projeto o projeto clicado e direciona para a página
+    setProject(projeto);
+    navigate('/projetos/detalhes');
+  };
 
   return (
     <div>
@@ -120,6 +120,15 @@ function Projects({ deviceType, isFromMain }) {
             <h2>{projeto.nome}</h2>
             <p>{projeto.descricao}</p>
             <img src={projeto.imagem} alt={projeto.nome} />
+            {isFromMain
+              ? <button type="button">Ver detalhes</button>
+              : (
+                <>
+                  {/* cria um botão para direcionar para a tela de detalhes */}
+                  <button type="button" onClick={HandleNavigate(projeto)}>Ver detalhes</button>
+                  <button type="button" onClick={() => window.open(projeto.link, '_blank')}>Abrir projeto</button>
+                </>
+              )}
           </ProjectCardS>
         ))}
       </Carousel>

@@ -15,7 +15,11 @@ function Footer({ phrase, isWheelActive }) {
 
 Footer.propTypes = {
   phrase: PropTypes.string.isRequired,
-  isWheelActive: PropTypes.bool.isRequired,
+  isWheelActive: PropTypes.bool,
+};
+
+Footer.defaultProps = {
+  isWheelActive: false,
 };
 
 export default Footer;

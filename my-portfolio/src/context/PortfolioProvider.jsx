@@ -1,10 +1,19 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import PortfolioContext from './PortfolioContext';
 
 export function PortfolioProvider({ children }) {
   const [mode, setMode] = useState('light');
   const [project, setProject] = useState({});
+
+  useEffect(() => {
+    const checkProject = () => {
+      const actualProject = project;
+      console.log('actualProject', actualProject);
+      return actualProject;
+    };
+    checkProject();
+  }, [project]);
 
   // console.log('projeto', projeto);
   //   ProjectDetails({ projeto });

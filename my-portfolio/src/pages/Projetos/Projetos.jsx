@@ -54,7 +54,11 @@ function Projetos({ deviceType }) {
 }
 
 Projetos.propTypes = {
-  deviceType: PropTypes.string.isRequired,
+  deviceType: PropTypes.string,
+};
+
+Projetos.defaultProps = {
+  deviceType: 'desktop',
 };
 
 export default Projetos;

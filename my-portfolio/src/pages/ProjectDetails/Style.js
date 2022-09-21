@@ -10,6 +10,8 @@ export const DivExterna = styled.div`
 
 export const ProjetosS = styled.div`  
   border: 1px solid red;
+  display: flex;
+  flex-direction: column;
   margin-top: 45px;
   width: 100%;
   height: 100vh;
@@ -17,6 +19,10 @@ export const ProjetosS = styled.div`
   justify-content: center;
   justify-items: center;
   text-align: center;
+  img {
+    width: 450px;
+    height: 400px;
+  }
 `;
 
 export const ProjectCardS = styled.div`
@@ -27,33 +33,8 @@ export const ProjectCardS = styled.div`
   justify-content: center;
   width: 100vw;
   height: 90vh;
-  gap: 20px; 
-  padding: 10px; 
-  margin-right: 20px;
-  // dá um espaço entre os elementos
-
   img {
     width: 350px;
     height: 300px;
-
-    @media (max-width: 768px) {
-    width: 250px;
-    height: 200px;
-    }
-
-    @media (max-width: 425px) {
-       width: 150px;
-       height: 100px;
-    }
-
-     @media (max-width: 375px) {
-       width: 100px;
-       height: 50px;
-     }
-
-     @media (max-width: 320px) {
-       width: 50px;
-       height: 25px;
-     }
   }
 `;

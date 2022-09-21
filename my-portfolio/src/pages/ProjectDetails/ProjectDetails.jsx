@@ -1,31 +1,29 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-// import project1 from '../../images/trybetunes.png';
+// import PropTypes from 'prop-types';
+import { useLocation } from 'react-router-dom';
+// import PortfolioContext from '../../context/PortfolioContext';
+import { DivExterna, ProjetosS/* , ProjectCardS  */ } from './Style';
+import Header from '../../components/HeaderFooter/Header';
+import Footer from '../../components/HeaderFooter/Footer';
 
-function ProjectDetails({ project }) {
-  // Recebe a props project e exibe os dados do projeto
-  console.log('projectDetails', project);
+function ProjectDetails() {
+  // Desestrutura o projeto de dentro de state e de dentro de location
+  const { state: { projeto } } = useLocation();
 
   return (
-    <div>
-      <h1>{project.nome}</h1>
-      <p>{project.descricao}</p>
-      <img src={project.imagem} alt={project.nome} />
-      <a href={project.link} target="_blank" rel="noreferrer">
-        Acessar
-      </a>
-    </div>
+    <DivExterna>
+      <ProjetosS>
+        <Header />
+        <h1>{projeto.nome}</h1>
+        <p>{projeto.descricao}</p>
+        <img src={projeto.imagem} alt={projeto.nome} />
+        <a href={projeto.link} target="_blank" rel="noreferrer">
+          Acessar
+        </a>
+      </ProjetosS>
+      <Footer phrase="Seu foco determina a sua realidade" />
+    </DivExterna>
   );
 }
-
-ProjectDetails.propTypes = {
-  project: PropTypes.shape({
-    id: PropTypes.number,
-    nome: PropTypes.string,
-    descricao: PropTypes.string,
-    imagem: PropTypes.string,
-    link: PropTypes.string,
-  }).isRequired,
-};
 
 export default ProjectDetails;

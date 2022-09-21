@@ -11,9 +11,13 @@ function Projects({ deviceType, isFromMain }) {
   const { setProject } = useContext(PortfolioContext);
   const navigate = useNavigate();
   // Recebe a props isFromMain e cria um objeto com o número de exibições dependendo de onde veio
-  const projectNumber = isFromMain
-    ? { desktop: 5, tablet: 2, mobile: 1 }
-    : { desktop: 1, tablet: 1, mobile: 1 };
+  const projectSpec = isFromMain
+    ? {
+      desktop: 3, tablet: 1, mobile: 1, centermode: true,
+    }
+    : {
+      desktop: 1, tablet: 1, mobile: 1, centermode: false,
+    };
 
   const projetos = [
     {
@@ -53,11 +57,10 @@ function Projects({ deviceType, isFromMain }) {
     },
   ];
 
-  const HandleNavigate = (projeto) => {
-    // envia para a rota de detalhes do projeto o projeto clicado e direciona para a página
-    setProject(projeto);
-    navigate('/projetos/detalhes');
-  };
+  // const HandleNavigate = (projeto) => {
+  //   setProject(projeto);
+  //   navigate(`/projetos/${projeto.id}`, { state: { projeto } });
+  // };
 
   return (
     <div>
@@ -71,7 +74,7 @@ function Projects({ deviceType, isFromMain }) {
         arrows
         autoPlay={deviceType !== 'mobile'}
         autoPlaySpeed={10000}
-        centerMode={false}
+        centerMode={projectSpec.centermode}
         className=""
         containerClass="carousel-container"
         dotListClass="custom-dot-list-style"
@@ -92,40 +95,41 @@ function Projects({ deviceType, isFromMain }) {
           desktop: {
             breakpoint: {
               max: 3000,
-              min: 1024,
+              min: 1448,
             },
-            items: projectNumber.desktop,
-            partialVisibilityGutter: 40,
+            items: projectSpec.desktop,
+            partialVisibilityGutter: null,
           },
           mobile: {
             breakpoint: {
               max: 464,
               min: 0,
             },
-            items: projectNumber.mobile,
-            partialVisibilityGutter: 30,
+            items: projectSpec.mobile,
+            partialVisibilityGutter: null,
           },
           tablet: {
             breakpoint: {
-              max: 1024,
+              max: 1448,
               min: 464,
             },
-            items: projectNumber.tablet,
-            partialVisibilityGutter: 30,
+            items: projectSpec.tablet,
+            partialVisibilityGutter: null,
           },
         }}
       >
         {projetos.map((projeto) => (
           <ProjectCardS key={projeto.id}>
             <h2>{projeto.nome}</h2>
-            <p>{projeto.descricao}</p>
+            {!isFromMain && <p>{projeto.descricao}</p>}
             <img src={projeto.imagem} alt={projeto.nome} />
+            {setProject(projeto)}
             {isFromMain
               ? <button type="button">Ver detalhes</button>
               : (
                 <>
                   {/* cria um botão para direcionar para a tela de detalhes */}
-                  <button type="button" onClick={HandleNavigate(projeto)}>Ver detalhes</button>
+                  <button type="button" onClick={() => navigate(`/projetos/${projeto.id}`, { state: { projeto } })}>Ver detalhes</button>
                   <button type="button" onClick={() => window.open(projeto.link, '_blank')}>Abrir projeto</button>
                 </>
               )}
@@ -137,8 +141,12 @@ function Projects({ deviceType, isFromMain }) {
 }
 
 Projects.propTypes = {
-  deviceType: PropTypes.string.isRequired,
+  deviceType: PropTypes.string,
   isFromMain: PropTypes.bool.isRequired,
+};
+
+Projects.defaultProps = {
+  deviceType: 'desktop',
 };
 
 export default Projects;

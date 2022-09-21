@@ -140,7 +140,9 @@ function Sobre() {
         ))} */}
           {/* create a new div to open a curriculum pdf file on a new tab */}
         </div>
-        <Footer id="footer" phrase="Seja a mudança que quer ver no mundo, tudo muda quando a gente muda" />
+        <div id="footer">
+          <Footer phrase="Seja a mudança que quer ver no mundo, tudo muda quando a gente muda" />
+        </div>
       </SobreS>
     </DivExterna>
   );

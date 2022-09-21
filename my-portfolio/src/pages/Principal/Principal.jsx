@@ -11,10 +11,10 @@ import curriculum from '../../data/curriculum.pdf';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
 import {
-  DivExterna, PrincipalS, /* ProjectCardS,  */ContatoS, SkillsS, ProjetosS,
+  DivExterna, PrincipalS, ContatoS, SkillsS, ProjetosS,
 } from './Style';
 import Contact from '../../components/Contact';
-import MySkills from '../../components/MySkills';
+import MySkillsMain from '../../components/MySkillsMain';
 import Projects from '../../components/Projects';
 
 function Principal() {
@@ -210,7 +210,7 @@ function Principal() {
               </button>
             </a>
           </div>
-          <MySkills />
+          <MySkillsMain />
         </SkillsS>
         <ProjetosS onWheel={handleOnWheel}>
           <Projects isFromMain />

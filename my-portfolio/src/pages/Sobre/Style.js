@@ -17,6 +17,9 @@ export const SobreS = styled.div`
   align-items: center;
   justify-content: center;
   justify-items: center;
+  p {
+    font-size: 14px;
+  }
   h1 {
     font-size: 30px;
   }
@@ -25,6 +28,7 @@ export const SobreS = styled.div`
   }
   #tecnologias {
     /* margin-left:25%; */
+    margin-bottom: 35px;
     border: 1px solid blue;
     display: flex;
     padding: 10px;
@@ -39,13 +43,24 @@ export const SobreS = styled.div`
       margin-bottom: 10px;
     }
   }
-`;
-
-export const ImagesS = styled.div`
-  img{
-    height: 40px;
-    width: 50px;
+  #footer {
+    h3 {
+      position: fixed;
+      bottom: 0;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
   }
 `;
+
+// export const ImagesS = styled.div`
+//   border: 1px solid red;
+//   display: flex;
+//   /* flex-direction: wrap; */
+//   img{
+//     height: 40px;
+//     width: 50px;
+//   }
+// `;
 
 export default SobreS;

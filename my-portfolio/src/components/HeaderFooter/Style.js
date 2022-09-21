@@ -72,6 +72,9 @@ export const FooterS = styled.div`
   position: ${(props) => (props.isWheelActive ? 'relative' : 'fixed')};
   bottom: 0;
   width: 100%;
+  h3 {
+    font-size: 14px;
+  }
 `;
 
 // export default HeaderS;

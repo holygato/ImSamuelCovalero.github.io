@@ -9,7 +9,6 @@ export function PortfolioProvider({ children }) {
   useEffect(() => {
     const checkProject = () => {
       const actualProject = project;
-      console.log('actualProject', actualProject);
       return actualProject;
     };
     checkProject();

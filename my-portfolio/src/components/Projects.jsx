@@ -125,7 +125,7 @@ function Projects({ deviceType, isFromMain }) {
             <img src={projeto.imagem} alt={projeto.nome} />
             {setProject(projeto)}
             {isFromMain
-              ? <button type="button">Ver detalhes</button>
+              ? <button type="button" onClick={() => navigate(`/projetos/${projeto.id}`, { state: { projeto } })}>Ver detalhes</button>
               : (
                 <>
                   {/* cria um botão para direcionar para a tela de detalhes */}

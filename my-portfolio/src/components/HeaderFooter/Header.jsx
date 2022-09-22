@@ -4,7 +4,7 @@ import PortfolioContext from '../../context/PortfolioContext';
 import { HeaderS } from './Style';
 
 function Header() {
-  const { mode, setMode } = useContext(PortfolioContext);
+  const { /* mode,  */setMode } = useContext(PortfolioContext);
   return (
     <HeaderS>
       <p>Samuel Reis</p>
@@ -14,7 +14,7 @@ function Header() {
         <a href="/about">Sobre</a>
         <a href="/contact">Contato</a>
       </div>
-      {console.log(mode)}
+      {/* {console.log(mode)} */}
       <div>
         <button
           type="button"

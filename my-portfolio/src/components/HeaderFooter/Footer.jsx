@@ -4,9 +4,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FooterS } from './Style';
 
-function Footer({ phrase, isWheelActive }) {
+function Footer({ phrase, isFooterRelative }) {
+  // console.log('Footer', isFooterRelative);
   return (
-    <FooterS isWheelActive={isWheelActive}>
+    <FooterS isFooterRelative={isFooterRelative}>
       <h3>{phrase}</h3>
       {/* <p>Fazer ou não fazer, tentativa não há</p> */}
     </FooterS>
@@ -15,11 +16,11 @@ function Footer({ phrase, isWheelActive }) {
 
 Footer.propTypes = {
   phrase: PropTypes.string.isRequired,
-  isWheelActive: PropTypes.bool,
+  isFooterRelative: PropTypes.bool,
 };
 
 Footer.defaultProps = {
-  isWheelActive: false,
+  isFooterRelative: false,
 };
 
 export default Footer;

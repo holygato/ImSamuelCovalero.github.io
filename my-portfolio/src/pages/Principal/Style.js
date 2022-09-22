@@ -20,6 +20,7 @@ export const PrincipalS = styled.div`
   align-items: center;
   justify-content: center;
   justify-items: center;
+  text-align: center;
   #principal {
     display: flex;
     flex-direction: column;
@@ -63,6 +64,23 @@ export const PrincipalS = styled.div`
     animation: show 2s;
     animation-fill-mode: forwards;
     animation-delay: 0.3s;
+  }
+  // posiciona o elemento deslize na parte inferior esquerda da tela
+  #deslize {
+    /* border: 1px solid red; */
+    position: fixed;
+    bottom: 18px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 55px;
+    img {
+      /* border: 1px solid blue; */
+      width: 35px;
+      height: 35px;
+      display: flex;
+    }
   }
 `;
 

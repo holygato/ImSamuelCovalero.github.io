@@ -30,7 +30,11 @@ export const ProjectCardS = styled.div`
   gap: 20px; 
   padding: 10px; 
   margin-right: 20px;
-  // dá um espaço entre os elementos
+  // Cria uma animação ao passar o mouse sobre o card
+  &:hover {
+    transform: scale(1.015);
+    transition: 0.8s;
+  }
 
   img {
     width: 350px;

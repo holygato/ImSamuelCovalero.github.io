@@ -69,7 +69,7 @@ export const HeaderS = styled.div`
 
 export const FooterS = styled.div`
   // recebe isWheelActive como propriedade e caso seja true deixa a posição relativa
-  position: ${(props) => (props.isWheelActive ? 'relative' : 'fixed')};
+  position: ${(props) => (props.isFooterRelative ? 'relative' : 'fixed')};
   bottom: 0;
   width: 100%;
   h3 {

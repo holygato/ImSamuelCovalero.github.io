@@ -94,27 +94,37 @@ export const SkillsS = styled.div`
   align-items: center;
   justify-content: center;
   justify-items: center;
+  // posiciona a divSobremimCurriculo no topo da página
+  #divSobremimCurriculo {
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+    /* width: 100%; */
+    height: 40%;
+    margin-top: 100px;
+  }
   #mySkillsComponent {
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 200px;
+    height: 100vh;
   }
-  #imagesDiv {
+  /* #imagesDiv {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-self: center;
-  }
-  #imageElement {
+  } */
+  /* #imageElement {
     display: flex;
     img{
       height: 40px;
       width: 50px;
     }
-  }
+  } */
   #skills {
     display: flex;
     align-items: center;

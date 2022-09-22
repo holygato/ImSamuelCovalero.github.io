@@ -70,7 +70,7 @@ function Principal() {
       if (!goingUp) {
         timer = setTimeout(() => {
           setIsWheelActive(false);
-        }, 5000);
+        }, 4000);
       }
       if (goingUp) {
         clearTimeout(timer);
@@ -95,8 +95,15 @@ function Principal() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY === 0) {
+        let timer = null;
+        timer = setTimeout(() => {
+          setIsWheelActive(false);
+        }, 4000);
+        clearTimeout(timer);
         setIsFooterRelative(false);
-        setIsWheelActive(false);
+      } else {
+        setIsFooterRelative(true);
+        setIsWheelActive(true);
       }
     };
 
@@ -148,19 +155,21 @@ function Principal() {
           )}
         </div>
         <SkillsS onWheel={handleOnWheel}>
-          <div>
-            <h1>Saiba mais sobre mim...</h1>
-            <a href="/about">
-              <button type="button">Sobre mim</button>
-            </a>
-          </div>
-          <div id="curriculum">
-            <a href={curriculum} target="_blank" rel="noreferrer">
-              <button type="button">
-                <AiOutlineDownload />
-                Currículum
-              </button>
-            </a>
+          <div id="divSobremimCurriculo">
+            <div>
+              <h1>Saiba mais sobre mim...</h1>
+              <a href="/about">
+                <button type="button">Sobre mim</button>
+              </a>
+            </div>
+            <div id="curriculum">
+              <a href={curriculum} target="_blank" rel="noreferrer">
+                <button type="button">
+                  <AiOutlineDownload />
+                  Currículum
+                </button>
+              </a>
+            </div>
           </div>
           <MySkillsMain />
           {!isWheelActive && (

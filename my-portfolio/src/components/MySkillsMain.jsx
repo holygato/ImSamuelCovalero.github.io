@@ -49,10 +49,7 @@ function MySkills() {
       </div>
       <div id="skills">
         {tecnologiesImages.map((tecnology) => (
-          <div
-            id="imageElement"
-            key={tecnology.nome}
-          >
+          <div key={tecnology.nome}>
             <abbr title={tecnology.nome}>
               <img src={tecnology.imagem} alt={tecnology.nome} />
             </abbr>

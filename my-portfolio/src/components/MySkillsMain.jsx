@@ -26,6 +26,7 @@ function MySkills() {
     { nome: 'Slack', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg' },
     { nome: 'Redux', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg' },
     { nome: 'RTL', imagem: 'https://external-preview.redd.it/ipDqIMGooKjcZY8gvo-SKMjV23dXdO4szBpoFFsSZQA.jpg?auto=webp&s=64fa5d043dc6b4f0dc9e3b40e0b8e221ceb7af5d' },
+    // { nome: 'Jest', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg' },
     { nome: 'Styled Components', imagem: 'https://avatars.githubusercontent.com/u/20658825?s=200&v=4' },
     // { nome: 'Context API', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
     { nome: 'NPM', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg' },

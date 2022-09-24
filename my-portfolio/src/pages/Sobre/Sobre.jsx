@@ -64,12 +64,13 @@ function Sobre() {
         <Header />
         <h1>Sobre Mim:</h1>
         <p>
-          Oĺa, meu nome é Samuel Covalero dos Reis, sou formado em Engenharia da Computação e
+          Oĺa, meu nome é Samuel Covalero dos Reis, resido em São Carlos, SP.
+          Sou formado em Engenharia da Computação e
           atualmente estudo Desenvolvimento Web na Trybe, buscando atuar como desenvolvedor
           Full Stack.
-          Sempre me interessei por tencologia e inovação, e me fascina a possibilidade de impactar
-          positivamente a vida das pessoas através das mesmas, transformando o mundo em um lugar
-          mais próspero e justo.
+          Sempre me interessei por tencologia, cultura Geek e inovação, e me fascina a possibilidade
+          de impactar positivamente a vida das pessoas através das mesmas, transformando o mundo em
+          um lugar mais próspero, conectado e justo.
           Eu acredito no pensamento surpreendente, no improvável e na melhora da realidade atual.
           E a forma com que contribuo para isto é através da criatividade, da constância e da
           busca pela excelência em meus códigos.

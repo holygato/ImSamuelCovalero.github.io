@@ -12,7 +12,7 @@ export const DivExterna = styled.div`
 `;
 
 export const PrincipalS = styled.div` 
-  /* font-family: 'Conthrax'; */
+  /* background-color: rgb(216 212 242 / 82%); */
   border: 1px solid red;
   margin-top: 45px;
   width: 100%;
@@ -65,7 +65,7 @@ export const PrincipalS = styled.div`
     animation-fill-mode: forwards;
     animation-delay: 0.3s;
   }
-  // posiciona o elemento deslize na parte inferior esquerda da tela
+  // posiciona o elemento deslize na parte inferior direita da tela
   #deslize {
     /* border: 1px solid red; */
     position: fixed;
@@ -285,6 +285,9 @@ export const ProjetosS = styled.div`
   justify-content: center;
   justify-items: center;
   text-align: center;
+  h2 {
+    font-size: 26px;
+  }
 `;
 
 // export const ProjectCardS = styled.div`

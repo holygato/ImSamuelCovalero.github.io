@@ -20,6 +20,7 @@ export const ProjetosS = styled.div`
 `;
 
 export const ProjectCardS = styled.div`
+  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +30,9 @@ export const ProjectCardS = styled.div`
   gap: 20px; 
   padding: 10px; 
   margin-right: 20px;
+  h2 {
+    font-size: 30px;
+  }
   // Cria uma animação ao passar o mouse sobre o card
   #projectImg {
     &:hover {

@@ -1,18 +1,16 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { ProjectCardS } from '../pages/Projetos/Style';
-import PortfolioContext from '../context/PortfolioContext';
-import trybetunesImg from '../images/trybetunes.png';
-import metawalletImg from '../images/metawallet.png';
-import triviaImg from '../images/trivia.png';
-import starwarsImg from '../images/starwars.png';
-import appReceitasImg from '../images/appReceitas.png';
+// import PortfolioContext from '../context/PortfolioContext';
+import projects from '../data/projects';
 
 function Projects({ deviceType, isFromMain }) {
-  const { setProject } = useContext(PortfolioContext);
+  // Realizei um test em enviar o projeto para o context e puxar ele no ProjectDetails
+  // porém não funcionou, então passei pelo navigate
+  // const { setProject } = useContext(PortfolioContext);
   const navigate = useNavigate();
   // Recebe a props isFromMain e cria um objeto com o número de exibições dependendo de onde veio
   const projectSpec = isFromMain
@@ -23,53 +21,9 @@ function Projects({ deviceType, isFromMain }) {
       desktop: 1, tablet: 1, mobile: 1, centermode: false, slidesToSlid: 1,
     };
 
-  const projetos = [
-    {
-      id: 1,
-      nome: 'Trybetunes',
-      descricao: 'Projeto de player de músicas',
-      imagem: trybetunesImg,
-      linkApp: 'https://project-tryetunes.vercel.app/',
-      linkGitHub: 'https://github.com/holygato/Project-Trybetunes',
-    },
-    {
-      id: 2,
-      nome: 'Meta Wallet',
-      descricao: 'Projeto de carteira de controle de gastos',
-      imagem: metawalletImg,
-      linkApp: 'https://project-trybewallet-drab.vercel.app/',
-      linkGitHub: 'https://github.com/holygato/Project-Trybewallet',
-    },
-    {
-      id: 3,
-      nome: 'Trivia',
-      descricao: 'Projeto de jogo de perguntas e respostas',
-      imagem: triviaImg,
-      linkApp: 'https://project-trivia-dun.vercel.app/',
-      linkGitHub: 'https://github.com/holygato/Project-Trivia',
-    },
-    {
-      id: 4,
-      nome: 'Star Wars: Planets Search',
-      descricao: 'Projeto de busca de planetas do Star Wars',
-      imagem: starwarsImg,
-      linkApp: 'https://project-star-wars-planets-search.vercel.app/',
-      linkGitHub: 'https://github.com/holygato/Project-StarWars-Planets-Search',
-    },
-    {
-      id: 5,
-      nome: 'Recipes App',
-      descricao: 'Projeto de receitas de comidas e bebidas',
-      imagem: appReceitasImg,
-      linkApp: 'https://project-recipes-app-jet.vercel.app/foods',
-      linkGitHub: 'https://github.com/holygato/Project-Recipes-App',
-    },
-  ];
-
-  // const HandleNavigate = (projeto) => {
-  //   setProject(projeto);
-  //   navigate(`/projetos/${projeto.id}`, { state: { projeto } });
-  // };
+  const HandleClick = (projeto) => {
+    navigate(`/projetos/${projeto.id}`, { state: { projeto } });
+  };
 
   return (
     <div>
@@ -127,12 +81,17 @@ function Projects({ deviceType, isFromMain }) {
           },
         }}
       >
-        {projetos.map((projeto) => (
+        {projects.map((projeto) => (
           <ProjectCardS key={projeto.id}>
             <h2>{projeto.nome}</h2>
-            {!isFromMain && <p>{projeto.descricao}</p>}
-            <img src={projeto.imagem} alt={projeto.nome} id="projectImg" />
-            {setProject(projeto)}
+            {!isFromMain && <p>{projeto.titulo}</p>}
+            <div onClick={() => HandleClick()}>
+              <img
+                src={projeto.imagem}
+                alt={projeto.nome}
+                id="projectImg"
+              />
+            </div>
             {isFromMain
               ? <button type="button" onClick={() => navigate(`/projetos/${projeto.id}`, { state: { projeto } })}>Ver detalhes</button>
               : (

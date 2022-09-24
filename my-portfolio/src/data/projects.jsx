@@ -1,6 +1,6 @@
 import trybetunesImg from '../images/trybetunes.png';
 import metawalletImg from '../images/metawallet.png';
-import triviaImg from '../images/trivia.png';
+import triviaImg from '../images/trivia2.png';
 import starwarsImg from '../images/starwars.png';
 import appReceitasImg from '../images/appReceitas.png';
 
@@ -34,7 +34,7 @@ const projetos = [
     titulo: 'Aplicativo de jogo de perguntas e respostas',
     description: 'Trivia é um projeto/aplicação desenvolvida no curso da Trybe em React.js que acessa uma API de perguntas e respostas e cria um ambiente onde o usuário pode jogar e ganhar pontos.',
     imagem: triviaImg,
-    skills: ['JavaScript', 'React', 'Redux', 'Tailwind CSS'],
+    skills: ['JavaScript', 'React', 'Redux', 'Tailwind CSS', 'React Testing Library'],
     stack: 'Front-end',
     linkApp: 'https://project-trivia-dun.vercel.app/',
     linkGitHub: 'https://github.com/holygato/Project-Trivia',
@@ -56,7 +56,7 @@ const projetos = [
     titulo: 'Aplicativo de receitas de comidas e bebidas',
     description: 'Recipes App é um projeto/aplicação desenvolvida no curso da Trybe em React.js que acessa uma API de receitas de comidas e bebidas e possibilita ao usuário buscar, favoritar e salvar o progresso da elaboração das receitas.',
     imagem: appReceitasImg,
-    skills: ['JavaScript', 'React', 'Context API', 'Styled Components CSS'],
+    skills: ['JavaScript', 'React', 'Context API', 'Styled Components CSS', 'React Testing Library'],
     stack: 'Front-end',
     linkApp: 'https://project-recipes-app-jet.vercel.app/foods',
     linkGitHub: 'https://github.com/holygato/Project-Recipes-App',

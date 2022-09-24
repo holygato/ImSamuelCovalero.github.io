@@ -286,7 +286,40 @@ export const ProjetosS = styled.div`
   justify-items: center;
   text-align: center;
   h2 {
-    font-size: 26px;
+    font-size: 24px !important;
+  }
+
+  #projectImg {
+    border: 1px solid green;
+    &:hover {
+      transform: scale(1.015);
+      transition: 0.8s;
+    }
+  }
+
+  img {
+    width: 350px;
+    height: 300px;
+
+    @media (max-width: 768px) {
+      width: 250px;
+      height: 200px;
+    }
+
+    @media (max-width: 425px) {
+      width: 150px;
+      height: 100px;
+    }
+
+    @media (max-width: 375px) {
+      width: 100px;
+      height: 50px;
+    }
+
+    @media (max-width: 320px) {
+      width: 50px;
+      height: 25px;
+    }
   }
 `;
 

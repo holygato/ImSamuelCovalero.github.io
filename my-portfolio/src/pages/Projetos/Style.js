@@ -20,7 +20,6 @@ export const ProjetosS = styled.div`
 `;
 
 export const ProjectCardS = styled.div`
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,35 +33,4 @@ export const ProjectCardS = styled.div`
     font-size: 30px;
   }
   // Cria uma animação ao passar o mouse sobre o card
-  #projectImg {
-    &:hover {
-      transform: scale(1.015);
-      transition: 0.8s;
-    }
-  }
-
-  img {
-    width: 350px;
-    height: 300px;
-
-    @media (max-width: 768px) {
-    width: 250px;
-    height: 200px;
-    }
-
-    @media (max-width: 425px) {
-       width: 150px;
-       height: 100px;
-    }
-
-     @media (max-width: 375px) {
-       width: 100px;
-       height: 50px;
-     }
-
-     @media (max-width: 320px) {
-       width: 50px;
-       height: 25px;
-     }
-  }
 `;

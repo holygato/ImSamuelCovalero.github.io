@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -6,6 +8,8 @@ import { useNavigate } from 'react-router-dom';
 import { ProjectCardS } from '../pages/Projetos/Style';
 // import PortfolioContext from '../context/PortfolioContext';
 import projects from '../data/projects';
+import { ProjectImageS } from './Style';
+import projectTecnologies from '../data/skillBadges';
 
 function Projects({ deviceType, isFromMain }) {
   // Realizei um test em enviar o projeto para o context e puxar ele no ProjectDetails
@@ -21,9 +25,25 @@ function Projects({ deviceType, isFromMain }) {
       desktop: 1, tablet: 1, mobile: 1, centermode: false, slidesToSlid: 1,
     };
 
+  // Cria uma função renderBadges que recebe a array de skills do projeto, percorre
+  // o array projectTecnologies e retorna as imagens que possuem o nome igual ao da skill
+  const renderBadges = (skills) => skills.map((skill) => (
+    projectTecnologies.map((tecnology) => (
+      skill === tecnology.nome
+        ? <img src={tecnology.imagem} alt={tecnology.nome} key={tecnology.nome} />
+        : null
+    ))
+  ));
+
   const HandleClick = (projeto) => {
     navigate(`/projetos/${projeto.id}`, { state: { projeto } });
   };
+
+  // Cria uma função para verificar se o mouse está sobre o card e mudar o estado isHover
+  // para true ou false
+  const [isHover, setIsHover] = React.useState(false);
+  const handleMouseEnter = () => setIsHover(true);
+  const handleMouseLeave = () => setIsHover(false);
 
   return (
     <div>
@@ -85,13 +105,23 @@ function Projects({ deviceType, isFromMain }) {
           <ProjectCardS key={projeto.id}>
             <h2>{projeto.nome}</h2>
             {!isFromMain && <p>{projeto.titulo}</p>}
-            <div onClick={() => HandleClick()}>
-              <img
-                src={projeto.imagem}
-                alt={projeto.nome}
-                id="projectImg"
-              />
-            </div>
+            {isFromMain
+              ? <img src={projeto.imagem} alt={projeto.nome} id="projectImg" />
+              : (
+                <ProjectImageS
+                  onClick={() => HandleClick(projeto)}
+                  projectImg={projeto.imagem}
+                  isHover={isHover}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div id="projectBadgesDiv">
+                    <div id="projectBadgesImgs">
+                      {renderBadges(projeto.skills)}
+                    </div>
+                  </div>
+                </ProjectImageS>
+              )}
             {isFromMain
               ? <button type="button" onClick={() => navigate(`/projetos/${projeto.id}`, { state: { projeto } })}>Ver detalhes</button>
               : (

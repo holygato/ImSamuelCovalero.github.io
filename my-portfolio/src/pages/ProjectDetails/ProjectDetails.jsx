@@ -25,7 +25,7 @@ function ProjectDetails() {
     <DivExterna>
       <ProjetosS>
         <Header />
-        <h2>{projeto.nome}</h2>
+        <h2 id="projectName">{projeto.nome}</h2>
         <h3>{projeto.titulo}</h3>
         <div id="projectBody">
           <div>
@@ -48,7 +48,7 @@ function ProjectDetails() {
         {/* Cria um botão que direciona para a página de projetos */}
         <button type="button" onClick={() => navigate('/projetos', { state: { projeto } })}>Página de Projetos</button>
       </ProjetosS>
-      <Footer phrase="Seu foco determina a sua realidade" />
+      <Footer phrase="Seu foco determina a sua realidade" isFooterRelative />
     </DivExterna>
   );
 }

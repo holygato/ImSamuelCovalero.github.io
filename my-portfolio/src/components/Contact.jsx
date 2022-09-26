@@ -89,7 +89,6 @@ function Contact() {
         </label>
         {isCopied && <p id="copyMsg">{copyMessage}</p>}
       </div>
-      <button type="button" onClick={() => window.history.back()}>Voltar</button>
     </div>
   );
 }

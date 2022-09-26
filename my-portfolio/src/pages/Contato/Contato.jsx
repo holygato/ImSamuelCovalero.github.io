@@ -10,6 +10,7 @@ function Contato() {
       <ContatoS>
         <Header />
         <Contact />
+        <button type="button" onClick={() => window.history.back()}>Voltar</button>
       </ContatoS>
       <Footer phrase="O bom as vezes é inimigo do melhor" isFooterRelative />
     </DivExterna>

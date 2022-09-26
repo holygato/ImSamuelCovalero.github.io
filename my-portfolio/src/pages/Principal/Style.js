@@ -75,6 +75,7 @@ export const PrincipalS = styled.div`
     animation: show 2s;
     animation-fill-mode: forwards;
     animation-delay: 0.3s;
+    margin-top: 20px;
   }
   // posiciona o elemento deslize na parte inferior direita da tela
   #deslize {
@@ -337,9 +338,9 @@ export const ContatoS = styled.div`
   margin-top: 45px;
   width: 100%;
   height: 100vh;
-  align-items: center;
   justify-content: center;
   justify-items: center;
   display: flex;
   flex-direction: column;
+  text-align: center;
 `;

@@ -72,14 +72,21 @@ export const SobreS = styled.div`
       flex-direction: column;
       align-items: center;
       #subTitle {
-        text-align: center;
         display: flex;
+        text-align: center;
         justify-content: center;
         align-items: center;
         margin-bottom: 10px;
         font-size: 14px;
         width: 150px;
         height: 45px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
+        border: 1px solid #e6e6e6;
+      }
+      img {
+        border-radius: 3px;
+        box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
       }
     }
     @media (max-width: 768px) {

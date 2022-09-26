@@ -13,9 +13,10 @@ export const ContatoS = styled.div`
   margin-top: 45px;
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   justify-items: center;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
 `;

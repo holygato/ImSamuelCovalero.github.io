@@ -94,6 +94,7 @@ function MySkills() {
           ))}
         </div>
       </div>
+      <button type="button" onClick={() => window.history.back()}>Voltar</button>
     </div>
   );
 }

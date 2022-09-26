@@ -3,30 +3,41 @@ import styled from 'styled-components';
 // import fonte from '../../data/conthrax-sb.ttf';
 
 export const DivExterna = styled.div`
-  /* font-family: 'Conthrax'; */
+  border: 3px solid blue;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  //Div que engloba todo o conteúdo da página
+  height: 100%;
+  width: 100%;
   align-items: center;
+  justify-content: center;
+  justify-items: center;
 `;
 
 export const PrincipalS = styled.div` 
   /* background-color: rgb(216 212 242 / 82%); */
-  border: 1px solid red;
+  border: 2px solid green;
   margin-top: 45px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  justify-items: center;
-  text-align: center;
   #principal {
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
+    // centraliza o conteúdo
     align-items: center;
     justify-content: center;
+    text-align: center;
     height: 100vh;
+    width: 948px;
+    padding: 50px;
+    @media (max-width: 1000px) {
+      width: 90%;
+    }
   }
   //cria uma animação para exibir o texto
   @keyframes fadeIn {
@@ -288,7 +299,7 @@ export const ProjetosS = styled.div`
   h2 {
     font-size: 24px !important;
     @media (max-width: 768px) {
-      font-size: 18px !important;
+      font-size: 12px !important;
     }
   }
 
@@ -305,8 +316,8 @@ export const ProjetosS = styled.div`
     height: 300px;
 
     @media (max-width: 768px) {
-      width: 250px;
-      height: 200px;
+      width: 200px;
+      height: 150px;
     }
   }
 `;

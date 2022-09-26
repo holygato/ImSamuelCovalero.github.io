@@ -48,7 +48,7 @@ function Contact() {
   return (
     <div>
       <div>
-        <h1>Me Contacte</h1>
+        <h1>Me Contacte:</h1>
       </div>
       <div>
         <label htmlFor="linkedIn">
@@ -89,6 +89,7 @@ function Contact() {
         </label>
         {isCopied && <p id="copyMsg">{copyMessage}</p>}
       </div>
+      <button type="button" onClick={() => window.history.back()}>Voltar</button>
     </div>
   );
 }

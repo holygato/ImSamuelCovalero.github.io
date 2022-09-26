@@ -134,7 +134,7 @@ function Principal() {
         <Header />
         <div id="principal" onWheel={handleOnWheel}>
           <p id="firstPart">Olá, eu sou Samuel dos Reis,</p>
-          <p id="secondPart">seja muito bem vindo (a) ao meu Portfólio</p>
+          <p id="secondPart">seja muito bem vindo (a) ao meu Portfólio!</p>
           <br />
           <p id="secondPart">
             Aqui você conhecerá um pouco sobre mim e aonde me encontrar, as tecnologias que conheço

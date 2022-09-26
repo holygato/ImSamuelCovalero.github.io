@@ -31,10 +31,14 @@ export const ProjetosS = styled.div`
     flex-direction: row;
     width: 860px;
     justify-content: center;
-    img {
+    #projectImg {
       width: 430px;
       height: 400px;
     }
+    /* img {
+      width: 430px;
+      height: 400px;
+    } */
     span {
       display: flex;
       flex-direction: row;
@@ -51,17 +55,17 @@ export const ProjetosS = styled.div`
       height: 400px;
       p {
         font-size: 16px;
+        // exibe o texto justificado
+        text-align: justify;
       }
       #skills {
-        border: 1px solid red;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 15px;
-        span {
-          font-size: 12px !important;
-        }
+        gap: 5px;
+        width: 90%;
       }
     }
   }

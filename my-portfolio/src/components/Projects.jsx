@@ -19,7 +19,7 @@ function Projects({ deviceType, isFromMain }) {
   // Recebe a props isFromMain e cria um objeto com o número de exibições dependendo de onde veio
   const projectSpec = isFromMain
     ? {
-      desktop: 3, tablet: 1, mobile: 1, centermode: true, slidesToSlid: 2,
+      desktop: 1, tablet: 1, mobile: 1, centermode: true, slidesToSlid: 2,
     }
     : {
       desktop: 1, tablet: 1, mobile: 1, centermode: false, slidesToSlid: 1,
@@ -44,6 +44,12 @@ function Projects({ deviceType, isFromMain }) {
   const [isHover, setIsHover] = React.useState(false);
   const handleMouseEnter = () => setIsHover(true);
   const handleMouseLeave = () => setIsHover(false);
+
+  // Cria uma função para exbibir o alerta na tela de ver mais detalhes
+  // const handleMouseOver = () => {
+  //   console.log('Clique para ver mais detalhes');
+  //   alert('Clique para ver mais detalhes');
+  // };
 
   return (
     <div>
@@ -83,20 +89,20 @@ function Projects({ deviceType, isFromMain }) {
             items: projectSpec.desktop,
             partialVisibilityGutter: null,
           },
-          mobile: {
-            breakpoint: {
-              max: 464,
-              min: 0,
-            },
-            items: projectSpec.mobile,
-            partialVisibilityGutter: null,
-          },
           tablet: {
             breakpoint: {
               max: 1448,
               min: 464,
             },
             items: projectSpec.tablet,
+            partialVisibilityGutter: null,
+          },
+          mobile: {
+            breakpoint: {
+              max: 464,
+              min: 0,
+            },
+            items: projectSpec.mobile,
             partialVisibilityGutter: null,
           },
         }}
@@ -106,7 +112,15 @@ function Projects({ deviceType, isFromMain }) {
             <h2>{projeto.nome}</h2>
             {!isFromMain && <p>{projeto.titulo}</p>}
             {isFromMain
-              ? <img src={projeto.imagem} alt={projeto.nome} id="projectImg" />
+              ? (
+                <div
+                  onClick={() => HandleClick(projeto)}
+                >
+                  <abbr title="Clique para ver mais detalhes">
+                    <img src={projeto.imagem} alt={projeto.nome} id="projectImg" />
+                  </abbr>
+                </div>
+              )
               : (
                 <ProjectImageS
                   onClick={() => HandleClick(projeto)}
@@ -129,6 +143,7 @@ function Projects({ deviceType, isFromMain }) {
                   {/* cria um botão para direcionar para a tela de detalhes */}
                   <button type="button" onClick={() => navigate(`/projetos/${projeto.id}`, { state: { projeto } })}>Ver detalhes</button>
                   <button type="button" onClick={() => window.open(projeto.link, '_blank')}>Abrir projeto</button>
+                  <button type="button" onClick={() => window.history.back()}>Voltar</button>
                 </>
               )}
           </ProjectCardS>

@@ -91,8 +91,8 @@ function Contato() {
           </label>
           {isCopied && <p id="copyMsg">{copyMessage}</p>}
         </div>
-        <Footer phrase="O bom as vezes é inimigo do melhor" />
       </ContatoS>
+      <Footer phrase="O bom as vezes é inimigo do melhor" isFooterRelative />
     </DivExterna>
   );
 }

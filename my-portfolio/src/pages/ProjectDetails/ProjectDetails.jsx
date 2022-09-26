@@ -6,11 +6,20 @@ import { DivExterna, ProjetosS/* , ProjectCardS  */ } from './Style';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
 // import Projects from '../../components/Projects';
+import projectTecnologies from '../../data/skillBadges';
 
 function ProjectDetails() {
   // Desestrutura o projeto de dentro de state e de dentro de location
   const { state: { projeto } } = useLocation();
   const navigate = useNavigate();
+
+  const renderBadges = (skills) => skills.map((skill) => (
+    projectTecnologies.map((tecnology) => (
+      skill === tecnology.nome
+        ? <img src={tecnology.imagem} alt={tecnology.nome} key={tecnology.nome} />
+        : null
+    ))
+  ));
 
   return (
     <DivExterna>
@@ -26,9 +35,7 @@ function ProjectDetails() {
             <p>{projeto.description}</p>
             {/* Cria uma span para mostrar as skills */}
             <div id="skills">
-              {projeto.skills.map((skill) => (
-                <span key={skill}>{skill}</span>
-              ))}
+              {renderBadges(projeto.skills)}
             </div>
             <div>
               <button type="button" onClick={() => window.open(projeto.linkApp, '_blank')}>Abrir projeto</button>

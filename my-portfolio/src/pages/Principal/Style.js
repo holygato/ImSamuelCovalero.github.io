@@ -287,6 +287,9 @@ export const ProjetosS = styled.div`
   text-align: center;
   h2 {
     font-size: 24px !important;
+    @media (max-width: 768px) {
+      font-size: 18px !important;
+    }
   }
 
   #projectImg {
@@ -304,21 +307,6 @@ export const ProjetosS = styled.div`
     @media (max-width: 768px) {
       width: 250px;
       height: 200px;
-    }
-
-    @media (max-width: 425px) {
-      width: 150px;
-      height: 100px;
-    }
-
-    @media (max-width: 375px) {
-      width: 100px;
-      height: 50px;
-    }
-
-    @media (max-width: 320px) {
-      width: 50px;
-      height: 25px;
     }
   }
 `;

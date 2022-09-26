@@ -44,7 +44,7 @@ function MySkills() {
   ];
 
   return (
-    <div>
+    <div id="skillsDiv">
       {/* cria uma div com um botão para direcionar para a página sobre mim */}
       {/* <div>
         <h1>Saiba mais sobre mim...</h1>
@@ -60,11 +60,11 @@ function MySkills() {
           </button>
         </a>
       </div> */}
-      <h1 id="skillsTitle">Minhas Skills</h1>
-      <div id="tecnologias">
+      <h1 id="skillsTitle">Linguagens e Tecnologias:</h1>
+      <div id="skills">
         {/* <h3>Tecnologias:</h3> */}
         <div id="tecnologiesPosition">
-          <h4>Tecnologias que conheço:</h4>
+          <h4 id="subTitle">Conheço:</h4>
           {tecnologiesAlreadyKnowed.map((tecnology) => (
             <div key={tecnology.nome}>
               <abbr title={tecnology.nome}>
@@ -74,7 +74,7 @@ function MySkills() {
           ))}
         </div>
         <div id="tecnologiesPosition">
-          <h4>Tecnologias que estou estudando:</h4>
+          <h4 id="subTitle">Estou estudando:</h4>
           {tecnologiesLearning.map((tecnology) => (
             <div key={tecnology.nome}>
               <abbr title={tecnology.nome}>
@@ -84,7 +84,7 @@ function MySkills() {
           ))}
         </div>
         <div id="tecnologiesPosition">
-          <h4>Tecnologias que pretendo estudar:</h4>
+          <h4 id="subTitle">Pretendo aprender:</h4>
           {tecnologiesLearningSoon.map((tecnology) => (
             <div key={tecnology.nome}>
               <abbr title={tecnology.nome}>

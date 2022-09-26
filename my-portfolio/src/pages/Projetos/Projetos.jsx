@@ -14,7 +14,7 @@ function Projetos({ deviceType }) {
         <Header />
         <Projects deviceType={deviceType} isFromMain={false} />
       </ProjetosS>
-      <Footer phrase="Fazer ou não fazer, tentativa não há" />
+      <Footer phrase="Fazer ou não fazer, tentativa não há" isFooterRelative />
     </DivExterna>
   );
 }

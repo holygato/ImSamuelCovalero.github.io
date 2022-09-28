@@ -23,7 +23,7 @@ function Header() {
         <a href="/projetos">Projetos</a>
         <a href="/about">Sobre</a>
         <a href="/contact">Contato</a>
-        <a href="/myskills">Minhas Skills</a>
+        {/* <a href="/myskills">Minhas Skills</a> */}
       </div>
       {/* {console.log(mode)} */}
     </HeaderS>

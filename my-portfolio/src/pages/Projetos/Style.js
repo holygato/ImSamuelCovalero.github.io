@@ -18,12 +18,12 @@ export const ProjetosS = styled.div`
   border: 1px solid red;
   /* margin-top: 45px; */
   width: 80vw;
-  height: 100%;
+  height: 97vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  justify-items: center;
+  text-align: center;
   #projetosDivS {
     width: 100%;
     height: 100vh;

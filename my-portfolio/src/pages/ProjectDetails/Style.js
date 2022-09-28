@@ -1,21 +1,26 @@
 import styled from 'styled-components';
 
 export const DivExterna = styled.div`
-  display: flex;
-  flex-direction: column;
+  border: 3px solid green;
   height: 100vh;
-  width: 100vw;
-  align-items: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, (120px, 1fr));
+  /* grid-template-columns: 120px 1fr; */
+  grid-template-rows: 1fr 25px;
+  grid-template-areas: 
+    "h m"
+    "f f";
 `;
 
-export const ProjetosS = styled.div`  
-  border: 2px solid red;
+export const ProjetosS = styled.div` 
+  grid-area: m;
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
-  margin-top: 45px;
-  width: 100%;
-  height: 100%;
-  @media (max-width: 880px) {
+  width: 80vw;
+  height: 97vh;
+  @media (max-width: 780px) {
     min-height: 100%;
     margin-top: 45px;
   }
@@ -34,7 +39,7 @@ export const ProjetosS = styled.div`
     border: 1px solid green;
     display: flex;
     flex-direction: row;
-    @media (max-width: 880px) {
+    @media (max-width: 1080px) {
       width: 90%;
       flex-direction: column;
       // alinha os itens ao centro
@@ -48,6 +53,10 @@ export const ProjetosS = styled.div`
     #projectImg {
       width: 430px;
       height: 400px;
+      @media (max-width: 600px) {
+        width: 330px;
+        height: 300px;
+      }
     }
     /* img {
       width: 430px;
@@ -70,6 +79,10 @@ export const ProjetosS = styled.div`
       height: 400px;
       @media (max-width: 880px) {
         height: 38%;
+      }
+      @media (max-width: 600px) {
+        height: 38%;
+        width: 330px;
       }
       p {
         font-size: 16px;

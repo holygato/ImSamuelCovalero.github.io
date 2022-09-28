@@ -23,8 +23,8 @@ function ProjectDetails() {
 
   return (
     <DivExterna>
+      <Header />
       <ProjetosS>
-        <Header />
         <h2 id="projectName">{projeto.nome}</h2>
         <h3>{projeto.titulo}</h3>
         <div id="projectBody">

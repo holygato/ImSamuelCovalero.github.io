@@ -11,8 +11,8 @@ import MySkills from '../../components/MySkills';
 function Sobre() {
   return (
     <DivExterna>
+      <Header />
       <SobreS>
-        <Header />
         <div id="aboutDiv">
           <h1>Sobre Mim:</h1>
           <p>

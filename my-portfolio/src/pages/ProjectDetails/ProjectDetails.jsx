@@ -44,9 +44,8 @@ function ProjectDetails() {
           </div>
         </div>
         {/* Cria um botão para voltar para a página de projetos */}
-        <button type="button" onClick={() => window.history.back()}>Voltar</button>
-        {/* Cria um botão que direciona para a página de projetos */}
         <button type="button" onClick={() => navigate('/projetos', { state: { projeto } })}>Página de Projetos</button>
+        <button type="button" onClick={() => window.history.back()}>Voltar</button>
       </ProjetosS>
       <Footer phrase="Seu foco determina a sua realidade" isFooterRelative />
     </DivExterna>

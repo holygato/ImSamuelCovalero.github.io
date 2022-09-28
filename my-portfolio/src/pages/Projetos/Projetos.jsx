@@ -10,9 +10,11 @@ import Projects from '../../components/Projects';
 function Projetos({ deviceType }) {
   return (
     <DivExterna>
+      <Header />
       <ProjetosS>
-        <Header />
-        <Projects deviceType={deviceType} isFromMain={false} />
+        <div id="projetosDivS">
+          <Projects deviceType={deviceType} isFromMain={false} />
+        </div>
       </ProjetosS>
       <Footer phrase="Fazer ou não fazer, tentativa não há" isFooterRelative />
     </DivExterna>

@@ -3,7 +3,9 @@
 import React from 'react';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
-import { DivExterna, SkillsS } from './Style';
+import {
+  DivExterna, SkillsS, /* FooterS, HeaderS, */
+} from './Style';
 
 function MySkills() {
   const tecnologiesAlreadyKnowed = [
@@ -41,15 +43,16 @@ function MySkills() {
     { nome: 'C#', imagem: 'https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white' },
     { nome: 'Python', imagem: 'https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white' },
   ];
+
   return (
     <DivExterna>
+      <Header />
       <SkillsS>
-        <Header />
-        <h1>Minhas Skills</h1>
-        <div id="tecnologias">
+        <h1 id="skillsTitle">Linguagens e Tecnologias:</h1>
+        <div id="skills">
           {/* <h3>Tecnologias:</h3> */}
           <div id="tecnologiesPosition">
-            <h4>Tecnologias que conheço:</h4>
+            <h4 id="subTitle">Conheço:</h4>
             {tecnologiesAlreadyKnowed.map((tecnology) => (
               <div key={tecnology.nome}>
                 <abbr title={tecnology.nome}>
@@ -59,7 +62,7 @@ function MySkills() {
             ))}
           </div>
           <div id="tecnologiesPosition">
-            <h4>Tecnologias que estou estudando:</h4>
+            <h4 id="subTitle">Estou estudando:</h4>
             {tecnologiesLearning.map((tecnology) => (
               <div key={tecnology.nome}>
                 <abbr title={tecnology.nome}>
@@ -69,7 +72,7 @@ function MySkills() {
             ))}
           </div>
           <div id="tecnologiesPosition">
-            <h4>Tecnologias que pretendo estudar:</h4>
+            <h4 id="subTitle">Pretendo aprender:</h4>
             {tecnologiesLearningSoon.map((tecnology) => (
               <div key={tecnology.nome}>
                 <abbr title={tecnology.nome}>
@@ -79,8 +82,9 @@ function MySkills() {
             ))}
           </div>
         </div>
-        <Footer phrase="O bom as vezes é inimigo do melhor" />
+        <button type="button" onClick={() => window.history.back()}>Voltar</button>
       </SkillsS>
+      <Footer phrase="O bom as vezes é inimigo do xablau" isFooterRelative />
     </DivExterna>
   );
 }

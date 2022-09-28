@@ -7,15 +7,8 @@ function Header() {
   const { /* mode,  */setMode } = useContext(PortfolioContext);
   return (
     <HeaderS>
-      <p>Samuel Reis</p>
-      <div id="navegation">
-        <a href="/">Principal</a>
-        <a href="/projetos">Projetos</a>
-        <a href="/about">Sobre</a>
-        <a href="/contact">Contato</a>
-      </div>
-      {/* {console.log(mode)} */}
-      <div>
+      <p id="logo">Samuel Reis</p>
+      <div id="modeBtn">
         <button
           type="button"
           onClick={() => {
@@ -25,6 +18,14 @@ function Header() {
           Mode
         </button>
       </div>
+      <div id="navegation">
+        <a href="/">Principal</a>
+        <a href="/projetos">Projetos</a>
+        <a href="/about">Sobre</a>
+        <a href="/contact">Contato</a>
+        <a href="/myskills">Minhas Skills</a>
+      </div>
+      {/* {console.log(mode)} */}
     </HeaderS>
   );
 }

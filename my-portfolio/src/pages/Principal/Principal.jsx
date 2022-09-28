@@ -12,7 +12,7 @@ import curriculum from '../../data/curriculum.pdf';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
 import {
-  DivExterna, PrincipalS, ContatoS, SkillsS, ProjetosS,
+  DivExterna, PrincipalS, /* ContatoS, SkillsS, ProjetosS, */
 } from './Style';
 import Contact from '../../components/Contact';
 import MySkillsMain from '../../components/MySkillsMain';
@@ -130,9 +130,9 @@ function Principal() {
 
   return (
     <DivExterna>
+      <Header />
       <PrincipalS>
-        <Header />
-        <div id="principal" onWheel={handleOnWheel}>
+        <div id="principalS" onWheel={handleOnWheel}>
           <p id="firstPart">Olá, eu sou Samuel dos Reis,</p>
           <p id="secondPart">seja muito bem vindo (a) ao meu Portfólio!</p>
           <br />
@@ -154,7 +154,7 @@ function Principal() {
             </div>
           )}
         </div>
-        <SkillsS onWheel={handleOnWheel}>
+        <div id="skillsS">
           <div id="divSobremimCurriculo">
             <div>
               <h1>Saiba mais sobre mim...</h1>
@@ -178,8 +178,8 @@ function Principal() {
               <p>Deslize para baixo</p>
             </div>
           )}
-        </SkillsS>
-        <ProjetosS onWheel={handleOnWheel}>
+        </div>
+        <div id="projetosS">
           <Projects isFromMain />
           {!isWheelActive && (
             <div id="deslize">
@@ -187,12 +187,12 @@ function Principal() {
               <p>Deslize para baixo</p>
             </div>
           )}
-        </ProjetosS>
-        <ContatoS onWheel={handleOnWheel}>
+        </div>
+        <div id="contatosS">
           <Contact />
-        </ContatoS>
-        <Footer phrase="Transformação pela informação, evolução pela tecnologia" isFooterRelative={isFooterRelative} />
+        </div>
       </PrincipalS>
+      <Footer phrase="Transformação pela informação, evolução pela tecnologia" isFooterRelative={isFooterRelative} />
     </DivExterna>
   );
 }

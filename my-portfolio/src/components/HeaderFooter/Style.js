@@ -37,18 +37,31 @@ import styled from 'styled-components';
 // `;
 
 export const HeaderS = styled.div`
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 45px;
+  grid-area: h;
+  position: sticky;
+  top: 300px;
+  /* width: 100%; */
+  height: 70px;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+
+  #logo {
+    /* top: 0 !important; */
+    border: 1px solid blue;
+    margin-bottom: 20px;
+  }
+
+  #modeBtn {
+    margin-bottom: 300px;
+  }
+
   #navegation {
     display: flex;
     gap: 20px;
-    /* flex-direction: column; */
+    flex-direction: column;
+    align-items: center;
   }
   #navegation a {
     text-decoration: none;
@@ -70,6 +83,7 @@ export const HeaderS = styled.div`
 export const FooterS = styled.div`
   // recebe isWheelActive como propriedade e caso seja true deixa a posição relativa
   position: ${(props) => (props.isFooterRelative ? 'relative' : 'fixed')};
+  grid-area: f;
   bottom: 0;
   width: 100%;
   h3 {

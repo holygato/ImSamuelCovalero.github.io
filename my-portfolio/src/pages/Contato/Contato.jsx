@@ -7,8 +7,8 @@ import Contact from '../../components/Contact';
 function Contato() {
   return (
     <DivExterna>
+      <Header />
       <ContatoS>
-        <Header />
         <Contact />
         <button type="button" onClick={() => window.history.back()}>Voltar</button>
       </ContatoS>

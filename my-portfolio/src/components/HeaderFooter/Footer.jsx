@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { FooterS } from './Style';
 
 function Footer({ phrase, isFooterRelative }) {
-  console.log('Footer', isFooterRelative);
   return (
     <FooterS isFooterRelative={isFooterRelative}>
       <h3>{phrase}</h3>

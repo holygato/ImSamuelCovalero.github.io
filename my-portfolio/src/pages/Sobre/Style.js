@@ -1,19 +1,23 @@
-// Estiliza o Sobre
-
 import styled from 'styled-components';
 
 export const DivExterna = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  align-items: center;
+  border: 3px solid green;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, (120px, 1fr));
+  /* grid-template-columns: 120px 1fr; */
+  grid-template-rows: 1fr 25px;
+  grid-template-areas: 
+    "h m"
+    "f f";
 `;
 
 export const SobreS = styled.div`  
+  grid-area: m;
   border: 1px solid red;
-  margin-top: 45px;
-  width: 100%;
+  width: 80vw;
+  height: 100%;
   align-items: center;
   justify-content: center;
   justify-items: center;

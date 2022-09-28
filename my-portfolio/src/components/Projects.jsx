@@ -10,6 +10,7 @@ import { ProjectCardS } from '../pages/Projetos/Style';
 import projects from '../data/projects';
 import { ProjectImageS } from './Style';
 import projectTecnologies from '../data/skillBadges';
+// import { ProjectImgMainS } from '../pages/Principal/Style';
 
 function Projects({ deviceType, isFromMain }) {
   // Realizei um test em enviar o projeto para o context e puxar ele no ProjectDetails
@@ -42,8 +43,13 @@ function Projects({ deviceType, isFromMain }) {
   // Cria uma função para verificar se o mouse está sobre o card e mudar o estado isHover
   // para true ou false
   const [isHover, setIsHover] = React.useState(false);
-  const handleMouseEnter = () => setIsHover(true);
-  const handleMouseLeave = () => setIsHover(false);
+  // Adiciona uma mensagem abbr Clique para ver mais detalhes a função HandleMouseEnter
+  const HandleMouseEnter = () => {
+    setIsHover(true);
+  };
+  const HandleMouseLeave = () => {
+    setIsHover(false);
+  };
 
   // Cria uma função para exbibir o alerta na tela de ver mais detalhes
   // const handleMouseOver = () => {
@@ -52,7 +58,7 @@ function Projects({ deviceType, isFromMain }) {
   // };
 
   return (
-    <div>
+    <div id="projetosDiv">
       <h1>Projetos</h1>
       <Carousel
         customTransition="all .5"
@@ -113,28 +119,26 @@ function Projects({ deviceType, isFromMain }) {
             {!isFromMain && <p>{projeto.titulo}</p>}
             {isFromMain
               ? (
-                <div
-                  onClick={() => HandleClick(projeto)}
-                >
-                  <abbr title="Clique para ver mais detalhes">
-                    <img src={projeto.imagem} alt={projeto.nome} id="projectImg" />
-                  </abbr>
-                </div>
+                <abbr title="Clique para ver mais detalhes">
+                  <img src={projeto.imagem} alt={projeto.nome} id="projectImg" />
+                </abbr>
               )
               : (
-                <ProjectImageS
-                  onClick={() => HandleClick(projeto)}
-                  projectImg={projeto.imagem}
-                  isHover={isHover}
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <div id="projectBadgesDiv">
-                    <div id="projectBadgesImgs">
-                      {renderBadges(projeto.skills)}
+                <abbr title="Clique para ver mais detalhes">
+                  <ProjectImageS
+                    onClick={() => HandleClick(projeto)}
+                    projectImg={projeto.imagem}
+                    isHover={isHover}
+                    onMouseEnter={HandleMouseEnter}
+                    onMouseLeave={HandleMouseLeave}
+                  >
+                    <div id="projectBadgesDiv">
+                      <div id="projectBadgesImgs">
+                        {renderBadges(projeto.skills)}
+                      </div>
                     </div>
-                  </div>
-                </ProjectImageS>
+                  </ProjectImageS>
+                </abbr>
               )}
             {isFromMain
               ? <button type="button" onClick={() => navigate(`/projetos/${projeto.id}`, { state: { projeto } })}>Ver detalhes</button>
@@ -142,7 +146,10 @@ function Projects({ deviceType, isFromMain }) {
                 <>
                   {/* cria um botão para direcionar para a tela de detalhes */}
                   <button type="button" onClick={() => navigate(`/projetos/${projeto.id}`, { state: { projeto } })}>Ver detalhes</button>
-                  <button type="button" onClick={() => window.open(projeto.link, '_blank')}>Abrir projeto</button>
+                  <div>
+                    <button type="button" onClick={() => window.open(projeto.linkApp, '_blank')}>Abrir projeto</button>
+                    <button type="button" onClick={() => window.open(projeto.linkGitHub, '_blank')}>Ver código</button>
+                  </div>
                   <button type="button" onClick={() => window.history.back()}>Voltar</button>
                 </>
               )}

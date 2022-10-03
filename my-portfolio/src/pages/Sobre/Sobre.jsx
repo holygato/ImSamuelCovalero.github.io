@@ -1,7 +1,6 @@
-// Cria uma página para exibir a informação sobre mim
-
 import React from 'react';
 import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
 import { DivExterna, SobreS } from './Style';
@@ -9,6 +8,7 @@ import curriculum from '../../data/curriculum.pdf';
 import MySkills from '../../components/MySkills';
 
 function Sobre() {
+  const navigate = useNavigate();
   return (
     <DivExterna>
       <Header />
@@ -29,9 +29,10 @@ function Sobre() {
           </p>
           <br />
           <p>
-            Eu acredito no pensamento surpreendente, no improvável e na melhora da realidade atual.
-            E a forma com que contribuo para isto é através da criatividade, da constância e da
-            busca pela excelência em meus códigos.
+            Eu acredito no pensamento surpreendente, no improvável e na melhora da realidade.
+            E a forma com que contribuo para isto é através da criatividade, do foco, da paixão em
+            codar, da presença, da constância e da busca pela excelência
+            em meus códigos e minha vida.
           </p>
         </div>
         <div id="curriculum">
@@ -44,6 +45,7 @@ function Sobre() {
         </div>
         <br />
         <MySkills />
+        <button type="button" onClick={() => navigate('/')}>Principal</button>
       </SobreS>
       <Footer phrase="Seja a mudança que quer ver no mundo, tudo muda quando a gente muda" isFooterRelative />
     </DivExterna>

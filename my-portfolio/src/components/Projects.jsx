@@ -150,7 +150,7 @@ function Projects({ deviceType, isFromMain }) {
                     <button type="button" onClick={() => window.open(projeto.linkApp, '_blank')}>Abrir projeto</button>
                     <button type="button" onClick={() => window.open(projeto.linkGitHub, '_blank')}>Ver código</button>
                   </div>
-                  <button type="button" onClick={() => window.history.back()}>Voltar</button>
+                  <button type="button" onClick={() => navigate('/')}>Principal</button>
                 </>
               )}
           </ProjectCardS>

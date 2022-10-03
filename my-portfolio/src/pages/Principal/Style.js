@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // import fonte from '../../data/conthrax-sb.ttf';
 
 export const DivExterna = styled.div`
-  border: 3px solid green;
+  border: 3px solid blue;
   height: 100%;
   width: 100%;
   display: grid;
@@ -39,9 +39,15 @@ export const PrincipalS = styled.div`
     justify-content: center;
     text-align: center;
     height: 100vh;
-    width: 948px;
+    width: 50%;
     padding: 50px;
-    @media (max-width: 1000px) {
+    @media (max-width: 1688px) {
+      width: 65%;
+    }
+    @media (max-width: 1488px) {
+      width: 80%;
+    }
+    @media (max-width: 1088px) {
       width: 90%;
     }
   }

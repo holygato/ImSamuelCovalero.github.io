@@ -1,22 +1,27 @@
 import React, { useContext } from 'react';
+// import { CgDarkMode } from 'react-icons/cg';
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import PortfolioContext from '../../context/PortfolioContext';
 // import { useNavigate } from 'react-router-dom';
 import { HeaderS } from './Style';
 
 function Header() {
-  const { /* mode,  */setMode } = useContext(PortfolioContext);
+  const { mode, setMode } = useContext(PortfolioContext);
   return (
     <HeaderS>
       <p id="logo">Samuel Reis</p>
       <div id="modeBtn">
-        <button
+        {mode === 'light'
+          ? <MdDarkMode onClick={() => setMode('dark')} />
+          : <MdLightMode onClick={() => setMode('light')} />}
+        {/* <button
           type="button"
           onClick={() => {
             setMode((currentMode) => (currentMode === 'light' ? 'dark' : 'light'));
           }}
         >
-          Mode
-        </button>
+          <MdDarkMode />
+        </button> */}
       </div>
       <div id="navegation">
         <a href="/">Principal</a>

@@ -54,7 +54,7 @@ export const HeaderS = styled.div`
   }
 
   #modeBtn {
-    margin-bottom: 300px;
+    margin-bottom: 280px;
   }
 
   #navegation {
@@ -62,12 +62,19 @@ export const HeaderS = styled.div`
     gap: 20px;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
   #navegation a {
     text-decoration: none;
     color: black;
     font-size: 20px;
     margin-bottom: 10px;
+    // adiciona estilização de botão nos links com box shadow, deixa todos com o mesmo width e height
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    width: 140px;
   }
   #navegation a:hover {
     color: #f1f1f1;

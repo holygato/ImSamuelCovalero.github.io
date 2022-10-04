@@ -1,14 +1,13 @@
 import React from 'react';
 import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
-import { useNavigate } from 'react-router-dom';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
 import { DivExterna, SobreS } from './Style';
 import curriculum from '../../data/curriculum.pdf';
 import MySkills from '../../components/MySkills';
+import ToMainBtn from '../../components/toMainBtn';
 
 function Sobre() {
-  const navigate = useNavigate();
   return (
     <DivExterna>
       <Header />
@@ -45,7 +44,9 @@ function Sobre() {
         </div>
         <br />
         <MySkills />
-        <button id="toMainBtn" type="button" onClick={() => navigate('/')}>Principal</button>
+        <div id="toMainBtn">
+          <ToMainBtn />
+        </div>
       </SobreS>
       <Footer phrase="Seja a mudança que quer ver no mundo, tudo muda quando a gente muda" isFooterRelative />
     </DivExterna>

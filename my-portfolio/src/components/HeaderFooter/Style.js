@@ -39,42 +39,55 @@ import styled from 'styled-components';
 export const HeaderS = styled.div`
   grid-area: h;
   position: sticky;
-  top: 300px;
+  top: 0;
   /* width: 100%; */
-  height: 70px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  /* border-right: 1px solid var(--secundary); */
+  background-color: var(--main);
 
   #logo {
-    /* top: 0 !important; */
+    top: 10px;
     border: 1px solid blue;
-    margin-bottom: 20px;
+    position: absolute;
+    /* margin-bottom: 20px; */
   }
 
   #modeBtn {
-    margin-bottom: 280px;
+    /* margin-bottom: 280px; */
+    top: 60px;
+    position: absolute;
+    #modeIcon {
+      width: 25px;
+      height: 25px;
+    }
   }
 
   #navegation {
     display: flex;
-    gap: 20px;
+    /* gap: 20px; */
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border-bottom: 1px solid #a7a9be;
+    width: 100%;
   }
   #navegation a {
     text-decoration: none;
     color: black;
     font-size: 20px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     // adiciona estilização de botão nos links com box shadow, deixa todos com o mesmo width e height
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 12px;
+    /* background-color: var(--buttonBackground); */
+    color: var(--buttonText);
+    border-top: 1px solid #a7a9be;
+    padding: 12px;
+    /* border-radius: 12px; */
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    width: 140px;
+    width: 100%;
     cursor: pointer;
   }
   #navegation a:hover {

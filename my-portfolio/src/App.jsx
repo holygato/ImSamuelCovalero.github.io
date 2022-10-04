@@ -1,16 +1,19 @@
-import React from 'react';
-import { PortfolioProvider } from './context/PortfolioProvider';
+import React, { useContext } from 'react';
+import { ThemeProvider } from 'styled-components';
 import Content from './routers/Content';
 import GlobalStyle from './styles/Globals';
+import PortfolioContext from './context/PortfolioContext';
+import { lightTheme, darkTheme } from './components/Themes';
 
 function App() {
+  const { theme } = useContext(PortfolioContext);
   return (
-    <PortfolioProvider>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <div>
         <GlobalStyle />
         <Content />
       </div>
-    </PortfolioProvider>
+    </ThemeProvider>
   );
 }
 

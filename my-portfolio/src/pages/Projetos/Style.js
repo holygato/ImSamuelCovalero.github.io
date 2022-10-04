@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const DivExterna = styled.div`
-  border: 3px solid green;
+  /* border: 3px solid green; */
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, (120px, 1fr));
-  /* grid-template-columns: 120px 1fr; */
+  /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
+  grid-template-columns: 140px 1fr;
   grid-template-rows: 1fr 25px;
   grid-template-areas: 
     "h m"
@@ -15,7 +15,7 @@ export const DivExterna = styled.div`
 
 export const ProjetosS = styled.div`  
   grid-area: m;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* margin-top: 45px; */
   width: 80vw;
   height: 97vh;
@@ -57,5 +57,72 @@ export const ProjectCardS = styled.div`
   h2 {
     font-size: 28px;
   }
+  #verDetalhes {
+    background-color: var(--tertiary);
+    color: var(--buttonText);
+    border: 2px solid var(--buttonBorder);
+    width: 110px;
+    height: 28px;
+    line-height: 2.5em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: 'Conthrax';
+    box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
+    cursor: pointer;
+  }
+  #vercelGithub {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    gap: 7px;
+    a {
+      color: var(--tertiary);
+    }
+  }
   // Cria uma animação ao passar o mouse sobre o card
+`;
+
+export const ProjectImageS = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  height: 400px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+  // recebe uma props projectImg e a usa como background
+  background: url(${(props) => props.projectImg});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  #projectBadgesDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // seta o width e height do div para ser igual ao do ProjectImageS
+    width: 480px;
+    height: 400px;
+    background-color: ${(props) => (props.isHover ? 'rgb(216 212 242 / 72%)' : 'transparent')};
+  }
+  #projectBadgesImgs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 90%;
+    // altera a visibilidade das skills de acordo com o mouse hover
+    visibility: ${(props) => (props.isHover ? 'visible' : 'hidden')};
+    // adiciona box-shadow em cada um dos itens
+    img {
+      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+    }
+  }
 `;

@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { PortfolioProvider } from './context/PortfolioProvider';
 
 const root = createRoot(
   document.getElementById('root'),
@@ -12,7 +13,9 @@ const root = createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <PortfolioProvider>
+        <App />
+      </PortfolioProvider>
     </BrowserRouter>
   </React.StrictMode>,
 );

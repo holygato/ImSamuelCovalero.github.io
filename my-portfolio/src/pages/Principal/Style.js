@@ -3,12 +3,12 @@ import styled from 'styled-components';
 // import fonte from '../../data/conthrax-sb.ttf';
 
 export const DivExterna = styled.div`
-  border: 3px solid blue;
+  /* border: 3px solid blue; */
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, (120px, 1fr));
-  /* grid-template-columns: 120px 1fr; */
+  /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
+  grid-template-columns: 140px 1fr;
   grid-template-rows: 1fr 25px;
   grid-template-areas: 
     "h m"
@@ -18,7 +18,7 @@ export const DivExterna = styled.div`
 export const PrincipalS = styled.div` 
   /* background-color: rgb(216 212 242 / 82%); */
   grid-area: m;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   width: 80vw;
   height: 100%;
   display: flex;
@@ -31,7 +31,7 @@ export const PrincipalS = styled.div`
     ** Div da Main
   */
   #principalS {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     // centraliza o conteúdo
@@ -112,7 +112,7 @@ export const PrincipalS = styled.div`
   */
   #skillsS {
     /* grid-area: m; */
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     /* margin-top: 45px; */
@@ -301,7 +301,7 @@ export const PrincipalS = styled.div`
 
   #projetosS {
     /* grid-area: m; */
-    border: 1px solid green;
+    /* border: 1px solid green; */
     /* margin-top: 45px; */
     width: 100%;
     height: 100vh;
@@ -314,7 +314,7 @@ export const PrincipalS = styled.div`
       margin-top: 30px;
     }
     #projetosDiv {
-      border: 2px solid red;
+      /* border: 2px solid red; */
       max-width: 100%;
       height: 100%;
       display: flex;
@@ -373,7 +373,7 @@ export const PrincipalS = styled.div`
   }
 
   #contatosS {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* margin-top: 45px; */
     width: 100%;
     height: 100vh;
@@ -391,7 +391,7 @@ export const PrincipalS = styled.div`
 
 export const SkillsS = styled.div`  
   grid-area: m;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   margin-top: 45px;
@@ -570,6 +570,7 @@ export const SkillsS = styled.div`
       width: 50px;
       height: 50px;
       border-radius: 50%;
+      // ALTERAR essa borda de acordo com o thema
       border: 1px solid #fff;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
       position: absolute;
@@ -593,7 +594,7 @@ export const SkillsS = styled.div`
 
 export const ProjetosS = styled.div`
   grid-area: m;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin-top: 45px;
   width: 100vw;
   height: 100vh;
@@ -632,7 +633,7 @@ export const ProjetosS = styled.div`
 
 export const ContatoS = styled.div`
   grid-area: m;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin-top: 45px;
   width: 100vw;
   height: 100vh;

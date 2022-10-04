@@ -46,8 +46,8 @@ function Contact() {
   };
 
   return (
-    <div>
-      <div id="h1Title">
+    <div id="contactItens">
+      <div>
         <h1>Me Contacte:</h1>
       </div>
       <div>

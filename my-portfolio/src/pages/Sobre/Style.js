@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const DivExterna = styled.div`
-  border: 3px solid green;
+  /* border: 3px solid green; */
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, (120px, 1fr));
-  /* grid-template-columns: 120px 1fr; */
+  /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
+  grid-template-columns: 140px 1fr;
   grid-template-rows: 1fr 25px;
   grid-template-areas: 
     "h m"
@@ -15,7 +15,7 @@ export const DivExterna = styled.div`
 
 export const SobreS = styled.div`  
   grid-area: m;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 80vw;
   height: 100%;
   align-items: center;
@@ -46,7 +46,7 @@ export const SobreS = styled.div`
       font-size: 14px;
       text-align: justify;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 968px) {
       width: 90%;
     }
   }
@@ -58,15 +58,14 @@ export const SobreS = styled.div`
     align-items: center;
     text-align: center;
     button {
+      background-color: var(--buttonBackground);
+      color: var(--buttonText);
+      border: 2px solid var(--buttonBorder);
       text-decoration: none !important;
       margin-top: 15px;
       width: 130px;
       height: 35px;
       line-height: 2.5em;
-      /* display: flex;
-      text-align: center;
-      align-items: center;
-      justify-content: center; */
       font-size: 14px;
       font-family: 'Conthrax';
       box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
@@ -119,17 +118,6 @@ export const SobreS = styled.div`
   }
   #toMainBtn{
     margin-bottom: 15px;
-    width: 130px;
-    height: 35px;
-    line-height: 2.5em;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-family: 'Conthrax';
-    box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
-    cursor: pointer;
   }
   /* #footer {
     h3 {

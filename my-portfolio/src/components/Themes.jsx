@@ -1,6 +1,6 @@
 export const lightTheme = {
   background: '#f8f5f2',
-  main: '#fffffe',
+  main: '#fcf5ee',
   headline: '#232323',
   paragraph: '#222525',
   // botões
@@ -9,12 +9,13 @@ export const lightTheme = {
   buttonBackground: '#078080',
   // outras
   secundary: '#f45d48',
-  tertiary: '#f8f5f2',
+  tertiary: '#9D8DF1',
+  xablau: '#072AC8',
 };
 
 export const darkTheme = {
   background: '#0f0e17',
-  main: '#fffffe',
+  main: '#121213',
   headline: '#fffffe',
   paragraph: '#a7a9be',
   // botões
@@ -24,4 +25,5 @@ export const darkTheme = {
   // outras
   secundary: '#f25f4c',
   tertiary: '#e53170',
+  xablau: '#e53170',
 };

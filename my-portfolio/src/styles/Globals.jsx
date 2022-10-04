@@ -4,6 +4,8 @@ import neuropol from '../fonts/neuropol.otf';
 import technoCapture from '../fonts/techno_capture.ttf';
 // import PortfolioContext from '../context/PortfolioContext';
 
+// background: ${({ theme }) => theme.background};
+
 export default createGlobalStyle`
   @font-face {
     font-family: 'Conthrax';
@@ -29,9 +31,27 @@ export default createGlobalStyle`
   body {
     -webkit-font-smoothing: antialiased !important;
     font-family: 'Conthrax';
+    background: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.paragraph};
+    h1 {
+      color: ${({ theme }) => theme.headline};
+    }
   }
   
   body html #root {
     height: 100%;
+  }
+
+  //define as cores do root
+  :root {
+    --background: ${({ theme }) => theme.background};
+    --main: ${({ theme }) => theme.main};
+    --headline: ${({ theme }) => theme.headline};
+    --paragraph: ${({ theme }) => theme.paragraph};
+    --buttonBorder: ${({ theme }) => theme.buttonBorder};
+    --buttonText: ${({ theme }) => theme.buttonText};
+    --buttonBackground: ${({ theme }) => theme.buttonBackground};
+    --secundary: ${({ theme }) => theme.secundary};
+    --tertiary: ${({ theme }) => theme.tertiary};
   }
 `;

@@ -5,12 +5,13 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import { ProjectCardS } from '../pages/Projetos/Style';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { ProjectCardS, ProjectImageS } from '../pages/Projetos/Style';
 // import PortfolioContext from '../context/PortfolioContext';
 import projects from '../data/projects';
-import { ProjectImageS } from './Style';
 import projectTecnologies from '../data/skillBadges';
 // import { ProjectImgMainS } from '../pages/Principal/Style';
+import ToMainBtn from './toMainBtn';
 
 function Projects({ deviceType, isFromMain }) {
   // Realizei um test em enviar o projeto para o context e puxar ele no ProjectDetails
@@ -147,12 +148,22 @@ function Projects({ deviceType, isFromMain }) {
               : (
                 <>
                   {/* cria um botão para direcionar para a tela de detalhes */}
-                  <button type="button" onClick={() => navigate(`/projetos/${projeto.id}`, { state: { projeto } })}>Ver detalhes</button>
-                  <div>
-                    <button type="button" onClick={() => window.open(projeto.linkApp, '_blank')}>Abrir projeto</button>
-                    <button type="button" onClick={() => window.open(projeto.linkGitHub, '_blank')}>Ver código</button>
+                  <button id="verDetalhes" type="button" onClick={() => navigate(`/projetos/${projeto.id}`, { state: { projeto } })}>Ver detalhes</button>
+                  <div id="vercelGithub">
+                    <abbr title="abrir o projeto">
+                      <a href={projeto.linkApp} target="_blank" rel="noreferrer">
+                        <FaExternalLinkAlt />
+                      </a>
+                    </abbr>
+                    <abbr title="ver o código">
+                      <a href={projeto.linkGitHub} target="_blank" rel="noreferrer">
+                        <FaGithub />
+                      </a>
+                    </abbr>
                   </div>
-                  <button type="button" onClick={() => navigate('/')}>Principal</button>
+                  <div id="toMainBtn">
+                    <ToMainBtn />
+                  </div>
                 </>
               )}
           </ProjectCardS>

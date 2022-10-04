@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const DivExterna = styled.div`
-  border: 3px solid green;
+  /* border: 3px solid green; */
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, (120px, 1fr));
-  /* grid-template-columns: 120px 1fr; */
+  /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
+  grid-template-columns: 140px 1fr;
   grid-template-rows: 1fr 25px;
   grid-template-areas: 
     "h m"
@@ -15,7 +15,7 @@ export const DivExterna = styled.div`
 
 export const ContatoS = styled.div`  
   grid-area: m;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 80vw;
   height: 100%;
   display: flex;
@@ -24,24 +24,25 @@ export const ContatoS = styled.div`
   justify-content: center;
   text-align: center;
   gap: 30px;
+  #contactItens {
+    h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    // remove o estilo de link
+    a {
+      text-decoration: none;
+      color: var(--secundary);
+    }
+    abbr[title] {
+      text-decoration: none;
+    }
+  }
   #h1Title {
     margin-bottom: 15px;
     h1 {
       font-size: 32px;
     }
-  }
-  #toMainBtn{
-    width: 130px;
-    height: 35px;
-    line-height: 2.5em;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-family: 'Conthrax';
-    box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
-    cursor: pointer;
   }
   /* button {
     --color: #560bad;

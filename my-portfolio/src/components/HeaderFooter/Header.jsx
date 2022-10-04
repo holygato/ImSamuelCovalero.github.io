@@ -6,14 +6,15 @@ import PortfolioContext from '../../context/PortfolioContext';
 import { HeaderS } from './Style';
 
 function Header() {
-  const { mode, setMode } = useContext(PortfolioContext);
+  const { theme, setTheme } = useContext(PortfolioContext);
+  console.log('theme', theme);
   return (
     <HeaderS>
       <p id="logo">Samuel Reis</p>
       <div id="modeBtn">
-        {mode === 'light'
-          ? <MdDarkMode onClick={() => setMode('dark')} />
-          : <MdLightMode onClick={() => setMode('light')} />}
+        {theme === 'light'
+          ? <MdDarkMode id="modeIcon" onClick={() => setTheme('dark')} />
+          : <MdLightMode id="modeIcon" onClick={() => setTheme('light')} />}
         {/* <button
           type="button"
           onClick={() => {

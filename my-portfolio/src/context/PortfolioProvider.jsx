@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import PortfolioContext from './PortfolioContext';
 
 export function PortfolioProvider({ children }) {
-  const [mode, setMode] = useState('light');
+  const [theme, setTheme] = useState('light');
   const [project, setProject] = useState({});
 
   useEffect(() => {
@@ -19,8 +19,8 @@ export function PortfolioProvider({ children }) {
   //   navigate(`/projetos/${projeto.id}`);
 
   const contextValue = useMemo(() => ({
-    mode, setMode, project, setProject,
-  }), [mode]);
+    theme, setTheme, project, setProject,
+  }), [theme]);
 
   return (
     <PortfolioContext.Provider value={contextValue}>

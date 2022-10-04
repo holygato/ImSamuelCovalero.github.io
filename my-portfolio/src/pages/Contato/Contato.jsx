@@ -12,7 +12,7 @@ function Contato() {
       <Header />
       <ContatoS>
         <Contact />
-        <button type="button" onClick={() => navigate('/')}>Principal</button>
+        <button id="toMainBtn" type="button" onClick={() => navigate('/')}>Principal</button>
       </ContatoS>
       <Footer phrase="O bom as vezes é inimigo do melhor" isFooterRelative />
     </DivExterna>

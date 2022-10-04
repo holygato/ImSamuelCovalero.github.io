@@ -20,7 +20,7 @@ function Projects({ deviceType, isFromMain }) {
   // Recebe a props isFromMain e cria um objeto com o número de exibições dependendo de onde veio
   const projectSpec = isFromMain
     ? {
-      desktop: 1, tablet: 1, mobile: 1, centermode: true, slidesToSlid: 2,
+      desktop: 1, tablet: 1, mobile: 1, centermode: true, slidesToSlid: 1,
     }
     : {
       desktop: 1, tablet: 1, mobile: 1, centermode: false, slidesToSlid: 1,
@@ -120,7 +120,9 @@ function Projects({ deviceType, isFromMain }) {
             {isFromMain
               ? (
                 <abbr title="Clique para ver mais detalhes">
-                  <img src={projeto.imagem} alt={projeto.nome} id="projectImg" />
+                  <div onClick={() => HandleClick(projeto)}>
+                    <img src={projeto.imagem} alt={projeto.nome} id="projectImg" />
+                  </div>
                 </abbr>
               )
               : (

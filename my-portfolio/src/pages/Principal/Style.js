@@ -131,7 +131,7 @@ export const PrincipalS = styled.div`
       margin-top: 100px;
       gap: 20px;
       h1 {
-        font-size: 22px;
+        font-size: 32px;
         margin-bottom: 10px;
       }
     }
@@ -310,7 +310,7 @@ export const PrincipalS = styled.div`
     justify-items: center;
     text-align: center;
     h1 {
-      font-size: 30px;
+      font-size: 32px;
       margin-top: 30px;
     }
     #projetosDiv {
@@ -383,7 +383,7 @@ export const PrincipalS = styled.div`
     flex-direction: column;
     text-align: center;
     h1 {
-      font-size: 30px;
+      font-size: 32px;
       margin-bottom: 15px;
     }
   }

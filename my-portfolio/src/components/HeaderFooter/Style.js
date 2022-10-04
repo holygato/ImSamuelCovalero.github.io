@@ -75,6 +75,7 @@ export const HeaderS = styled.div`
     border-radius: 12px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     width: 140px;
+    cursor: pointer;
   }
   #navegation a:hover {
     color: #f1f1f1;

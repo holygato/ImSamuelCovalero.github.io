@@ -24,6 +24,10 @@ export const ProjetosS = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  h1 {
+    font-size: 32px;;
+    margin-top: 30px;
+  }
   #projetosDivS {
     width: 100%;
     height: 100vh;
@@ -51,7 +55,7 @@ export const ProjectCardS = styled.div`
   padding: 10px; 
   margin-right: 20px;
   h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
   // Cria uma animação ao passar o mouse sobre o card
 `;

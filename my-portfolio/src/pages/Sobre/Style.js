@@ -37,7 +37,7 @@ export const SobreS = styled.div`
     border-radius: 8px;
     padding: 20px;
     h1 {
-      font-size: 30px;
+      font-size: 32px;
       margin-bottom: 15px;
       // posiciona no topo da página
       margin-top: 10px;
@@ -52,7 +52,26 @@ export const SobreS = styled.div`
   }
 
   #curriculum {
-    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    button {
+      text-decoration: none !important;
+      margin-top: 15px;
+      width: 130px;
+      height: 35px;
+      line-height: 2.5em;
+      /* display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center; */
+      font-size: 14px;
+      font-family: 'Conthrax';
+      box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
+      cursor: pointer;
+    }
   }
 
   #skillsDiv {
@@ -65,38 +84,52 @@ export const SobreS = styled.div`
       font-size: 24px;
     }
     #skills {
-    /* margin-left:25%; */
-    margin-bottom: 35px;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    gap: 20px;
-    #tecnologiesPosition {
+      /* margin-left:25%; */
+      margin-bottom: 35px;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      #subTitle {
+      justify-content: center;
+      padding: 10px;
+      gap: 20px;
+      #tecnologiesPosition {
         display: flex;
-        text-align: center;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        margin-bottom: 10px;
-        font-size: 14px;
-        width: 150px;
-        height: 45px;
-        border-radius: 8px;
-        box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
-        border: 1px solid #e6e6e6;
+        #subTitle {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 10px;
+          font-size: 14px;
+          width: 150px;
+          height: 45px;
+          border-radius: 8px;
+          box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
+          border: 1px solid #e6e6e6;
+        }
+        img {
+          border-radius: 3px;
+          box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
+        }
       }
-      img {
-        border-radius: 3px;
-        box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
+      @media (max-width: 768px) {
+        width: 95%;
       }
-    }
-    @media (max-width: 768px) {
-      width: 95%;
     }
   }
+  #toMainBtn{
+    margin-bottom: 15px;
+    width: 130px;
+    height: 35px;
+    line-height: 2.5em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-family: 'Conthrax';
+    box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
+    cursor: pointer;
   }
   /* #footer {
     h3 {

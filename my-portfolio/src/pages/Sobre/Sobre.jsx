@@ -45,7 +45,7 @@ function Sobre() {
         </div>
         <br />
         <MySkills />
-        <button type="button" onClick={() => navigate('/')}>Principal</button>
+        <button id="toMainBtn" type="button" onClick={() => navigate('/')}>Principal</button>
       </SobreS>
       <Footer phrase="Seja a mudança que quer ver no mundo, tudo muda quando a gente muda" isFooterRelative />
     </DivExterna>

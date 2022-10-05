@@ -21,7 +21,7 @@ function Projects({ deviceType, isFromMain }) {
   // Recebe a props isFromMain e cria um objeto com o número de exibições dependendo de onde veio
   const projectSpec = isFromMain
     ? {
-      desktop: 1, tablet: 1, mobile: 1, centermode: true, slidesToSlid: 1,
+      desktop: 3, tablet: 2, mobile: 1, centermode: false, slidesToSlid: 1,
     }
     : {
       desktop: 1, tablet: 1, mobile: 1, centermode: false, slidesToSlid: 1,

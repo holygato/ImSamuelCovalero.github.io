@@ -2,7 +2,8 @@
 import React, { useState, useEffect, useRef }/* , { useState } */ from 'react';
 import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
-import arrowDown from '../../images/icons8-double-down-100.png';
+import { TbArrowBigDownLines } from 'react-icons/tb';
+// import arrowDown from '../../images/icons8-double-down-100.png';
 import curriculum from '../../data/curriculum.pdf';
 // import Carousel from 'react-multi-carousel';
 // import 'react-multi-carousel/lib/styles.css';
@@ -115,27 +116,27 @@ function Principal() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isFooterRelative, isWheelActive]);
 
-  const handleOnWheel = (e) => {
-    e.preventDefault();
-    if (window.pageYOffset === 0) {
-      setIsFooterRelative(false);
-      setIsWheelActive(false);
-    }
-    if (e.nativeEvent.wheelDelta < 0 && window.pageYOffset !== 0) {
-      setIsFooterRelative(true);
-    }
-    // if (e.deltaY > 20 || e.deltaX > 20) {
-    //   setIsWheelActive(true);
-    // }
-    setIsFooterRelative(true);
-    setIsWheelActive(true);
-  };
+  // const handleOnWheel = (e) => {
+  //   e.preventDefault();
+  //   if (window.pageYOffset === 0) {
+  //     setIsFooterRelative(false);
+  //     setIsWheelActive(false);
+  //   }
+  //   if (e.nativeEvent.wheelDelta < 0 && window.pageYOffset !== 0) {
+  //     setIsFooterRelative(true);
+  //   }
+  //   // if (e.deltaY > 20 || e.deltaX > 20) {
+  //   //   setIsWheelActive(true);
+  //   // }
+  //   setIsFooterRelative(true);
+  //   setIsWheelActive(true);
+  // };
 
   return (
     <DivExterna>
       <Header />
       <PrincipalS>
-        <div id="principalS" onWheel={handleOnWheel}>
+        <div id="principalS"/*  onWheel={handleOnWheel} */>
           <p id="firstPart">Olá, eu sou Samuel dos Reis,</p>
           <p id="secondPart">seja muito bem vindo (a) ao meu Portfólio!</p>
           <br />
@@ -150,8 +151,10 @@ function Principal() {
           eu sou Samuel dos Reis */}
           {!isWheelActive && (
             <div id="deslize">
-              <img src={arrowDown} alt="deslize para baixo" />
-              <p>Deslize para baixo</p>
+              <abbr title="Deslize para baixo">
+                <TbArrowBigDownLines id="arrowDown" />
+                <p>Deslize para baixo</p>
+              </abbr>
             </div>
           )}
         </div>
@@ -169,19 +172,21 @@ function Principal() {
             </div>
           </div>
           <MySkillsMain />
-          {!isWheelActive && (
+          {/* {!isWheelActive && (
             <div id="deslize">
               <img src={arrowDown} alt="deslize para baixo" />
               <p>Deslize para baixo</p>
             </div>
-          )}
+          )} */}
         </div>
         <div id="projetosS">
           <Projects isFromMain />
           {!isWheelActive && (
             <div id="deslize">
-              <img src={arrowDown} alt="deslize para baixo" />
-              <p>Deslize para baixo</p>
+              <abbr title="Deslize para baixo">
+                <TbArrowBigDownLines id="arrowDown" />
+                <p>Deslize para baixo</p>
+              </abbr>
             </div>
           )}
         </div>

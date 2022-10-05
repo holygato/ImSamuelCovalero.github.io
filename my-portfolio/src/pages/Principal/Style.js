@@ -19,7 +19,13 @@ export const PrincipalS = styled.div`
   /* background-color: rgb(216 212 242 / 82%); */
   grid-area: m;
   /* border: 2px solid green; */
-  width: 80vw;
+  width: 92vw;
+  @media (max-width: 1150px) {
+    width: 86vw;
+  }
+  @media (max-width: 1050px) {
+    width: 84vw;
+  }
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -118,11 +124,23 @@ export const PrincipalS = styled.div`
     flex-direction: column;
     align-items: flex-end;
     height: 55px;
+    font-size: 12px;
+    #arrowDown {
+      width: 30px;
+      height: 30px;
+      color: var(--secundary);
+      // posiciona o elemento no canto direito
+      margin-right: -100px;
+    }
+    p {
+      font-size: 12px;
+    }
     img {
       /* border: 1px solid blue; */
-      width: 35px;
+      width: 55px;
       height: 35px;
       display: flex;
+      color: var(--secundary);
     }
   }
 

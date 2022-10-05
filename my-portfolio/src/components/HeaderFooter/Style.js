@@ -109,12 +109,24 @@ export const FooterS = styled.div`
   grid-area: f;
   bottom: 0;
   width: 100%;
-  h3 {
+  #phrase {
     font-size: 14px;
+    // posiciona a esquerda do footer com um margin de 10px
+    margin-left: 10px;
   }
-  background-color: var(--main);
+  display: flex;
+  align-items: center;
+  background-color: var(--background);
+  gap: 10px;
+  #copyright {
+    /* border: 1px solid red; */
+    display: flex;
+    margin-left: auto;
+    margin-right: 10px;
+    font-size: 10px;
+  }
   // coloca box-shadow na borda superior do componente
-  box-shadow: 0 0 3px 0px var(--buttonBorder);
+  /* box-shadow: 0 0 3px 0px var(--buttonBorder); */
 `;
 
 // export default HeaderS;

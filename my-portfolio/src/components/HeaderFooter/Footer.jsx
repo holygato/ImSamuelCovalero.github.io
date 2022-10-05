@@ -7,8 +7,9 @@ import { FooterS } from './Style';
 function Footer({ phrase, isFooterRelative }) {
   return (
     <FooterS isFooterRelative={isFooterRelative}>
-      <h3>{phrase}</h3>
+      <h3 id="phrase">{phrase}</h3>
       {/* <p>Fazer ou não fazer, tentativa não há</p> */}
+      <p id="copyright">Desenvolvido por Samuel em ReactJS e Styled C. © 2022</p>
     </FooterS>
   );
 }

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DivExterna = styled.div`
   /* border: 3px solid green; */
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: grid;
   /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
@@ -17,7 +17,7 @@ export const ContatoS = styled.div`
   grid-area: m;
   /* border: 1px solid red; */
   width: 80vw;
-  height: 100%;
+  height: 97vh;
   display: flex;
   flex-direction: column;
   align-items: center;

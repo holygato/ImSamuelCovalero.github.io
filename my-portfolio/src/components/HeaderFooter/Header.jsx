@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 // import { CgDarkMode } from 'react-icons/cg';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
+import PropTypes from 'prop-types';
 import PortfolioContext from '../../context/PortfolioContext';
 // import { useNavigate } from 'react-router-dom';
 import { HeaderS } from './Style';
 
-function Header() {
+function Header({ defaultPositionHeader }) {
   const { theme, setTheme } = useContext(PortfolioContext);
   const [mountedComponent, setMountedComponent] = useState(false);
 
@@ -34,7 +35,7 @@ function Header() {
   if (!mountedComponent) return <div />;
 
   return (
-    <HeaderS>
+    <HeaderS defaultPositionHeader={defaultPositionHeader}>
       <p id="logo">Samuel Reis</p>
       <div id="modeBtn">
         {theme === 'light'
@@ -51,8 +52,8 @@ function Header() {
       </div>
       <div id="navegation">
         <a href="/">Principal</a>
-        <a href="/projetos">Projetos</a>
         <a href="/about">Sobre</a>
+        <a href="/projetos">Projetos</a>
         <a href="/contact">Contato</a>
         {/* <a href="/myskills">Minhas Skills</a> */}
       </div>
@@ -60,5 +61,9 @@ function Header() {
     </HeaderS>
   );
 }
+
+Header.propTypes = {
+  defaultPositionHeader: PropTypes.bool.isRequired,
+};
 
 export default Header;

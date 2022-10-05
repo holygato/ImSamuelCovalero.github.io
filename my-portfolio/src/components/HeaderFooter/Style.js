@@ -40,8 +40,10 @@ export const HeaderS = styled.div`
   grid-area: h;
   position: sticky;
   top: 0;
-  /* width: 100%; */
-  height: 100vh;
+  // recebe a prop isFooterRelative e se for true o height recebe 100vh
+  // por padrão recebe 97vh
+  height: ${(props) => (props.defaultPositionHeader ? '97vh' : '100vh')};
+  /* height: 100vh;  */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,13 +95,16 @@ export const HeaderS = styled.div`
     cursor: pointer;
   }
   #navegation a:hover {
-    color: #f1f1f1;
+    color: var(--tertiary);
+    // adiciona estilização no hover dos links
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
   }
   #navegation a.active {
-    color: #f1f1f1;
+    color: var(--tertiary);
   }
   #navegation a.active:hover {
-    color: #f1f1f1;
+    color: var(--tertiary);
   }
 `;
 
@@ -109,10 +114,12 @@ export const FooterS = styled.div`
   grid-area: f;
   bottom: 0;
   width: 100%;
+  height: 25px;
   #phrase {
     font-size: 14px;
     // posiciona a esquerda do footer com um margin de 10px
     margin-left: 10px;
+    margin-top: 4px;
   }
   display: flex;
   align-items: center;
@@ -120,13 +127,14 @@ export const FooterS = styled.div`
   gap: 10px;
   #copyright {
     /* border: 1px solid red; */
+    margin-top: 8px;
     display: flex;
     margin-left: auto;
     margin-right: 10px;
     font-size: 10px;
   }
-  // coloca box-shadow na borda superior do componente
-  /* box-shadow: 0 0 3px 0px var(--buttonBorder); */
+  // coloca box-shadow apenas borda superior do componente
+  box-shadow: 0px -2px 2px var(--buttonBorder);
 `;
 
 // export default HeaderS;

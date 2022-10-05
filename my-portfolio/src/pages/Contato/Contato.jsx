@@ -8,7 +8,7 @@ import ToMainBtn from '../../components/toMainBtn';
 function Contato() {
   return (
     <DivExterna>
-      <Header />
+      <Header defaultPositionHeader />
       <ContatoS>
         <Contact />
         <div id="toMainBtn">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
@@ -8,9 +8,40 @@ import MySkills from '../../components/MySkills';
 import ToMainBtn from '../../components/toMainBtn';
 
 function Sobre() {
+  const [goingUp, setGoingUp] = useState(false);
+  const [defaultPositionHeader, setDefaultPositionHeader] = useState(false);
+
+  const prevScrollY = useRef(0);
+
+  // Cria um useEffect para verificar se está no final da página
+  // e seta como true isPageOnBottom
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > prevScrollY.current) {
+        console.log('descendo');
+        setGoingUp(false);
+      }
+      if (currentScrollY < prevScrollY.current) {
+        console.log('subindo');
+        setGoingUp(true);
+      }
+      prevScrollY.current = currentScrollY;
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        console.log('final da página');
+        setDefaultPositionHeader(true);
+      } else {
+        console.log('não está no final da página');
+        setDefaultPositionHeader(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [goingUp]);
+
   return (
     <DivExterna>
-      <Header />
+      <Header defaultPositionHeader={defaultPositionHeader} />
       <SobreS>
         <div id="aboutDiv">
           <h1>Sobre Mim:</h1>

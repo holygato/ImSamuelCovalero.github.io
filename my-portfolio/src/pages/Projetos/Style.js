@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DivExterna = styled.div`
   /* border: 3px solid green; */
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: grid;
   /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
@@ -24,6 +24,7 @@ export const ProjetosS = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-bottom: 20px;
   h1 {
     font-size: 32px;;
     margin-top: 30px;

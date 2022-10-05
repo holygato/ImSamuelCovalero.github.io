@@ -10,7 +10,7 @@ import Projects from '../../components/Projects';
 function Projetos({ deviceType }) {
   return (
     <DivExterna>
-      <Header />
+      <Header defaultPositionHeader />
       <ProjetosS>
         <div id="projetosDivS">
           <Projects deviceType={deviceType} isFromMain={false} />

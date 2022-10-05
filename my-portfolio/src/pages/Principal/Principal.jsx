@@ -25,6 +25,7 @@ function Principal() {
   const [isFooterRelative, setIsFooterRelative] = useState(false);
   const [isPageOnBottom, setIsPageOnBottom] = useState(false);
   const [goingUp, setGoingUp] = useState(false);
+  const [defaultPositionHeader, setDefaultPositionHeader] = useState(true);
 
   const navigate = useNavigate();
 
@@ -47,9 +48,11 @@ function Principal() {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
         console.log('final da página');
         setIsPageOnBottom(true);
+        setDefaultPositionHeader(true);
       } else {
         console.log('não está no final da página');
         setIsPageOnBottom(false);
+        setDefaultPositionHeader(false);
       }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -105,7 +108,6 @@ function Principal() {
   // e seta como false setIsFooterRelative e setIsWheelActive
   useEffect(() => {
     const handleScroll = () => {
-      console.log('isPageOnBottom2', isPageOnBottom);
       const currentScrollY = window.scrollY;
       if (currentScrollY === 0) {
         // let timer = null;
@@ -114,6 +116,7 @@ function Principal() {
         // }, 4000);
         // clearTimeout(timer);
         setIsFooterRelative(false);
+        setDefaultPositionHeader(false);
       } else {
         setIsFooterRelative(true);
         // setIsWheelActive(true);
@@ -143,7 +146,7 @@ function Principal() {
 
   return (
     <DivExterna>
-      <Header />
+      <Header defaultPositionHeader={defaultPositionHeader} />
       <PrincipalS>
         <div id="principalS"/*  onWheel={handleOnWheel} */>
           <p id="firstPart">Olá, eu sou Samuel dos Reis,</p>

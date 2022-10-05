@@ -144,7 +144,7 @@ function Projects({ deviceType, isFromMain }) {
                 </abbr>
               )}
             {isFromMain
-              ? <button type="button" onClick={() => navigate(`/projetos/${projeto.id}`, { state: { projeto } })}>Ver detalhes</button>
+              ? <button id="verDetalhes" type="button" onClick={() => navigate(`/projetos/${projeto.id}`, { state: { projeto } })}>Ver detalhes</button>
               : (
                 <>
                   {/* cria um botão para direcionar para a tela de detalhes */}
@@ -152,12 +152,12 @@ function Projects({ deviceType, isFromMain }) {
                   <div id="vercelGithub">
                     <abbr title="abrir o projeto">
                       <a href={projeto.linkApp} target="_blank" rel="noreferrer">
-                        <FaExternalLinkAlt />
+                        <FaExternalLinkAlt id="vercelGithubIcons" />
                       </a>
                     </abbr>
                     <abbr title="ver o código">
                       <a href={projeto.linkGitHub} target="_blank" rel="noreferrer">
-                        <FaGithub />
+                        <FaGithub id="vercelGithubIcons" />
                       </a>
                     </abbr>
                   </div>

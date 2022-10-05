@@ -30,8 +30,8 @@ function Sobre() {
           <p>
             Eu acredito no pensamento surpreendente, no improvável e na melhora da realidade.
             E a forma com que contribuo para isto é através da criatividade, do foco, da paixão em
-            codar, da presença, da constância e da busca pela excelência
-            em meus códigos e minha vida.
+            codar, da constância e da busca pela excelência
+            em meus códigos.
           </p>
         </div>
         <div id="curriculum">

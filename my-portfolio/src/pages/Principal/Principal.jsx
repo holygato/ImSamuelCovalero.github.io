@@ -1,6 +1,7 @@
 // página principal
 import React, { useState, useEffect, useRef }/* , { useState } */ from 'react';
 import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 import arrowDown from '../../images/icons8-double-down-100.png';
 import curriculum from '../../data/curriculum.pdf';
 // import Carousel from 'react-multi-carousel';
@@ -21,6 +22,8 @@ import Projects from '../../components/Projects';
 function Principal() {
   const [isWheelActive, setIsWheelActive] = useState(false);
   const [isFooterRelative, setIsFooterRelative] = useState(false);
+
+  const navigate = useNavigate();
 
   // useEffect(() => {
   //   if (isWheelActive) {
@@ -141,9 +144,7 @@ function Principal() {
             e utilizo e terá acesso a alguns projetos que desenvolvi.
           </p>
           <div id="contato">
-            <a href="/contact">
-              <button type="button">Me Contacte!</button>
-            </a>
+            <button id="meContacteBtn" type="button" onClick={() => navigate('/contact')}>Me Contacte!</button>
           </div>
           {/* insere o elemento deslize para baixo caso exiba na tela o texto Olá,
           eu sou Samuel dos Reis */}
@@ -156,15 +157,11 @@ function Principal() {
         </div>
         <div id="skillsS">
           <div id="divSobremimCurriculo">
+            <h1>Saiba mais sobre mim...</h1>
+            <button id="sobreMimBtn" type="button" onClick={() => navigate('/about')}>Sobre mim</button>
             <div>
-              <h1>Saiba mais sobre mim...</h1>
-              <a href="/about">
-                <button type="button">Sobre mim</button>
-              </a>
-            </div>
-            <div id="curriculum">
               <a href={curriculum} target="_blank" rel="noreferrer">
-                <button type="button">
+                <button id="curriculum" type="button">
                   <AiOutlineDownload />
                   Currículum
                 </button>

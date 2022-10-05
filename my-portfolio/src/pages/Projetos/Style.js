@@ -60,7 +60,7 @@ export const ProjectCardS = styled.div`
   #verDetalhes {
     background-color: var(--tertiary);
     color: var(--buttonText);
-    border: 2px solid var(--buttonBorder);
+    border: 2px solid var(--secundary);
     width: 110px;
     height: 28px;
     line-height: 2.5em;
@@ -72,16 +72,20 @@ export const ProjectCardS = styled.div`
     font-family: 'Conthrax';
     box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
     cursor: pointer;
+    border-radius: 3px;
   }
   #vercelGithub {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 50px;
     gap: 7px;
+    #vercelGithubIcons {
+          width: 23px;
+          height: 23px;
+        }
     a {
-      color: var(--tertiary);
+      color: var(--extra);
     }
   }
   // Cria uma animação ao passar o mouse sobre o card
@@ -95,6 +99,7 @@ export const ProjectImageS = styled.div`
   width: 480px;
   height: 400px;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
   // recebe uma props projectImg e a usa como background
   background: url(${(props) => props.projectImg});
   background-size: cover;

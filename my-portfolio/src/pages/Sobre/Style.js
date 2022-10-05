@@ -63,13 +63,14 @@ export const SobreS = styled.div`
       border: 2px solid var(--buttonBorder);
       text-decoration: none !important;
       margin-top: 15px;
-      width: 130px;
-      height: 35px;
+      width: 170px;
+      height: 40px;
       line-height: 2.5em;
       font-size: 14px;
       font-family: 'Conthrax';
       box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
       cursor: pointer;
+      border-radius: 3px;
     }
   }
 

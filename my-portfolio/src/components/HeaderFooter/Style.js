@@ -48,6 +48,8 @@ export const HeaderS = styled.div`
   justify-content: space-evenly;
   /* border-right: 1px solid var(--secundary); */
   background-color: var(--main);
+  // coloca box-shadow na borda direita do componente
+  box-shadow: 0 0 1px 0px var(--buttonBorder);
 
   #logo {
     top: 10px;
@@ -110,6 +112,9 @@ export const FooterS = styled.div`
   h3 {
     font-size: 14px;
   }
+  background-color: var(--main);
+  // coloca box-shadow na borda superior do componente
+  box-shadow: 0 0 3px 0px var(--buttonBorder);
 `;
 
 // export default HeaderS;

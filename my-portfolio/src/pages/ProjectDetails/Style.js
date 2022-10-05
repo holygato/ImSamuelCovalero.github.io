@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const DivExterna = styled.div`
-  border: 3px solid green;
+  /* border: 3px solid green; */
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, (120px, 1fr));
-  /* grid-template-columns: 120px 1fr; */
+  /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
+  grid-template-columns: 140px 1fr;
   grid-template-rows: 1fr 25px;
   grid-template-areas: 
     "h m"
@@ -15,28 +15,40 @@ export const DivExterna = styled.div`
 
 export const ProjetosS = styled.div` 
   grid-area: m;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   width: 80vw;
-  height: 97vh;
+  height: 100%;
+  /* gap: 20px;  */
   @media (max-width: 780px) {
     min-height: 100%;
     margin-top: 45px;
+    /* gap: 15px;  */
   }
-  gap: 20px; 
+  @media (max-width: 580px) {
+    min-height: 100%;
+    margin-top: 10px;
+    /* gap: 10px;  */
+  }
+  
   align-items: center;
   justify-content: center;
   justify-items: center;
   text-align: center;
   #projectName {
+    height: 100px;
     font-size: 30px;
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 15px; */
   }
   h3 {
     font-size: 20px;
+    margin-bottom: 15px;
   }
   #projectBody {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: row;
     @media (max-width: 1080px) {
@@ -51,11 +63,13 @@ export const ProjetosS = styled.div`
     width: 860px;
     justify-content: center;
     #projectImg {
+      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+      border-radius: 4px;
       width: 430px;
-      height: 400px;
+      height: 320px;
       @media (max-width: 600px) {
         width: 330px;
-        height: 300px;
+        height: 250px;
       }
     }
     /* img {
@@ -68,7 +82,9 @@ export const ProjetosS = styled.div`
       gap: 10px;
     }
     #projectDetails {
-      border: 1px solid red;
+      /* border: 1px solid red; */
+      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+      border-radius: 4px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -76,12 +92,12 @@ export const ProjetosS = styled.div`
       padding: 10px;
       gap: 10px;
       width: 430px;
-      height: 400px;
-      @media (max-width: 880px) {
-        height: 38%;
+      height: 320px;;
+      @media (max-width: 1080px) {
+        height: 42%;
       }
       @media (max-width: 600px) {
-        height: 38%;
+        height: 60%;
         width: 330px;
       }
       p {
@@ -98,7 +114,45 @@ export const ProjetosS = styled.div`
         gap: 5px;
         width: 90%;
       }
+      #vercelGithub {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        gap: 15px;
+        a {
+          color: var(--extra);
+        }
+        #vercelGithubIcons {
+          width: 23px;
+          height: 23px;
+        }
+      }    
     }
+  }
+  #toProjectsBtn {
+    background-color: var(--tertiary);
+    color: var(--buttonText);
+    border: 2px solid var(--secundary);
+    margin-bottom: 15px;
+    margin-top: 10px;
+    width: 170px;
+    height: 40px;
+    border-radius: 3px;
+    line-height: 2.5em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: 'Conthrax';
+    box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
+    cursor: pointer;
+  }
+  #toMainBtn {
+    margin-bottom: 15px;
   }
 `;
 

@@ -32,6 +32,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased !important;
     font-family: 'Conthrax';
     background: ${({ theme }) => theme.background};
+    /* transition: all 0.03s linear; */
     color: ${({ theme }) => theme.paragraph};
     h1 {
       color: ${({ theme }) => theme.headline};
@@ -53,5 +54,6 @@ export default createGlobalStyle`
     --buttonBackground: ${({ theme }) => theme.buttonBackground};
     --secundary: ${({ theme }) => theme.secundary};
     --tertiary: ${({ theme }) => theme.tertiary};
+    --extra: ${({ theme }) => theme.extra};
   }
 `;

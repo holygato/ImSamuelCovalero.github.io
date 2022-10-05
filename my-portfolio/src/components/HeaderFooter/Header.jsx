@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 // import { CgDarkMode } from 'react-icons/cg';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import PortfolioContext from '../../context/PortfolioContext';
@@ -7,14 +7,39 @@ import { HeaderS } from './Style';
 
 function Header() {
   const { theme, setTheme } = useContext(PortfolioContext);
-  console.log('theme', theme);
+  const [mountedComponent, setMountedComponent] = useState(false);
+
+  const setMode = (mode) => {
+    window.localStorage.setItem('theme', mode);
+    setTheme(mode);
+  };
+
+  // cria função para chamar o setMode e mudar o tema
+  const themeToggler = () => {
+    if (theme === 'light') {
+      setMode('dark');
+    } else {
+      setMode('light');
+    }
+  };
+
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem('theme');
+    if (localTheme) {
+      setTheme(localTheme);
+      setMountedComponent(true);
+    }
+  }, []);
+
+  if (!mountedComponent) return <div />;
+
   return (
     <HeaderS>
       <p id="logo">Samuel Reis</p>
       <div id="modeBtn">
         {theme === 'light'
-          ? <MdDarkMode id="modeIcon" onClick={() => setTheme('dark')} />
-          : <MdLightMode id="modeIcon" onClick={() => setTheme('light')} />}
+          ? <MdDarkMode id="modeIcon" onClick={themeToggler} />
+          : <MdLightMode id="modeIcon" onClick={themeToggler} />}
         {/* <button
           type="button"
           onClick={() => {

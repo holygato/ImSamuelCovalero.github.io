@@ -9,8 +9,8 @@ export const lightTheme = {
   buttonBackground: '#078080',
   // outras
   secundary: '#f45d48',
-  tertiary: '#9D8DF1',
-  xablau: '#072AC8',
+  tertiary: '#DB7C26',
+  extra: '#9D8DF1',
 };
 
 export const darkTheme = {
@@ -25,5 +25,5 @@ export const darkTheme = {
   // outras
   secundary: '#f25f4c',
   tertiary: '#e53170',
-  xablau: '#e53170',
+  extra: '#1E2EDE',
 };

@@ -23,8 +23,38 @@ import Projects from '../../components/Projects';
 function Principal() {
   const [isWheelActive, setIsWheelActive] = useState(false);
   const [isFooterRelative, setIsFooterRelative] = useState(false);
+  const [isPageOnBottom, setIsPageOnBottom] = useState(false);
+  const [goingUp, setGoingUp] = useState(false);
 
   const navigate = useNavigate();
+
+  const prevScrollY = useRef(0);
+
+  // Cria um useEffect para verificar se está no final da página
+  // e seta como true isPageOnBottom
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > prevScrollY.current) {
+        console.log('descendo');
+        setGoingUp(false);
+      }
+      if (currentScrollY < prevScrollY.current) {
+        console.log('subindo');
+        setGoingUp(true);
+      }
+      prevScrollY.current = currentScrollY;
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        console.log('final da página');
+        setIsPageOnBottom(true);
+      } else {
+        console.log('não está no final da página');
+        setIsPageOnBottom(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [goingUp]);
 
   // useEffect(() => {
   //   if (isWheelActive) {
@@ -34,58 +64,36 @@ function Principal() {
   //   }
   // }, [isWheelActive]);
 
-  // useEffect(() => {
-  //   if (document.getElementById('firstPart')) {
-  //     const observer = new IntersectionObserver(
-  //       (entries) => {
-  //         entries.forEach((entry) => {
-  //           if (entry.isIntersecting) {
-  //             setIsWheelActive(false);
-  //           }
-  //         });
-  //       },
-  //       {
-  //         threshold: [0.5],
-  //       },
-  //     );
-  //     observer.observe(document.getElementById('firstPart'));
-  //   }
-  // }, []);
-
   // Cria um useEffect para verificar se o scroll ativo ou parado e habilitar o botão de
   // scroll para baixo baseado em timer
-  const prevScrollY = useRef(0);
-
-  const [goingUp, setGoingUp] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      // console.log('isPageOnBottom', isPageOnBottom);
+      // console.log('goingUp', goingUp);
       const currentScrollY = window.scrollY;
-      if (prevScrollY.current < currentScrollY && goingUp) {
-        setGoingUp(false);
-      }
-      if (prevScrollY.current > currentScrollY && !goingUp) {
-        setGoingUp(true);
-      }
-
+      // if (prevScrollY.current < currentScrollY && goingUp) {
+      //   console.log('xablau1');
+      //   setIsWheelActive(true);
+      //   setGoingUp(false);
+      // }
+      // if (prevScrollY.current > currentScrollY && !goingUp) {
+      //   console.log('xablau2');
+      //   setIsWheelActive(true);
+      //   setGoingUp(true);
+      // }
+      setIsWheelActive(true);
       prevScrollY.current = currentScrollY;
       console.log(goingUp, currentScrollY);
-      let timer = null;
-      if (!goingUp) {
-        timer = setTimeout(() => {
+      // console.log('isWheelActive', isWheelActive);
+
+      // cria um contador para setar para false o isWheelActive após 4 segundos após
+      // o último scroll
+      if (isWheelActive) {
+        setTimeout(() => {
           setIsWheelActive(false);
         }, 4000);
       }
-      if (goingUp) {
-        clearTimeout(timer);
-        setIsWheelActive(true);
-      }
-
-      // if (currentScrollY > 0) {
-      //   setIsFooterRelative(true);
-      // } else {
-      //   setIsFooterRelative(false);
-      // }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -97,17 +105,18 @@ function Principal() {
   // e seta como false setIsFooterRelative e setIsWheelActive
   useEffect(() => {
     const handleScroll = () => {
+      console.log('isPageOnBottom2', isPageOnBottom);
       const currentScrollY = window.scrollY;
       if (currentScrollY === 0) {
-        let timer = null;
-        timer = setTimeout(() => {
-          setIsWheelActive(false);
-        }, 4000);
-        clearTimeout(timer);
+        // let timer = null;
+        // timer = setTimeout(() => {
+        //   setIsWheelActive(false);
+        // }, 4000);
+        // clearTimeout(timer);
         setIsFooterRelative(false);
       } else {
         setIsFooterRelative(true);
-        setIsWheelActive(true);
+        // setIsWheelActive(true);
       }
     };
 
@@ -149,12 +158,20 @@ function Principal() {
           </div>
           {/* insere o elemento deslize para baixo caso exiba na tela o texto Olá,
           eu sou Samuel dos Reis */}
-          {!isWheelActive && (
-            <div id="deslize">
-              <abbr title="Deslize para baixo">
-                <TbArrowBigDownLines id="arrowDown" />
-                <p>Deslize para baixo</p>
-              </abbr>
+          {!isWheelActive && !isPageOnBottom && (
+            <div>
+              <div id="deslize">
+                <abbr title="Deslize para baixo">
+                  <TbArrowBigDownLines id="arrowDown" />
+                  <p>Deslize</p>
+                </abbr>
+              </div>
+              <div id="deslize2">
+                <abbr title="Deslize para baixo">
+                  <TbArrowBigDownLines id="arrowDown" />
+                  <p>Deslize</p>
+                </abbr>
+              </div>
             </div>
           )}
         </div>
@@ -181,12 +198,20 @@ function Principal() {
         </div>
         <div id="projetosS">
           <Projects isFromMain />
-          {!isWheelActive && (
-            <div id="deslize">
-              <abbr title="Deslize para baixo">
-                <TbArrowBigDownLines id="arrowDown" />
-                <p>Deslize para baixo</p>
-              </abbr>
+          {!isWheelActive && !isPageOnBottom && (
+            <div>
+              <div id="deslize">
+                <abbr title="Deslize para baixo">
+                  <TbArrowBigDownLines id="arrowDown" />
+                  <p>Deslize</p>
+                </abbr>
+              </div>
+              <div id="deslize2">
+                <abbr title="Deslize para baixo">
+                  <TbArrowBigDownLines id="arrowDown" />
+                  <p>Deslize</p>
+                </abbr>
+              </div>
             </div>
           )}
         </div>

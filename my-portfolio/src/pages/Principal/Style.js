@@ -120,6 +120,7 @@ export const PrincipalS = styled.div`
     position: fixed;
     bottom: 18px;
     right: 0;
+    margin-right: 4px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -128,12 +129,43 @@ export const PrincipalS = styled.div`
     #arrowDown {
       width: 30px;
       height: 30px;
-      color: var(--secundary);
+      color: var(--tertiary);
       // posiciona o elemento no canto direito
-      margin-right: -100px;
+      margin-right: -30px;
     }
     p {
       font-size: 12px;
+      color: var(--secundary);
+    }
+    img {
+      /* border: 1px solid blue; */
+      width: 55px;
+      height: 35px;
+      display: flex;
+      color: var(--secundary);
+    }
+  }
+  #deslize2 {
+    /* border: 1px solid red; */
+    position: fixed;
+    bottom: 18px;
+    left: 0;
+    margin-left: 144px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 55px;
+    font-size: 12px;
+    #arrowDown {
+      width: 30px;
+      height: 30px;
+      color: var(--tertiary);
+      // posiciona o elemento no canto direito
+      margin-left: -30px;
+    }
+    p {
+      font-size: 12px;
+      color: var(--secundary);
     }
     img {
       /* border: 1px solid blue; */

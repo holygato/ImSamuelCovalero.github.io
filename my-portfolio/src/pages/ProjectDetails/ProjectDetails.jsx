@@ -25,7 +25,7 @@ function ProjectDetails() {
 
   return (
     <DivExterna>
-      <Header />
+      <Header defaultPositionHeader />
       <ProjetosS>
         <h1 id="projectName">{projeto.nome}</h1>
         <h3>{projeto.titulo}</h3>

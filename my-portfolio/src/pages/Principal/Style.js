@@ -9,7 +9,7 @@ export const DivExterna = styled.div`
   display: grid;
   /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
   grid-template-columns: 140px 1fr;
-  grid-template-rows: 1fr 25px;
+  grid-template-rows: 1fr 30px;
   grid-template-areas: 
     "h m"
     "f f";
@@ -114,22 +114,30 @@ export const PrincipalS = styled.div`
     }
   }
   #myPicture {
-    width: 350px;
-    height: 200px;
+    width: 648px;
+    height: 400px;
+    @media (max-width: 1688px) {
+      width: 350px;
+      height: 200px;
+    }
     /* border-radius: 80%; */
     border-radius: 10px;
     border: 2px solid var(--buttonBorder);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
     /* margin-top: 30px; */
-    box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
   }
 
   // posiciona o elemento deslize na parte inferior direita da tela
-  #deslize {
+  #deslizeRight {
     /* border: 1px solid red; */
     position: fixed;
-    bottom: 22px;
+    bottom: 67px;
+    margin-right: 12px;
+    @media (max-width: 1488px) {
+      bottom: 27px;
+      margin-right: 4px;
+    }
     right: 0;
-    margin-right: 4px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -138,30 +146,37 @@ export const PrincipalS = styled.div`
       text-decoration: none;
     }
     #arrowDown {
-      width: 30px;
-      height: 30px;
+      /* border: 1px solid blue; */
+      width: 60px;
+      height: 60px;
       color: var(--tertiary);
       // posiciona o elemento no canto direito
-      margin-right: -30px;
+      margin-right: -24px;
+      @media (max-width: 1488px) {
+        width: 30px;
+        height: 30px;
+        margin-right: -24px;
+      }
+      img {
+        display: flex;
+        color: var(--secundary);
+      }
     }
     p {
       font-size: 12px;
       color: var(--secundary);
     }
-    img {
-      /* border: 1px solid blue; */
-      width: 55px;
-      height: 35px;
-      display: flex;
-      color: var(--secundary);
-    }
   }
-  #deslize2 {
+  #deslizeLeft {
     /* border: 1px solid red; */
     position: fixed;
-    bottom: 18px;
+    bottom: 67px;
+    margin-left: 152px;
+    @media (max-width: 1488px) {
+      bottom: 27px;
+      margin-left: 144px;
+    }
     left: 0;
-    margin-left: 144px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -171,21 +186,19 @@ export const PrincipalS = styled.div`
       text-decoration: none;
     }
     #arrowDown {
-      width: 30px;
-      height: 30px;
+      width: 60px;
+      height: 60px;
       color: var(--tertiary);
-      // posiciona o elemento no canto direito
-      margin-left: -30px;
+      // posiciona o elemento no canto esquerdo
+      margin-left: -18px;
+      @media (max-width: 1488px) {
+        width: 30px;
+        height: 30px;
+        margin-left: -30px;
+      }
     }
     p {
       font-size: 12px;
-      color: var(--secundary);
-    }
-    img {
-      /* border: 1px solid blue; */
-      width: 55px;
-      height: 35px;
-      display: flex;
       color: var(--secundary);
     }
   }
@@ -486,7 +499,7 @@ export const PrincipalS = styled.div`
       }
     }
 
-    #deslize {
+    /* #deslize {
       position: fixed;
       bottom: 18px;
       right: 0;
@@ -495,12 +508,11 @@ export const PrincipalS = styled.div`
       align-items: flex-end;
       height: 55px;
       img {
-        /* border: 1px solid blue; */
         width: 35px;
         height: 35px;
         display: flex;
       }
-    }
+    } */
   }
 
   #contatosS {

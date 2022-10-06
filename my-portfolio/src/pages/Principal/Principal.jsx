@@ -125,13 +125,13 @@ function Principal() {
           eu sou Samuel dos Reis */}
           {!isWheelActive && !isPageOnBottom && (
             <div>
-              <div id="deslize">
+              <div id="deslizeRight">
                 <abbr title="Deslize para baixo">
                   <TbArrowBigDownLines id="arrowDown" />
                   <p>Deslize</p>
                 </abbr>
               </div>
-              <div id="deslize2">
+              <div id="deslizeLeft">
                 <abbr title="Deslize para baixo">
                   <TbArrowBigDownLines id="arrowDown" />
                   <p>Deslize</p>
@@ -162,13 +162,13 @@ function Principal() {
           <Projects isFromMain />
           {!isWheelActive && !isPageOnBottom && (
             <div>
-              <div id="deslize">
+              <div id="deslizeRight">
                 <abbr title="Deslize para baixo">
                   <TbArrowBigDownLines id="arrowDown" />
                   <p>Deslize</p>
                 </abbr>
               </div>
-              <div id="deslize2">
+              <div id="deslizeLeft">
                 <abbr title="Deslize para baixo">
                   <TbArrowBigDownLines id="arrowDown" />
                   <p>Deslize</p>

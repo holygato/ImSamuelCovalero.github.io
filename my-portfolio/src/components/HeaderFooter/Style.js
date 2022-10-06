@@ -128,20 +128,22 @@ export const HeaderS = styled.div`
 export const FooterS = styled.div`
   // recebe isWheelActive como propriedade e caso seja true deixa a posição relativa
   position: ${(props) => (props.isFooterRelative ? 'relative' : 'fixed')};
+  // posiciona os textos no centro
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-area: f;
   bottom: 0;
   width: 100%;
-  height: 25px;
+  height: 30px;
+  background-color: var(--background);
+  gap: 10px;
   #phrase {
     font-size: 14px;
     // posiciona a esquerda do footer com um margin de 10px
     margin-left: 10px;
     margin-top: 4px;
   }
-  display: flex;
-  align-items: center;
-  background-color: var(--background);
-  gap: 10px;
   #copyright {
     /* border: 1px solid red; */
     margin-top: 8px;

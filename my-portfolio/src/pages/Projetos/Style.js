@@ -7,7 +7,7 @@ export const DivExterna = styled.div`
   display: grid;
   /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
   grid-template-columns: 140px 1fr;
-  grid-template-rows: 1fr 25px;
+  grid-template-rows: 1fr 30px;
   grid-template-areas: 
     "h m"
     "f f";

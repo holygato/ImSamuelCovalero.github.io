@@ -1,21 +1,12 @@
 // página principal
-import React, { useState, useEffect, useRef }/* , { useState } */ from 'react';
-import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
+import React, { useState, useEffect, useRef } from 'react';
+import { AiOutlineDownload } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { TbArrowBigDownLines } from 'react-icons/tb';
-// import arrowDown from '../../images/icons8-double-down-100.png';
 import curriculum from '../../data/curriculum.pdf';
-// import Carousel from 'react-multi-carousel';
-// import 'react-multi-carousel/lib/styles.css';
-// import PropTypes from 'prop-types';
-// import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
-// import { AiOutlineMail } from 'react-icons/ai';
-// import copy from 'copy-to-clipboard';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
-import {
-  DivExterna, PrincipalS, /* ContatoS, SkillsS, ProjetosS, */
-} from './Style';
+import { DivExterna, PrincipalS } from './Style';
 import Contact from '../../components/Contact';
 import MySkillsMain from '../../components/MySkillsMain';
 import Projects from '../../components/Projects';
@@ -59,44 +50,36 @@ function Principal() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [goingUp]);
 
-  // useEffect(() => {
-  //   if (isWheelActive) {
-  //     setTimeout(() => {
-  //       setIsWheelActive(false);
-  //     }, 5000);
-  //   }
-  // }, [isWheelActive]);
+  useEffect(() => {
+    if (isWheelActive) {
+      setTimeout(() => {
+        setIsWheelActive(false);
+      }, 5000);
+    }
+  }, [isWheelActive]);
 
   // Cria um useEffect para verificar se o scroll ativo ou parado e habilitar o botão de
   // scroll para baixo baseado em timer
-
   useEffect(() => {
     const handleScroll = () => {
-      // console.log('isPageOnBottom', isPageOnBottom);
-      // console.log('goingUp', goingUp);
       const currentScrollY = window.scrollY;
-      // if (prevScrollY.current < currentScrollY && goingUp) {
-      //   console.log('xablau1');
-      //   setIsWheelActive(true);
-      //   setGoingUp(false);
-      // }
-      // if (prevScrollY.current > currentScrollY && !goingUp) {
-      //   console.log('xablau2');
-      //   setIsWheelActive(true);
-      //   setGoingUp(true);
-      // }
-      setIsWheelActive(true);
+      if (currentScrollY > prevScrollY.current) {
+        setGoingUp(false);
+        setIsWheelActive(true);
+      }
+      if (currentScrollY < prevScrollY.current) {
+        setGoingUp(true);
+        setIsWheelActive(true);
+      }
       prevScrollY.current = currentScrollY;
       console.log(goingUp, currentScrollY);
-      // console.log('isWheelActive', isWheelActive);
+      setIsWheelActive(true);
 
-      // cria um contador para setar para false o isWheelActive após 4 segundos após
-      // o último scroll
-      if (isWheelActive) {
-        setTimeout(() => {
-          setIsWheelActive(false);
-        }, 4000);
-      }
+      // if (isWheelActive) {
+      //   setTimeout(() => {
+      //     setIsWheelActive(false);
+      //   }, 5000);
+      // }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -110,16 +93,10 @@ function Principal() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY === 0) {
-        // let timer = null;
-        // timer = setTimeout(() => {
-        //   setIsWheelActive(false);
-        // }, 4000);
-        // clearTimeout(timer);
         setIsFooterRelative(false);
         setDefaultPositionHeader(false);
       } else {
         setIsFooterRelative(true);
-        // setIsWheelActive(true);
       }
     };
 
@@ -128,27 +105,11 @@ function Principal() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isFooterRelative, isWheelActive]);
 
-  // const handleOnWheel = (e) => {
-  //   e.preventDefault();
-  //   if (window.pageYOffset === 0) {
-  //     setIsFooterRelative(false);
-  //     setIsWheelActive(false);
-  //   }
-  //   if (e.nativeEvent.wheelDelta < 0 && window.pageYOffset !== 0) {
-  //     setIsFooterRelative(true);
-  //   }
-  //   // if (e.deltaY > 20 || e.deltaX > 20) {
-  //   //   setIsWheelActive(true);
-  //   // }
-  //   setIsFooterRelative(true);
-  //   setIsWheelActive(true);
-  // };
-
   return (
     <DivExterna>
       <Header defaultPositionHeader={defaultPositionHeader} />
       <PrincipalS>
-        <div id="principalS"/*  onWheel={handleOnWheel} */>
+        <div id="principalS">
           <p id="firstPart">Olá, eu sou Samuel dos Reis,</p>
           <p id="secondPart">seja muito bem vindo (a) ao meu Portfólio!</p>
           <br />
@@ -192,12 +153,6 @@ function Principal() {
             </div>
           </div>
           <MySkillsMain />
-          {/* {!isWheelActive && (
-            <div id="deslize">
-              <img src={arrowDown} alt="deslize para baixo" />
-              <p>Deslize para baixo</p>
-            </div>
-          )} */}
         </div>
         <div id="projetosS">
           <Projects isFromMain />
@@ -226,9 +181,5 @@ function Principal() {
     </DivExterna>
   );
 }
-
-// Principal.propTypes = {
-//   deviceType: PropTypes.string.isRequired,
-// };
 
 export default Principal;

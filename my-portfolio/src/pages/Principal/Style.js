@@ -126,6 +126,9 @@ export const PrincipalS = styled.div`
     align-items: flex-end;
     height: 55px;
     font-size: 12px;
+    abbr[title] {
+      text-decoration: none;
+    }
     #arrowDown {
       width: 30px;
       height: 30px;
@@ -156,6 +159,9 @@ export const PrincipalS = styled.div`
     align-items: flex-end;
     height: 55px;
     font-size: 12px;
+    abbr[title] {
+      text-decoration: none;
+    }
     #arrowDown {
       width: 30px;
       height: 30px;

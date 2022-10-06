@@ -113,19 +113,27 @@ export const PrincipalS = styled.div`
       cursor: pointer;
     }
   }
+  #myPicture {
+    width: 350px;
+    height: 200px;
+    /* border-radius: 80%; */
+    border-radius: 10px;
+    border: 2px solid var(--buttonBorder);
+    /* margin-top: 30px; */
+    box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
+  }
 
   // posiciona o elemento deslize na parte inferior direita da tela
   #deslize {
     /* border: 1px solid red; */
     position: fixed;
-    bottom: 18px;
+    bottom: 22px;
     right: 0;
     margin-right: 4px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     height: 55px;
-    font-size: 12px;
     abbr[title] {
       text-decoration: none;
     }

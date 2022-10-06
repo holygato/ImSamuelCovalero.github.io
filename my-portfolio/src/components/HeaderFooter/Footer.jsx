@@ -1,5 +1,3 @@
-// Cria um componente para exibir o rodapé
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FooterS } from './Style';

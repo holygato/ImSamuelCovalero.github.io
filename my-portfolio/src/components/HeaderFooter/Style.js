@@ -43,6 +43,8 @@ export const HeaderS = styled.div`
   // recebe a prop isFooterRelative e se for true o height recebe 100vh
   // por padrão recebe 97vh
   height: ${(props) => (props.defaultPositionHeader ? '97vh' : '100vh')};
+  // adiciona transição a mudança de height
+  transition: height 0.5s;
   /* height: 100vh;  */
   display: flex;
   flex-direction: column;
@@ -53,20 +55,35 @@ export const HeaderS = styled.div`
   // coloca box-shadow na borda direita do componente
   box-shadow: 0 0 1px 0px var(--buttonBorder);
 
-  #logo {
+  #logoAndModeDiv {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 100%; */
+    width: 100%;
     top: 10px;
-    border: 1px solid blue;
     position: absolute;
-    /* margin-bottom: 20px; */
-  }
 
-  #modeBtn {
-    /* margin-bottom: 280px; */
-    top: 60px;
-    position: absolute;
-    #modeIcon {
-      width: 25px;
-      height: 25px;
+    #logo {
+      top: 10px;
+      /* border: 1px solid blue; */
+      /* position: absolute; */
+      margin-bottom: 20px;
+      width: 130px;
+      height: 100px;
+    }
+
+    #modeBtn {
+      /* margin-bottom: 280px; */
+      /* border: 1px solid green; */
+      top: 60px;
+      /* position: absolute; */
+      #modeIcon {
+        width: 25px;
+        height: 25px;
+        color: var(--headline);
+      }
     }
   }
 

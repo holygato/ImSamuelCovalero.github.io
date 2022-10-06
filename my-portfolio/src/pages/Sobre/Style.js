@@ -49,6 +49,16 @@ export const SobreS = styled.div`
     @media (max-width: 968px) {
       width: 90%;
     }
+
+    #myPicture{
+      width: 200px;
+      height: 230px;
+      border-radius: 10px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      border: 2px solid var(--buttonBorder);
+      box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
+    }
   }
 
   #curriculum {

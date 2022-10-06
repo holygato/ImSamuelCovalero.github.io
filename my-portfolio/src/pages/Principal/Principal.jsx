@@ -10,6 +10,7 @@ import { DivExterna, PrincipalS } from './Style';
 import Contact from '../../components/Contact';
 import MySkillsMain from '../../components/MySkillsMain';
 import Projects from '../../components/Projects';
+import myPicture from '../../images/myPicture.png';
 
 function Principal() {
   const [isWheelActive, setIsWheelActive] = useState(false);
@@ -140,6 +141,9 @@ function Principal() {
           )}
         </div>
         <div id="skillsS">
+          <div>
+            <img id="myPicture" src={myPicture} alt="Foto de Samuel dos Reis" />
+          </div>
           <div id="divSobremimCurriculo">
             <h1>Saiba mais sobre mim...</h1>
             <button id="sobreMimBtn" type="button" onClick={() => navigate('/about')}>Sobre mim</button>

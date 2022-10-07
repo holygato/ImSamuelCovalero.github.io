@@ -8,11 +8,15 @@ import PortfolioContext from '../../context/PortfolioContext';
 
 function Contato() {
   const { smallScreen } = useContext(PortfolioContext);
+  console.log('smallScreen_contact', smallScreen);
+
+  // if (!smallScreen) return <div />;
 
   return (
-    <DivExterna smallScreen={smallScreen}>
+    <DivExterna smallScreen={smallScreen === true}>
+      {console.log('smallScreen_contact', smallScreen)}
       <Header defaultPositionHeader />
-      <ContatoS>
+      <ContatoS smallScreen={smallScreen}>
         <Contact />
         <div id="toMainBtn">
           <ToMainBtn />

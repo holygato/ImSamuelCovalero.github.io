@@ -8,7 +8,9 @@ import { NormalMenuS, MenuBurgerS } from './Style';
 import covalero from '../../images/covalero.png';
 
 function Header({ defaultPositionHeader }) {
-  const { theme, setTheme, setSmallScreen } = useContext(PortfolioContext);
+  const {
+    theme, setTheme, setSmallScreen,
+  } = useContext(PortfolioContext);
   const [mountedComponent, setMountedComponent] = useState(false);
   const [isBurgerClicked, setIsBurgerClicked] = useState(false);
   // const [isScreenSmall, setIsScreenSmall] = useState(false);
@@ -21,13 +23,17 @@ function Header({ defaultPositionHeader }) {
   // de setGlobalScreenMode
   useEffect(() => {
     if (isSmallScreen) {
-      console.log('é menor que 768px');
+      // console.log('é menor que 768px');
+      // console.log('xablau1');
       setSmallScreen(true);
     } else {
-      console.log('é maior que 768px');
+      // console.log('é maior que 768px');
+      // console.log('xablau2');
       setSmallScreen(false);
     }
-  }, [isSmallScreen]);
+  }, []);
+
+  // console.log('smallScreen', isSmallScreen);
 
   const setMode = (mode) => {
     window.localStorage.setItem('theme', mode);

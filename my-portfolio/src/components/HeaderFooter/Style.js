@@ -127,9 +127,22 @@ export const NormalMenuS = styled.div`
 
 export const MenuBurgerS = styled.div`
   // estiliza o menu burger
+  border: 1px solid red;
   grid-area: h;
-  position: sticky;
-  top: 0;
+  /* top: 0; */
+  width: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--main);
+  #logoBurgerBtn {
+    border: none;
+    background-color: var(--main);
+    #logoBurgerImg {
+      width: 35px;
+      height: 35px;
+    }
+  }
 `;
 
 export const FooterS = styled.div`

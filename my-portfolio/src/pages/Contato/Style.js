@@ -1,38 +1,30 @@
 import styled from 'styled-components';
 
 export const DivExterna = styled.div`
-  /* border: 3px solid green; */
+  border: 3px solid green;
   height: 100%;
   width: 100%;
   display: grid;
   /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
-  // recebe a props smallScreen e se for false, aplica o grid-template-columns 140px 1fr
-  // se for true, aplica o grid-template-columns 1fr
   grid-template-columns: ${(props) => (props.smallScreen ? '1fr' : '140px 1fr')};
-  // recebe a props smallScreen e se for false, aplica o grid-template-rows 1fr 30px
-  // se for true, aplica o grid-template-rows 10px 1fr 30px
   grid-template-rows: ${(props) => (props.smallScreen ? '10px 1fr 30px' : '1fr 30px')};
-  // recebe a props smallScreen e se for false, aplica o grid-template-areas "h m"
-  //  "f f";
-  // se for true, aplica o grid-template-areas "h"
-  //  "m"
-  //  "f";
   grid-template-areas: ${(props) => (props.smallScreen
     ? `'h'
       'm'
       'f'`
     : `'h m'
     'f f'`)};
-  /* grid-template-areas: 
-    "h m"
-    "f f"; */
 `;
 
 export const ContatoS = styled.div`  
   grid-area: m;
-  /* border: 1px solid red; */
-  width: 80vw;
-  height: 97vh;
+  border: ${(props) => (props.smallScreen ? '1px solid red' : '1px solid blue')};
+  // regula o width de acordo com a pro smallScreen
+  width: ${(props) => (props.smallScreen ? '40%' : '80vw')};
+  // regula o height de acordo com a pro smallScreen
+  height: ${(props) => (props.smallScreen ? '100vh' : '97vh')};
+  /* width: 80vw;
+  height: 97vh; */
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
 import { DivExterna, ContatoS } from './Style';
 import Contact from '../../components/Contact';
 import ToMainBtn from '../../components/toMainBtn';
+import PortfolioContext from '../../context/PortfolioContext';
 
 function Contato() {
+  const { smallScreen } = useContext(PortfolioContext);
+
   return (
-    <DivExterna>
+    <DivExterna smallScreen={smallScreen}>
       <Header defaultPositionHeader />
       <ContatoS>
         <Contact />

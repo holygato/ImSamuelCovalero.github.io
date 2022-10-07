@@ -5,6 +5,7 @@ import PortfolioContext from './PortfolioContext';
 export function PortfolioProvider({ children }) {
   const [theme, setTheme] = useState('light');
   const [project, setProject] = useState({});
+  const [smallScreen, setSmallScreen] = useState(false);
 
   useEffect(() => {
     const checkProject = () => {
@@ -19,7 +20,7 @@ export function PortfolioProvider({ children }) {
   //   navigate(`/projetos/${projeto.id}`);
 
   const contextValue = useMemo(() => ({
-    theme, setTheme, project, setProject,
+    theme, setTheme, project, setProject, smallScreen, setSmallScreen,
   }), [theme]);
 
   return (

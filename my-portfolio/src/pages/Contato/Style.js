@@ -6,11 +6,26 @@ export const DivExterna = styled.div`
   width: 100%;
   display: grid;
   /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
-  grid-template-columns: 140px 1fr;
-  grid-template-rows: 1fr 30px;
-  grid-template-areas: 
+  // recebe a props smallScreen e se for false, aplica o grid-template-columns 140px 1fr
+  // se for true, aplica o grid-template-columns 1fr
+  grid-template-columns: ${(props) => (props.smallScreen ? '1fr' : '140px 1fr')};
+  // recebe a props smallScreen e se for false, aplica o grid-template-rows 1fr 30px
+  // se for true, aplica o grid-template-rows 10px 1fr 30px
+  grid-template-rows: ${(props) => (props.smallScreen ? '10px 1fr 30px' : '1fr 30px')};
+  // recebe a props smallScreen e se for false, aplica o grid-template-areas "h m"
+  //  "f f";
+  // se for true, aplica o grid-template-areas "h"
+  //  "m"
+  //  "f";
+  grid-template-areas: ${(props) => (props.smallScreen
+    ? `'h'
+      'm'
+      'f'`
+    : `'h m'
+    'f f'`)};
+  /* grid-template-areas: 
     "h m"
-    "f f";
+    "f f"; */
 `;
 
 export const ContatoS = styled.div`  

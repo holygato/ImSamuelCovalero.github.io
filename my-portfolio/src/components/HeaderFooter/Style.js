@@ -36,7 +36,7 @@ import styled from 'styled-components';
 //   }
 // `;
 
-export const HeaderS = styled.div`
+export const NormalMenuS = styled.div`
   grid-area: h;
   position: sticky;
   top: 0;
@@ -123,6 +123,13 @@ export const HeaderS = styled.div`
   #navegation a.active:hover {
     color: var(--tertiary);
   }
+`;
+
+export const MenuBurgerS = styled.div`
+  // estiliza o menu burger
+  grid-area: h;
+  position: sticky;
+  top: 0;
 `;
 
 export const FooterS = styled.div`

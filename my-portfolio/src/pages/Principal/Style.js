@@ -151,11 +151,11 @@ export const PrincipalS = styled.div`
       height: 60px;
       color: var(--tertiary);
       // posiciona o elemento no canto direito
-      margin-right: -24px;
+      margin-right: -26px;
       @media (max-width: 1488px) {
         width: 30px;
         height: 30px;
-        margin-right: -24px;
+        margin-right: -30px;
       }
       img {
         display: flex;

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const DivExterna = styled.div`
-  border: 3px solid green;
+  /* border: 3px solid green; */
   height: 100%;
   width: 100%;
   display: grid;
   /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
   grid-template-columns: ${(props) => (props.smallScreen ? '1fr' : '140px 1fr')};
-  grid-template-rows: ${(props) => (props.smallScreen ? '10px 1fr 30px' : '1fr 30px')};
+  grid-template-rows: ${(props) => (props.smallScreen ? '35px 1fr 30px' : '1fr 30px')};
   grid-template-areas: ${(props) => (props.smallScreen
     ? `'h'
       'm'
@@ -18,11 +18,11 @@ export const DivExterna = styled.div`
 
 export const ContatoS = styled.div`  
   grid-area: m;
-  border: ${(props) => (props.smallScreen ? '1px solid red' : '1px solid blue')};
+  /* border: ${(props) => (props.smallScreen ? '1px solid red' : '1px solid blue')}; */
   // regula o width de acordo com a pro smallScreen
-  width: ${(props) => (props.smallScreen ? '40%' : '80vw')};
+  width: ${(props) => (props.smallScreen ? '100%' : '80vw')};
   // regula o height de acordo com a pro smallScreen
-  height: ${(props) => (props.smallScreen ? '100vh' : '97vh')};
+  height: ${(props) => (props.smallScreen ? '93vh' : '97vh')};
   /* width: 80vw;
   height: 97vh; */
   display: flex;

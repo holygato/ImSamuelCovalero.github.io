@@ -53,7 +53,7 @@ export const NormalMenuS = styled.div`
   /* border-right: 1px solid var(--secundary); */
   background-color: var(--main);
   // coloca box-shadow na borda direita do componente
-  box-shadow: 0 0 1px 0px var(--buttonBorder);
+  /* box-shadow: 0 0 1px 0px var(--buttonBorder); */
 
   #logoAndModeDiv {
     /* border: 1px solid red; */
@@ -80,6 +80,7 @@ export const NormalMenuS = styled.div`
       top: 60px;
       /* position: absolute; */
       #modeIcon {
+        cursor: pointer;
         width: 25px;
         height: 25px;
         color: var(--headline);
@@ -127,21 +128,90 @@ export const NormalMenuS = styled.div`
 
 export const MenuBurgerS = styled.div`
   // estiliza o menu burger
-  border: 1px solid red;
+  /* border: 1px solid red; */
   grid-area: h;
   /* top: 0; */
-  width: 100vh;
+  width: 100%;
+  height: 39px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px;
   background-color: var(--main);
+  // adiciona box-shadow na borda inferior do componente
+  /* box-shadow: 0 0 2px 0px var(--buttonBorder); */
+  #modeBtnBurger {
+      #modeIcon {
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+        color: var(--headline);
+      }
+    }
   #logoBurgerBtn {
     border: none;
     background-color: var(--main);
-    #logoBurgerImg {
-      width: 35px;
-      height: 35px;
+    cursor: pointer;
+    // recebe a prop logo e coloca no background como cover do botão
+    background-image: url(${(props) => props.logo});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    #hamburgerIcon {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 40px;
+      color: rgb(216 212 242 / 65%);
+      // deixa com visibilidade parcial
+      opacity: 0.5;
     }
+  }
+`;
+
+export const MenuBurgerContentS = styled.div`
+  // estiliza os links do menu burger
+  /* border: 1px solid red; */
+  display: flex;
+  /* gap: 20px; */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #a7a9be;
+  /* width: 100%; */
+  // posiciona fixado no topo direto abaixo do menu burger
+  position: fixed;
+  top: 39px;
+  right: 0;
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    /* margin-bottom: 10px; */
+    // adiciona estilização de botão nos links com box shadow, deixa todos com o mesmo width e height
+    /* background-color: var(--buttonBackground); */
+    color: var(--buttonText);
+    border-top: 1px solid #a7a9be;
+    padding: 12px;
+    /* border-radius: 12px; */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    cursor: pointer;
+  }
+  a:hover {
+    color: var(--tertiary);
+    // adiciona estilização no hover dos links
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  }
+  a.active {
+    color: var(--tertiary);
+  }
+  a.active:hover {
+    color: var(--tertiary);
   }
 `;
 
@@ -156,7 +226,7 @@ export const FooterS = styled.div`
   bottom: 0;
   width: 100%;
   height: 30px;
-  background-color: var(--background);
+  background-color: var(--main);
   gap: 10px;
   #phrase {
     font-size: 14px;

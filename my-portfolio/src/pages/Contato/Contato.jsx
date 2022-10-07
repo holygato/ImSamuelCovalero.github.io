@@ -5,18 +5,28 @@ import { DivExterna, ContatoS } from './Style';
 import Contact from '../../components/Contact';
 import ToMainBtn from '../../components/toMainBtn';
 import PortfolioContext from '../../context/PortfolioContext';
+import { MenuBurgerContentS } from '../../components/HeaderFooter/Style';
 
 function Contato() {
-  const { smallScreen } = useContext(PortfolioContext);
-  console.log('smallScreen_contact', smallScreen);
-
-  // if (!smallScreen) return <div />;
+  const { smallScreen, isBurgerClicked } = useContext(PortfolioContext);
+  console.log('isBurgerClicked', isBurgerClicked);
+  console.log('smallScreen', smallScreen);
 
   return (
-    <DivExterna smallScreen={smallScreen === true}>
-      {console.log('smallScreen_contact', smallScreen)}
+    <DivExterna smallScreen={smallScreen}>
       <Header defaultPositionHeader />
       <ContatoS smallScreen={smallScreen}>
+        {
+          isBurgerClicked
+          && (
+            <MenuBurgerContentS>
+              <a href="/">Principal</a>
+              <a href="/about">Sobre</a>
+              <a href="/projetos">Projetos</a>
+              <a href="/contact">Contato</a>
+            </MenuBurgerContentS>
+          )
+        }
         <Contact />
         <div id="toMainBtn">
           <ToMainBtn />

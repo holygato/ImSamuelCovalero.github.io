@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 // import { CgDarkMode } from 'react-icons/cg';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { TbLetterX } from 'react-icons/tb';
 import PropTypes from 'prop-types';
 import { useMediaQuery } from 'react-responsive';
 import PortfolioContext from '../../context/PortfolioContext';
@@ -75,16 +76,26 @@ function Header({ defaultPositionHeader }) {
               </abbr>
             </div>
             <div id="logoBurger">
-              {/* Cria um botão com a imagem covalero que ao ser clicado seta como
-              true isBurgerClicked */}
-              <abbr title="Abra o Menu">
-                <button id="logoBurgerBtn" type="button" onClick={() => setIsBurgerClicked(!isBurgerClicked)}>
-                  <GiHamburgerMenu id="hamburgerIcon" />
-                  {/* <img id="logoBurgerImg" src={covaleroBurger} alt="logo" /> */}
-                </button>
-              </abbr>
+              {/* Cria uma lógica baseada no isBurgerClicked para alternar entre o botão com o
+              ícone buger e o botão com icone x */}
+              {isBurgerClicked
+                ? (
+                  <abbr title="Feche o Menu">
+                    <button type="button" id="XIconBtn" onClick={() => setIsBurgerClicked(false)}>
+                      <TbLetterX id="XIcon" />
+                    </button>
+                  </abbr>
+                )
+                : (
+                  <abbr title="Abra o Menu">
+                    <button id="iconBurgerBtn" type="button" onClick={() => setIsBurgerClicked(!isBurgerClicked)}>
+                      <GiHamburgerMenu id="hamburgerIcon" />
+                      {/* <img id="logoBurgerImg" src={covaleroBurger} alt="logo" /> */}
+                    </button>
+                  </abbr>
+                )}
             </div>
-            {console.log('xablau', isBurgerClicked)}
+            {/* {console.log('xablau', isBurgerClicked)} */}
             {/* {
               isBurgerClicked
               && (

@@ -6,11 +6,14 @@ export const DivExterna = styled.div`
   width: 100%;
   display: grid;
   /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
-  grid-template-columns: 140px 1fr;
-  grid-template-rows: 1fr 30px;
-  grid-template-areas: 
-    "h m"
-    "f f";
+  grid-template-columns: ${(props) => (props.smallScreen ? '1fr' : '140px 1fr')};
+  grid-template-rows: ${(props) => (props.smallScreen ? '35px 1fr 30px' : '1fr 30px')};
+  grid-template-areas: ${(props) => (props.smallScreen
+    ? `'h'
+      'm'
+      'f'`
+    : `'h m'
+    'f f'`)};
 `;
 
 export const ProjetosS = styled.div` 
@@ -18,17 +21,19 @@ export const ProjetosS = styled.div`
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
-  width: 80vw;
+  width: ${(props) => (props.smallScreen ? '100vw' : '80vw')};
   height: 100%;
+  /* width: 80vw;
+  height: 100%; */
   /* gap: 20px;  */
   @media (max-width: 780px) {
     min-height: 100%;
-    margin-top: 45px;
+    /* margin-top: 45px; */
     /* gap: 15px;  */
   }
   @media (max-width: 580px) {
     min-height: 100%;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     /* gap: 10px;  */
   }
   
@@ -104,6 +109,7 @@ export const ProjetosS = styled.div`
         font-size: 16px;
         // exibe o texto justificado
         text-align: justify;
+        text-justify: auto;
       }
       #skills {
         display: flex;

@@ -116,7 +116,7 @@ function Projects({ deviceType, isFromMain }) {
       >
         {projects.map((projeto) => (
           <ProjectCardS key={projeto.id}>
-            <h2>{projeto.nome}</h2>
+            <h2 id="projectName">{projeto.nome}</h2>
             {!isFromMain && <p>{projeto.titulo}</p>}
             {isFromMain
               ? (

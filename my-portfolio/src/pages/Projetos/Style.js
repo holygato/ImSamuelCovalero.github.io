@@ -20,22 +20,22 @@ export const ProjetosS = styled.div`
   grid-area: m;
   /* border: ${(props) => (props.smallScreen ? '1px solid red' : '1px solid blue')}; */
   /* margin-top: 45px; */
-  width: ${(props) => (props.smallScreen ? '98vw' : '80vw')};
-  height: ${(props) => (props.smallScreen ? '93vh' : '97vh')};
+  width: ${(props) => (props.smallScreen ? '100vw' : '80vw')};
+  height: ${(props) => (props.smallScreen ? '92vh' : '96vh')};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-bottom: 20px;
+  margin-bottom: 5px;
   h1 {
-    font-size: 32px;;
-    margin-top: 30px;
+    font-size: 32px;
+    margin-top: 25px;
   }
   #projetosDivS {
     /* border: 2px solid red; */
     width: 100%;
-    height: 100%;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     justify-items: center;
@@ -55,12 +55,13 @@ export const ProjectCardS = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   gap: 20px; 
   padding: 10px; 
   margin-right: 20px;
-  h2 {
+  #projectName {
     font-size: 28px;
+    // exibe esse elemento mais atrás que os outros
   }
   #verDetalhes {
     background-color: var(--tertiary);
@@ -103,6 +104,10 @@ export const ProjectImageS = styled.div`
   align-items: center;
   width: 480px;
   height: 400px;
+  @media (max-width: 768px) {
+    width: 380px;
+    height: 300px;
+  }
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   // recebe uma props projectImg e a usa como background
@@ -118,6 +123,10 @@ export const ProjectImageS = styled.div`
     // seta o width e height do div para ser igual ao do ProjectImageS
     width: 480px;
     height: 400px;
+    @media (max-width: 768px) {
+      width: 380px;
+      height: 300px;
+    }
     background-color: ${(props) => (props.isHover ? 'rgb(216 212 242 / 72%)' : 'transparent')};
   }
   #projectBadgesImgs {

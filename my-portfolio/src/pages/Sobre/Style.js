@@ -6,18 +6,23 @@ export const DivExterna = styled.div`
   width: 100%;
   display: grid;
   /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
-  grid-template-columns: 140px 1fr;
-  grid-template-rows: 1fr 30px;
-  grid-template-areas: 
-    "h m"
-    "f f";
+  grid-template-columns: ${(props) => (props.smallScreen ? '1fr' : '140px 1fr')};
+  grid-template-rows: ${(props) => (props.smallScreen ? '35px 1fr 30px' : '1fr 30px')};
+  grid-template-areas: ${(props) => (props.smallScreen
+    ? `'h'
+      'm'
+      'f'`
+    : `'h m'
+    'f f'`)};
 `;
 
 export const SobreS = styled.div`  
   grid-area: m;
-  /* border: 1px solid red; */
-  width: 80vw;
-  height: 100%;
+  /* border: ${(props) => (props.smallScreen ? '1px solid red' : '1px solid blue')}; */
+  width: ${(props) => (props.smallScreen ? '98vw' : '80vw')};
+  height: ${(props) => (props.smallScreen ? '100%' : '100%')};
+  /* width: 80vw;
+  height: 100%; */
   align-items: center;
   justify-content: center;
   justify-items: center;
@@ -40,10 +45,13 @@ export const SobreS = styled.div`
       font-size: 32px;
       margin-bottom: 15px;
       // posiciona no topo da página
-      margin-top: 10px;
+      margin-top: 15px;
     }
     p {
       font-size: 14px;
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
       text-align: justify;
     }
     @media (max-width: 968px) {
@@ -92,6 +100,9 @@ export const SobreS = styled.div`
     #skillsTitle {
       text-align: center;
       font-size: 24px;
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
     }
     #skills {
       /* margin-left:25%; */
@@ -111,8 +122,15 @@ export const SobreS = styled.div`
           align-items: center;
           margin-bottom: 10px;
           font-size: 14px;
+          @media (max-width: 768px) {
+            font-size: 12px;
+          }
           width: 150px;
           height: 45px;
+          @media (max-width: 768px) {
+            width: 120px;
+            height: 40px;
+          }
           border-radius: 8px;
           box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
           border: 1px solid #e6e6e6;

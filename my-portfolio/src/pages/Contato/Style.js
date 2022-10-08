@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const DivExterna = styled.div`
-  border: 3px solid green;
+  /* border: 3px solid green; */
   height: 100%;
   width: 100%;
   display: grid;
@@ -18,7 +18,7 @@ export const DivExterna = styled.div`
 
 export const ContatoS = styled.div`  
   grid-area: m;
-  border: ${(props) => (props.smallScreen ? '1px solid red' : '1px solid blue')};
+  /* border: ${(props) => (props.smallScreen ? '1px solid red' : '1px solid blue')}; */
   width: ${(props) => (props.smallScreen ? '100%' : '80vw')};
   height: ${(props) => (props.smallScreen ? '93vh' : '97vh')};
   /* width: 80vw;

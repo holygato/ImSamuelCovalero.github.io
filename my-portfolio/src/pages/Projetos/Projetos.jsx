@@ -13,7 +13,6 @@ function Projetos({ deviceType }) {
     <DivExterna smallScreen={smallScreen}>
       <Header defaultPositionHeader />
       <ProjetosS smallScreen={smallScreen}>
-        {console.log('isBurgerClicked', isBurgerClicked)}
         {
           isBurgerClicked
           && <HamburgerMenu />

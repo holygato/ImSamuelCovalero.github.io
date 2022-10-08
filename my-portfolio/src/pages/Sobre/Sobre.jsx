@@ -1,4 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {
+  useEffect, useRef, useState, useContext,
+} from 'react';
 import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
@@ -7,10 +9,13 @@ import curriculum from '../../data/curriculum.pdf';
 import MySkills from '../../components/MySkills';
 import ToMainBtn from '../../components/toMainBtn';
 import myPicture2 from '../../images/myPicture2.jpg';
+import PortfolioContext from '../../context/PortfolioContext';
+import HamburgerMenu from '../../components/HeaderFooter/HamburgerMenu';
 
 function Sobre() {
   const [goingUp, setGoingUp] = useState(false);
   const [defaultPositionHeader, setDefaultPositionHeader] = useState(false);
+  const { smallScreen, isBurgerClicked } = useContext(PortfolioContext);
 
   const prevScrollY = useRef(0);
 
@@ -41,9 +46,13 @@ function Sobre() {
   }, [goingUp]);
 
   return (
-    <DivExterna>
+    <DivExterna smallScreen={smallScreen}>
       <Header defaultPositionHeader={defaultPositionHeader} />
-      <SobreS>
+      <SobreS smallScreen={smallScreen}>
+        {
+          isBurgerClicked
+          && <HamburgerMenu />
+        }
         <div id="aboutDiv">
           <h1>Sobre Mim:</h1>
           <img id="myPicture" src={myPicture2} alt="Foto de Samuel Covalero dos Reis" />

@@ -21,6 +21,7 @@ export const ContatoS = styled.div`
   /* border: ${(props) => (props.smallScreen ? '1px solid red' : '1px solid blue')}; */
   width: ${(props) => (props.smallScreen ? '100%' : '80vw')};
   height: ${(props) => (props.smallScreen ? '93vh' : '97vh')};
+  transition: all 0.3s;
   /* width: 80vw;
   height: 97vh; */
   display: flex;

@@ -1,5 +1,7 @@
 // página principal
-import React, { useState, useEffect, useRef } from 'react';
+import React, {
+  useState, useEffect, useRef, useContext,
+} from 'react';
 import { AiOutlineDownload } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { TbArrowBigDownLines } from 'react-icons/tb';
@@ -11,6 +13,8 @@ import Contact from '../../components/Contact';
 import MySkillsMain from '../../components/MySkillsMain';
 import Projects from '../../components/Projects';
 import myPicture from '../../images/myPicture.png';
+import PortfolioContext from '../../context/PortfolioContext';
+import HamburgerMenu from '../../components/HeaderFooter/HamburgerMenu';
 
 function Principal() {
   const [isWheelActive, setIsWheelActive] = useState(false);
@@ -18,6 +22,7 @@ function Principal() {
   const [isPageOnBottom, setIsPageOnBottom] = useState(false);
   const [goingUp, setGoingUp] = useState(false);
   const [defaultPositionHeader, setDefaultPositionHeader] = useState(true);
+  const { smallScreen, isBurgerClicked } = useContext(PortfolioContext);
 
   const navigate = useNavigate();
 
@@ -107,9 +112,13 @@ function Principal() {
   }, [isFooterRelative, isWheelActive]);
 
   return (
-    <DivExterna>
+    <DivExterna smallScreen={smallScreen}>
       <Header defaultPositionHeader={defaultPositionHeader} />
-      <PrincipalS>
+      <PrincipalS smallScreen={smallScreen}>
+        {
+          isBurgerClicked
+          && <HamburgerMenu />
+        }
         <div id="principalS">
           <p id="firstPart">Olá, eu sou Samuel dos Reis,</p>
           <p id="secondPart">seja muito bem vindo (a) ao meu Portfólio!</p>

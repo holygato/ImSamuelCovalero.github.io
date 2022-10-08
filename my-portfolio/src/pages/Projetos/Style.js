@@ -22,6 +22,7 @@ export const ProjetosS = styled.div`
   /* margin-top: 45px; */
   width: ${(props) => (props.smallScreen ? '100vw' : '80vw')};
   height: ${(props) => (props.smallScreen ? '92vh' : '96vh')};
+  transition: all 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -123,7 +123,7 @@ export const NormalMenuS = styled.div`
 
 export const MenuBurgerS = styled.div`
   // estiliza o menu burger
-  border: 2px solid green;
+  /* border: 2px solid green; */
   grid-area: h;
   /* top: 0; */
   width: 100%;

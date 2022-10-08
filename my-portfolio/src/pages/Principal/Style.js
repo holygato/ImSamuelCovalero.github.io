@@ -8,25 +8,34 @@ export const DivExterna = styled.div`
   width: 100%;
   display: grid;
   /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
-  grid-template-columns: 140px 1fr;
-  grid-template-rows: 1fr 30px;
-  grid-template-areas: 
-    "h m"
-    "f f";
+  grid-template-columns: ${(props) => (props.smallScreen ? '1fr' : '140px 1fr')};
+  grid-template-rows: ${(props) => (props.smallScreen ? '35px 1fr 30px' : '1fr 30px')};
+  grid-template-areas: ${(props) => (props.smallScreen
+    ? `'h'
+      'm'
+      'f'`
+    : `'h m'
+    'f f'`)};
 `;
 
 export const PrincipalS = styled.div` 
   /* background-color: rgb(216 212 242 / 82%); */
   grid-area: m;
-  /* border: 2px solid green; */
-  width: 92vw;
+  /* border: ${(props) => (props.smallScreen ? '1px solid green' : '1px solid blue')}; */
+  width: ${(props) => (props.smallScreen ? '100vw' : '92vw')};
+  height: ${(props) => (props.smallScreen ? '100%' : '100%')};
   @media (max-width: 1150px) {
     width: 86vw;
   }
   @media (max-width: 1050px) {
     width: 84vw;
   }
-  height: 100%;
+  @media (max-width: 768px) {
+    width: 98vw;
+  }
+  transition: all 0.3s;
+  /* width: 92vw;
+  height: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,6 +185,9 @@ export const PrincipalS = styled.div`
       bottom: 27px;
       margin-left: 144px;
     }
+    @media (max-width: 768px) {
+      margin-left: 5px;
+    } 
     left: 0;
     display: flex;
     flex-direction: column;
@@ -428,7 +440,7 @@ export const PrincipalS = styled.div`
 
   #projetosS {
     /* grid-area: m; */
-    border: 1px solid green;
+    /* border: 1px solid green; */
     /* margin-top: 45px; */
     width: 100%;
     height: 100vh;

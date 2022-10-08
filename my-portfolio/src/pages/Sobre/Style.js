@@ -21,6 +21,7 @@ export const SobreS = styled.div`
   /* border: ${(props) => (props.smallScreen ? '1px solid red' : '1px solid blue')}; */
   width: ${(props) => (props.smallScreen ? '98vw' : '80vw')};
   height: ${(props) => (props.smallScreen ? '100%' : '100%')};
+  transition: all 0.3s;
   /* width: 80vw;
   height: 100%; */
   align-items: center;

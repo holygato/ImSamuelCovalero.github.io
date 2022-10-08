@@ -36,7 +36,7 @@ export const ProjetosS = styled.div`
     /* margin-top: 10px; */
     /* gap: 10px;  */
   }
-  
+  transition: all 0.3s;
   align-items: center;
   justify-content: center;
   justify-items: center;

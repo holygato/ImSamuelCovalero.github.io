@@ -14,7 +14,6 @@ function Contato() {
     <DivExterna smallScreen={smallScreen}>
       <Header defaultPositionHeader />
       <ContatoS smallScreen={smallScreen}>
-        {console.log('isBurgerClicked', isBurgerClicked)}
         {
           isBurgerClicked
           && <HamburgerMenu />

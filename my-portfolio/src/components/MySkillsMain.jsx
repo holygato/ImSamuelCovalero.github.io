@@ -41,6 +41,7 @@ function MySkills() {
     { nome: 'Mocha', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mocha/mocha-plain.svg' },
     { nome: 'Chai', imagem: 'https://avatars.githubusercontent.com/u/1515293?s=280&v=4' },
     { nome: 'TypeScript', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+    // { nome: 'MongoDB', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
   ];
 
   return (

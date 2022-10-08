@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-// import Carousel from 'react-multi-carousel';
-// import 'react-multi-carousel/lib/styles.css';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
 import { DivExterna, ProjetosS/* , ProjectCardS  */ } from './Style';
 import Projects from '../../components/Projects';
+import PortfolioContext from '../../context/PortfolioContext';
+import HamburgerMenu from '../../components/HeaderFooter/HamburgerMenu';
 
 function Projetos({ deviceType }) {
+  const { smallScreen, isBurgerClicked } = useContext(PortfolioContext);
   return (
-    <DivExterna>
+    <DivExterna smallScreen={smallScreen}>
       <Header defaultPositionHeader />
-      <ProjetosS>
+      <ProjetosS smallScreen={smallScreen}>
+        {console.log('isBurgerClicked', isBurgerClicked)}
+        {
+          isBurgerClicked
+          && <HamburgerMenu />
+        }
         <div id="projetosDivS">
           <Projects deviceType={deviceType} isFromMain={false} />
         </div>

@@ -6,19 +6,22 @@ export const DivExterna = styled.div`
   width: 100%;
   display: grid;
   /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
-  grid-template-columns: 140px 1fr;
-  grid-template-rows: 1fr 30px;
-  grid-template-areas: 
-    "h m"
-    "f f";
+  grid-template-columns: ${(props) => (props.smallScreen ? '1fr' : '140px 1fr')};
+  grid-template-rows: ${(props) => (props.smallScreen ? '35px 1fr 30px' : '1fr 30px')};
+  grid-template-areas: ${(props) => (props.smallScreen
+    ? `'h'
+      'm'
+      'f'`
+    : `'h m'
+    'f f'`)};
 `;
 
 export const ProjetosS = styled.div`  
   grid-area: m;
-  /* border: 1px solid red; */
+  /* border: ${(props) => (props.smallScreen ? '1px solid red' : '1px solid blue')}; */
   /* margin-top: 45px; */
-  width: 80vw;
-  height: 97vh;
+  width: ${(props) => (props.smallScreen ? '98vw' : '80vw')};
+  height: ${(props) => (props.smallScreen ? '93vh' : '97vh')};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,8 +33,9 @@ export const ProjetosS = styled.div`
     margin-top: 30px;
   }
   #projetosDivS {
+    /* border: 2px solid red; */
     width: 100%;
-    height: 100vh;
+    height: 100%;
     align-items: center;
     justify-content: center;
     justify-items: center;

@@ -428,7 +428,7 @@ export const PrincipalS = styled.div`
 
   #projetosS {
     /* grid-area: m; */
-    /* border: 1px solid green; */
+    border: 1px solid green;
     /* margin-top: 45px; */
     width: 100%;
     height: 100vh;

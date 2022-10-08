@@ -84,7 +84,7 @@ function Header({ defaultPositionHeader }) {
                 </button>
               </abbr>
             </div>
-            {console.log(isBurgerClicked)}
+            {console.log('xablau', isBurgerClicked)}
             {/* {
               isBurgerClicked
               && (

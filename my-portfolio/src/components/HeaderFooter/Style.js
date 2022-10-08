@@ -99,7 +99,6 @@ export const NormalMenuS = styled.div`
   }
   #navegation a {
     text-decoration: none;
-    color: black;
     font-size: 20px;
     /* margin-bottom: 10px; */
     // adiciona estilização de botão nos links com box shadow, deixa todos com o mesmo width e height
@@ -128,7 +127,7 @@ export const NormalMenuS = styled.div`
 
 export const MenuBurgerS = styled.div`
   // estiliza o menu burger
-  /* border: 1px solid red; */
+  border: 1px solid blue;
   grid-area: h;
   /* top: 0; */
   width: 100%;
@@ -154,10 +153,10 @@ export const MenuBurgerS = styled.div`
     background-color: var(--main);
     cursor: pointer;
     // recebe a prop logo e coloca no background como cover do botão
-    background-image: url(${(props) => props.logo});
-    background-size: cover;
+    /* background-image: url(${(props) => props.logo}); */
+    /* background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
     width: 40px;
     height: 40px;
     #hamburgerIcon {
@@ -165,16 +164,16 @@ export const MenuBurgerS = styled.div`
       background-repeat: no-repeat;
       width: 40px;
       height: 40px;
-      color: rgb(216 212 242 / 65%);
+      color: var(--extra);
       // deixa com visibilidade parcial
-      opacity: 0.5;
+      /* opacity: 0.5; */
     }
   }
 `;
 
 export const MenuBurgerContentS = styled.div`
   // estiliza os links do menu burger
-  /* border: 1px solid red; */
+  border: 1px solid blue;
   display: flex;
   /* gap: 20px; */
   flex-direction: column;
@@ -184,12 +183,30 @@ export const MenuBurgerContentS = styled.div`
   /* width: 100%; */
   // posiciona fixado no topo direto abaixo do menu burger
   position: fixed;
-  top: 39px;
+  top: 0;
   right: 0;
+  #XIconBtn {
+    color: var(--buttonText);
+    background-color: var(--main);
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    #XIcon {
+      // posiciona o XIcon no canto direito do botão
+      /* position: absolute; */
+      /* right: 50px; */
+      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      color: var(--extra);
+    }
+  }
   a {
     text-decoration: none;
-    color: black;
     font-size: 20px;
+    background-color: var(--main);
     /* margin-bottom: 10px; */
     // adiciona estilização de botão nos links com box shadow, deixa todos com o mesmo width e height
     /* background-color: var(--buttonBackground); */
@@ -197,14 +214,14 @@ export const MenuBurgerContentS = styled.div`
     border-top: 1px solid #a7a9be;
     padding: 12px;
     /* border-radius: 12px; */
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     width: 100%;
     cursor: pointer;
   }
   a:hover {
     color: var(--tertiary);
     // adiciona estilização no hover dos links
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 
   }
   a.active {
@@ -212,6 +229,14 @@ export const MenuBurgerContentS = styled.div`
   }
   a.active:hover {
     color: var(--tertiary);
+  }
+  #logo {
+    /* border: 1px solid red; */
+    margin-top: 5px;
+    width: 135.344px;
+    height: 100%;
+    background-color: var(--main);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }
 `;
 

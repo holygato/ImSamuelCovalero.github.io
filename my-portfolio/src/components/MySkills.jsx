@@ -1,9 +1,4 @@
 import React from 'react';
-// import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
-// import curriculum from '../data/curriculum.pdf';
-// import {
-//   DivExterna, PrincipalS, ProjectCardS, ContatoS, SkillsS,
-// } from './Style';
 
 function MySkills() {
   const tecnologiesAlreadyKnowed = [
@@ -46,24 +41,8 @@ function MySkills() {
 
   return (
     <div id="skillsDiv">
-      {/* cria uma div com um botão para direcionar para a página sobre mim */}
-      {/* <div>
-        <h1>Saiba mais sobre mim...</h1>
-        <a href="/about">
-          <button type="button">Sobre mim</button>
-        </a>
-      </div>
-      <div id="curriculum">
-        <a href={curriculum} target="_blank" rel="noreferrer">
-          <button type="button">
-            <AiOutlineDownload />
-            Currículum
-          </button>
-        </a>
-      </div> */}
       <h1 id="skillsTitle">Linguagens e Tecnologias:</h1>
       <div id="skills">
-        {/* <h3>Tecnologias:</h3> */}
         <div id="tecnologiesPosition">
           <h4 id="subTitle">Conheço:</h4>
           {tecnologiesAlreadyKnowed.map((tecnology) => (
@@ -95,7 +74,6 @@ function MySkills() {
           ))}
         </div>
       </div>
-      {/* <button type="button" onClick={() => window.history.back()}>Voltar</button> */}
     </div>
   );
 }

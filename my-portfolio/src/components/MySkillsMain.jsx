@@ -1,20 +1,6 @@
 import React from 'react';
-// import { ImagesS } from '../pages/Sobre/Style';
 
 function MySkills() {
-  // const tecnologiesImages = [
-  //   { nome: 'HTML5', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
-  //   { nome: 'CSS3', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
-  //   { nome: 'JavaScript', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-  //   { nome: 'React', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-  //   { nome: 'NodeJS', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-  //   { nome: 'MySQL', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
-  //   { nome: 'Docker', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
-  //   { nome: 'TypeScript', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
-  //   { nome: 'Docker', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
-  // ];
-
-  // Cria um componentes para mostrar as imagens das tecnologias que conheço
   const tecnologiesImages = [
     { nome: 'HTML5', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
     { nome: 'CSS3', imagem: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },

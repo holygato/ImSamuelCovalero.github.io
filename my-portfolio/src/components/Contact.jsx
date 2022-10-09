@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
 import copy from 'copy-to-clipboard';
-// import {
-//   DivExterna, PrincipalS, ProjectCardS, ContatoS, SkillsS,
-// } from './Style';
 
 function Contact() {
   const [isCopied, setIsCopied] = useState(false);

@@ -7,16 +7,11 @@ import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { ProjectCardS, ProjectImageS } from '../pages/Projetos/Style';
-// import PortfolioContext from '../context/PortfolioContext';
 import projects from '../data/projects';
 import projectTecnologies from '../data/skillBadges';
-// import { ProjectImgMainS } from '../pages/Principal/Style';
 import ToMainBtn from './toMainBtn';
 
 function Projects({ deviceType, isFromMain }) {
-  // Realizei um test em enviar o projeto para o context e puxar ele no ProjectDetails
-  // porém não funcionou, então passei pelo navigate
-  // const { setProject } = useContext(PortfolioContext);
   const navigate = useNavigate();
   // Recebe a props isFromMain e cria um objeto com o número de exibições dependendo de onde veio
   const projectSpec = isFromMain
@@ -44,19 +39,13 @@ function Projects({ deviceType, isFromMain }) {
   // Cria uma função para verificar se o mouse está sobre o card e mudar o estado isHover
   // para true ou false
   const [isHover, setIsHover] = React.useState(false);
-  // Adiciona uma mensagem abbr Clique para ver mais detalhes a função HandleMouseEnter
+
   const HandleMouseEnter = () => {
     setIsHover(true);
   };
   const HandleMouseLeave = () => {
     setIsHover(false);
   };
-
-  // Cria uma função para exbibir o alerta na tela de ver mais detalhes
-  // const handleMouseOver = () => {
-  //   console.log('Clique para ver mais detalhes');
-  //   alert('Clique para ver mais detalhes');
-  // };
 
   return (
     <div id="projetosDiv">
@@ -147,7 +136,6 @@ function Projects({ deviceType, isFromMain }) {
               ? <button id="verDetalhes" type="button" onClick={() => navigate(`/projetos/${projeto.id}`, { state: { projeto } })}>Ver detalhes</button>
               : (
                 <>
-                  {/* cria um botão para direcionar para a tela de detalhes */}
                   <button id="verDetalhes" type="button" onClick={() => navigate(`/projetos/${projeto.id}`, { state: { projeto } })}>Ver detalhes</button>
                   <div id="vercelGithub">
                     <abbr title="abrir o projeto">

@@ -22,20 +22,18 @@ export const ContatoS = styled.div`
   width: ${(props) => (props.smallScreen ? '100%' : '80vw')};
   height: ${(props) => (props.smallScreen ? '93vh' : '97vh')};
   transition: all 0.3s;
-  /* width: 80vw;
-  height: 97vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 30px;
+
   #contactItens {
     h1 {
       font-size: 32px;
       margin-bottom: 15px;
     }
-    // remove o estilo de link
     a {
       text-decoration: none;
       color: var(--secundary);
@@ -50,55 +48,4 @@ export const ContatoS = styled.div`
       font-size: 32px;
     }
   }
-  /* button {
-    --color: #560bad;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 130px;
-    height: 35px;
-    line-height: 2.5em;
-    margin: 20px;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid var(--color);
-    transition: color .5s;
-    z-index: 1;
-    font-size: 17px;
-    border-radius: 6px;
-    font-weight: 500;
-    color: var(--color);
-  }
-
-  button:before {
-    content: "";
-    position: absolute;
-    text-align: center;
-    z-index: -1;
-    background: var(--color);
-    height: 150px;
-    width: 200px;
-    border-radius: 50%;
-  }
-
-  button:hover {
-    color: #fff;
-  }
-
-  button:before {
-    top: 100%;
-    left: 100%;
-    transition: all .7s;
-  }
-
-  button:hover:before {
-    top: -30px;
-    left: -30px;
-  }
-
-  button:active:before {
-    background: #3a0ca3;
-    transition: background 0s;
-  } */
 `;

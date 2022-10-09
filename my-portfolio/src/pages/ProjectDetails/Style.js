@@ -23,43 +23,35 @@ export const ProjetosS = styled.div`
   flex-direction: column;
   width: ${(props) => (props.smallScreen ? '100vw' : '80vw')};
   height: 100%;
-  /* width: 80vw;
-  height: 100%; */
-  /* gap: 20px;  */
   @media (max-width: 780px) {
     min-height: 100%;
-    /* margin-top: 45px; */
-    /* gap: 15px;  */
   }
   @media (max-width: 580px) {
     min-height: 100%;
-    /* margin-top: 10px; */
-    /* gap: 10px;  */
   }
   transition: all 0.3s;
   align-items: center;
   justify-content: center;
   justify-items: center;
   text-align: center;
+
   #projectName {
     height: 100px;
     font-size: 30px;
     display: flex;
     align-items: center;
-    /* margin-bottom: 15px; */
   }
   h3 {
     font-size: 20px;
     margin-bottom: 15px;
   }
+
   #projectBody {
-    /* border: 1px solid green; */
     display: flex;
     flex-direction: row;
     @media (max-width: 1080px) {
       width: 90%;
       flex-direction: column;
-      // alinha os itens ao centro
       align-items: center;
       justify-content: center;
       justify-items: center;
@@ -77,17 +69,12 @@ export const ProjetosS = styled.div`
         height: 250px;
       }
     }
-    /* img {
-      width: 430px;
-      height: 400px;
-    } */
     span {
       display: flex;
       flex-direction: row;
       gap: 10px;
     }
     #projectDetails {
-      /* border: 1px solid red; */
       box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
       border-radius: 4px;
       display: flex;
@@ -107,7 +94,6 @@ export const ProjetosS = styled.div`
       }
       p {
         font-size: 16px;
-        // exibe o texto justificado
         text-align: justify;
         text-justify: auto;
       }
@@ -138,12 +124,32 @@ export const ProjetosS = styled.div`
       }    
     }
   }
+
+  #backBtn {
+    background-color: var(--extra);
+    color: var(--buttonText);
+    border: 2px solid var(--buttonBorder);
+    margin-bottom: 15px;
+    margin-top: 10px;
+    width: 110px;
+    height: 28px;
+    border-radius: 3px;
+    line-height: 2.5em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: 'Conthrax';
+    box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
+    cursor: pointer;
+  }
+
   #toProjectsBtn {
     background-color: var(--tertiary);
     color: var(--buttonText);
     border: 2px solid var(--secundary);
     margin-bottom: 15px;
-    margin-top: 10px;
     width: 170px;
     height: 40px;
     border-radius: 3px;
@@ -160,18 +166,4 @@ export const ProjetosS = styled.div`
   #toMainBtn {
     margin-bottom: 15px;
   }
-`;
-
-export const ProjectCardS = styled.div`
-  /* border: 1px solid blue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 90vh;
-  img {
-    width: 350px;
-    height: 300px;
-  } */
 `;

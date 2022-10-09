@@ -22,15 +22,13 @@ export const SobreS = styled.div`
   width: ${(props) => (props.smallScreen ? '98vw' : '80vw')};
   height: ${(props) => (props.smallScreen ? '100%' : '100%')};
   transition: all 0.3s;
-  /* width: 80vw;
-  height: 100%; */
   align-items: center;
   justify-content: center;
   justify-items: center;
   display: flex;
   flex-direction: column;
+
   #aboutDiv {
-    /* border: 1px solid blue; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -45,7 +43,6 @@ export const SobreS = styled.div`
     h1 {
       font-size: 32px;
       margin-bottom: 15px;
-      // posiciona no topo da página
       margin-top: 15px;
     }
     p {
@@ -106,7 +103,6 @@ export const SobreS = styled.div`
       }
     }
     #skills {
-      /* margin-left:25%; */
       margin-bottom: 35px;
       display: flex;
       justify-content: center;
@@ -146,28 +142,10 @@ export const SobreS = styled.div`
       }
     }
   }
+
   #toMainBtn{
     margin-bottom: 15px;
   }
-  /* #footer {
-    h3 {
-      border: 1px solid red;
-      position: fixed;
-      bottom: 0;
-      margin-bottom: 0;
-      font-size: 14px;
-    }
-  } */
 `;
-
-// export const ImagesS = styled.div`
-//   border: 1px solid red;
-//   display: flex;
-//   /* flex-direction: wrap; */
-//   img{
-//     height: 40px;
-//     width: 50px;
-//   }
-// `;
 
 export default SobreS;

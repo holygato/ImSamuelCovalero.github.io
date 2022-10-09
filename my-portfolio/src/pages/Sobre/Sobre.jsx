@@ -1,7 +1,7 @@
 import React, {
   useEffect, useRef, useState, useContext,
 } from 'react';
-import { AiOutlineDownload/* , AiOutlineArrowDown */ } from 'react-icons/ai';
+import { AiOutlineDownload } from 'react-icons/ai';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
 import { DivExterna, SobreS } from './Style';
@@ -25,19 +25,15 @@ function Sobre() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY > prevScrollY.current) {
-        console.log('descendo');
         setGoingUp(false);
       }
       if (currentScrollY < prevScrollY.current) {
-        console.log('subindo');
         setGoingUp(true);
       }
       prevScrollY.current = currentScrollY;
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        console.log('final da página');
         setDefaultPositionHeader(true);
       } else {
-        console.log('não está no final da página');
         setDefaultPositionHeader(false);
       }
     };
@@ -76,9 +72,6 @@ function Sobre() {
             em meus códigos.
           </p>
         </div>
-        {/* <div id="myPictureDiv">
-
-        </div> */}
         <div id="curriculum">
           <a href={curriculum} target="_blank" rel="noreferrer">
             <button type="button">

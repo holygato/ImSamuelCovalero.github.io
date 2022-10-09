@@ -1,4 +1,3 @@
-// página principal
 import React, {
   useState, useEffect, useRef, useContext,
 } from 'react';
@@ -34,20 +33,16 @@ function Principal() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY > prevScrollY.current) {
-        console.log('descendo');
         setGoingUp(false);
       }
       if (currentScrollY < prevScrollY.current) {
-        console.log('subindo');
         setGoingUp(true);
       }
       prevScrollY.current = currentScrollY;
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        console.log('final da página');
         setIsPageOnBottom(true);
         setDefaultPositionHeader(true);
       } else {
-        console.log('não está no final da página');
         setIsPageOnBottom(false);
         setDefaultPositionHeader(false);
       }
@@ -56,6 +51,7 @@ function Principal() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [goingUp]);
 
+  // Cria um useEffectque seta isWheelActive como false após 5 segundos de inatividade no scroll
   useEffect(() => {
     if (isWheelActive) {
       setTimeout(() => {
@@ -64,8 +60,7 @@ function Principal() {
     }
   }, [isWheelActive]);
 
-  // Cria um useEffect para verificar se o scroll ativo ou parado e habilitar o botão de
-  // scroll para baixo baseado em timer
+  // Cria um useEffect para verificar se o scroll ativo e seta como true isWheelActive
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -78,14 +73,8 @@ function Principal() {
         setIsWheelActive(true);
       }
       prevScrollY.current = currentScrollY;
-      console.log(goingUp, currentScrollY);
+      // console.log(goingUp, currentScrollY);
       setIsWheelActive(true);
-
-      // if (isWheelActive) {
-      //   setTimeout(() => {
-      //     setIsWheelActive(false);
-      //   }, 5000);
-      // }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -127,11 +116,9 @@ function Principal() {
             Aqui você conhecerá um pouco sobre mim e aonde me encontrar, as tecnologias que conheço
             e utilizo e terá acesso a alguns projetos que desenvolvi.
           </p>
-          <div id="contato">
-            <button id="meContacteBtn" type="button" onClick={() => navigate('/contact')}>Me Contacte!</button>
+          <div id="contactMe">
+            <button id="contacteMeBtn" type="button" onClick={() => navigate('/contact')}>Me Contacte!</button>
           </div>
-          {/* insere o elemento deslize para baixo caso exiba na tela o texto Olá,
-          eu sou Samuel dos Reis */}
           {!isWheelActive && !isPageOnBottom && (
             <div>
               <div id="deslizeRight">

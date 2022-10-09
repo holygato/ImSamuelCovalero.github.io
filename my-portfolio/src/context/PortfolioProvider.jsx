@@ -21,7 +21,6 @@ export function PortfolioProvider({ children }) {
   // de isBurgetClicked para false
   useEffect(() => {
     const checkSmallScreen = () => {
-      console.log('smallScreen', smallScreen);
       if (!smallScreen) {
         setIsBurgerClicked(false);
       }
@@ -29,42 +28,11 @@ export function PortfolioProvider({ children }) {
     checkSmallScreen();
   }, [smallScreen]);
 
-  // Cria um useEffect para verificar se a tela está menor do que 768px
-  // useEffect(() => {
-  //   const checkScreenSize = () => {
-  //     if (smallScreen) {
-  //       console.log('PROVIDER é menor que 768px');
-  //       setSmallScreen(true);
-  //       console.log('PROVIDER smallScreen_provider', smallScreen);
-  //     } else {
-  //       console.log('PROVIDERé maior que 768px');
-  //       setSmallScreen(false);
-  //       console.log('PROVIDER smallScreen_provider', smallScreen);
-  //     }
-  //   };
-  //   checkScreenSize();
-  // }, [smallScreen, smallScreen]);
-
-  // Cria uma função que utiliza o useMediaQuery para verificar se o display está menor do que 768px
-  // e seta como true isScreenSmall
-  // const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
-
-  // Cria um useEffect para verificar se isScreenSmall é true o false e seta o valor
-  // de setGlobalScreenMode
-  // useEffect(() => {
-  //   if (isSmallScreen) {
-  //     console.log('é menor que 768px');
-  //     setSmallScreen(true);
-  //   } else {
-  //     console.log('é maior que 768px');
-  //     setSmallScreen(false);
-  //   }
-  // }, [isSmallScreen]);
-
-  // console.log('projeto', projeto);
-  //   ProjectDetails({ projeto });
-  //   navigate(`/projetos/${projeto.id}`);
-
+  /*
+    Versão mais atual do React, foi alterado o modo de passar o contexto,
+    necessitando a utilização do useMemo, os estados que precisam ser atualizados
+    nos componentes são passados na array de dependências do useMemo
+  */
   const contextValue = useMemo(() => ({
     theme,
     setTheme,

@@ -2,9 +2,6 @@ import { createGlobalStyle } from 'styled-components';
 import conthrax from '../fonts/conthrax-sb.ttf';
 import neuropol from '../fonts/neuropol.otf';
 import technoCapture from '../fonts/techno_capture.ttf';
-// import PortfolioContext from '../context/PortfolioContext';
-
-// background: ${({ theme }) => theme.background};
 
 export default createGlobalStyle`
   @font-face {

@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import { useMediaQuery } from 'react-responsive';
 import PortfolioContext from '../../context/PortfolioContext';
 import { NormalMenuS, MenuBurgerS } from './Style';
-import covalero from '../../images/covaleroLogo.svg';
 
 function Header({ defaultPositionHeader }) {
   const {
@@ -88,7 +87,7 @@ function Header({ defaultPositionHeader }) {
             <div id="logoAndModeDiv">
               <div>
                 <a href="/">
-                  <img id="logo" src={covalero} alt="Covalero" />
+                  <img id="logo" src="./images/covaleroLogo.svg" alt="Logo Covalero" />
                 </a>
               </div>
               <div id="modeBtn">

@@ -19,7 +19,6 @@ export const DivExterna = styled.div`
 export const ProjetosS = styled.div`  
   grid-area: m;
   /* border: ${(props) => (props.smallScreen ? '1px solid red' : '1px solid blue')}; */
-  /* margin-top: 45px; */
   width: ${(props) => (props.smallScreen ? '100vw' : '80vw')};
   height: ${(props) => (props.smallScreen ? '92vh' : '96vh')};
   transition: all 0.3s;
@@ -29,12 +28,13 @@ export const ProjetosS = styled.div`
   justify-content: center;
   text-align: center;
   margin-bottom: 5px;
+
   h1 {
     font-size: 32px;
     margin-top: 25px;
   }
+
   #projetosDivS {
-    /* border: 2px solid red; */
     width: 100%;
     height: 100vh;
     align-items: center;
@@ -42,12 +42,6 @@ export const ProjetosS = styled.div`
     justify-items: center;
     text-align: center;
   }
-  /* width: 100%;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  text-align: center; */
 `;
 
 export const ProjectCardS = styled.div`
@@ -62,7 +56,6 @@ export const ProjectCardS = styled.div`
   margin-right: 20px;
   #projectName {
     font-size: 28px;
-    // exibe esse elemento mais atrás que os outros
   }
   #verDetalhes {
     background-color: var(--tertiary);
@@ -95,7 +88,6 @@ export const ProjectCardS = styled.div`
       color: var(--extra);
     }
   }
-  // Cria uma animação ao passar o mouse sobre o card
 `;
 
 export const ProjectImageS = styled.div`
@@ -121,7 +113,6 @@ export const ProjectImageS = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // seta o width e height do div para ser igual ao do ProjectImageS
     width: 480px;
     height: 400px;
     @media (max-width: 768px) {
@@ -130,6 +121,7 @@ export const ProjectImageS = styled.div`
     }
     background-color: ${(props) => (props.isHover ? 'rgb(216 212 242 / 72%)' : 'transparent')};
   }
+  
   #projectBadgesImgs {
     display: flex;
     flex-wrap: wrap;

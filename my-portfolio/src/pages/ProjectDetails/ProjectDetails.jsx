@@ -1,12 +1,9 @@
 import React, { useContext } from 'react';
-// import PropTypes from 'prop-types';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-// import PortfolioContext from '../../context/PortfolioContext';
-import { DivExterna, ProjetosS/* , ProjectCardS  */ } from './Style';
+import { DivExterna, ProjetosS } from './Style';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
-// import Projects from '../../components/Projects';
 import projectTecnologies from '../../data/skillBadges';
 import ToMainBtn from '../../components/toMainBtn';
 import PortfolioContext from '../../context/PortfolioContext';
@@ -42,7 +39,6 @@ function ProjectDetails() {
           </div>
           <div id="projectDetails">
             <p>{projeto.description}</p>
-            {/* Cria uma span para mostrar as skills */}
             <div id="skills">
               {renderBadges(projeto.skills)}
             </div>
@@ -60,7 +56,8 @@ function ProjectDetails() {
             </div>
           </div>
         </div>
-        {/* Cria um botão para voltar para a página de projetos */}
+        {/* cria um botão para voltar para a página anterior */}
+        <button id="backBtn" type="button" onClick={() => navigate(-1)}>Voltar</button>
         <button id="toProjectsBtn" type="button" onClick={() => navigate('/projetos', { state: { projeto } })}>Página de Projetos</button>
         <div id="toMainBtn">
           <ToMainBtn />

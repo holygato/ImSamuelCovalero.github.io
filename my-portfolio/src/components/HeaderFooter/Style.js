@@ -62,7 +62,7 @@ export const NormalMenuS = styled.div`
     align-items: center;
     /* height: 100%; */
     width: 100%;
-    top: 10px;
+    top: 20px;
     position: absolute;
 
     #logo {
@@ -70,14 +70,25 @@ export const NormalMenuS = styled.div`
       /* border: 1px solid blue; */
       /* position: absolute; */
       margin-bottom: 20px;
-      width: 130px;
-      height: 100px;
+      width: 135.344px;
+      height: 128px;
     }
 
     #modeBtn {
       /* margin-bottom: 280px; */
       /* border: 1px solid green; */
       top: 60px;
+      // quando diminuir o height do header, o botão de mudar de tema deve ficar posicionado a 10px do bottom
+      @media (max-height: 700px) {
+        /* top: auto; */
+        /* bottom: -500px; */
+        position: fixed;
+        // centraliza o elemento em relação ao eixo y
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        bottom: 35px;
+      }
       /* position: absolute; */
       #modeIcon {
         cursor: pointer;
@@ -148,21 +159,12 @@ export const MenuBurgerS = styled.div`
     border: none;
     background-color: var(--main);
     cursor: pointer;
-    // recebe a prop logo e coloca no background como cover do botão
-    /* background-image: url(${(props) => props.logo}); */
-    /* background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
     width: 30px;
     height: 30px;
     #hamburgerIcon {
-      /* background-size: cover;
-      background-repeat: no-repeat; */
       width: 30px;
       height: 30px;
       color: var(--extra);
-      // deixa com visibilidade parcial
-      /* opacity: 0.5; */
     }
   }
   #XIconBtn {
@@ -250,7 +252,7 @@ export const MenuBurgerContentS = styled.div`
     /* border: 1px solid red; */
     /* margin-top: 5px; */
     width: 135.344px;
-    height: 100%;
+    height: 128px;
     background-color: var(--main);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }

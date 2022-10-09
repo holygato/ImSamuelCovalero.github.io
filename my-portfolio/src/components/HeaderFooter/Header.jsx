@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-// import { CgDarkMode } from 'react-icons/cg';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { TbLetterX } from 'react-icons/tb';
@@ -7,16 +6,13 @@ import PropTypes from 'prop-types';
 import { useMediaQuery } from 'react-responsive';
 import PortfolioContext from '../../context/PortfolioContext';
 import { NormalMenuS, MenuBurgerS } from './Style';
-import covalero from '../../images/covalero.png';
-import covaleroBurger from '../../images/covalero_burger.png';
+import covalero from '../../images/covaleroLogo.svg';
 
 function Header({ defaultPositionHeader }) {
   const {
     theme, setTheme, setSmallScreen, smallScreen, setIsBurgerClicked, isBurgerClicked,
   } = useContext(PortfolioContext);
   const [mountedComponent, setMountedComponent] = useState(false);
-  // const [isBurgerClicked, setIsBurgerClicked] = useState(false);
-  // const [isScreenSmall, setIsScreenSmall] = useState(false);
 
   // Cria uma função que utiliza o useMediaQuery para verificar se o display está menor do que 768px
   // e seta como true isScreenSmall
@@ -26,24 +22,18 @@ function Header({ defaultPositionHeader }) {
   // de setGlobalScreenMode
   useEffect(() => {
     if (isSmallScreen) {
-      // console.log('é menor que 768px');
-      // console.log('xablau1');
       setSmallScreen(true);
     } else {
-      // console.log('é maior que 768px');
-      // console.log('xablau2');
       setSmallScreen(false);
     }
   }, [isSmallScreen]);
-
-  // console.log('smallScreen', isSmallScreen);
 
   const setMode = (mode) => {
     window.localStorage.setItem('theme', mode);
     setTheme(mode);
   };
 
-  // cria função para chamar o setMode e mudar o tema
+  // cria função para chamar o setMode e trocar o tema
   const themeToggler = () => {
     if (theme === 'light') {
       setMode('dark');
@@ -64,10 +54,9 @@ function Header({ defaultPositionHeader }) {
 
   return (
     <div>
-      {/* {console.log('smallScreen', smallScreen)} */}
       {smallScreen
         ? (
-          <MenuBurgerS logo={covaleroBurger}>
+          <MenuBurgerS>
             <div id="modeBtnBurger">
               <abbr title="Mode">
                 {theme === 'light'
@@ -76,8 +65,6 @@ function Header({ defaultPositionHeader }) {
               </abbr>
             </div>
             <div id="logoBurger">
-              {/* Cria uma lógica baseada no isBurgerClicked para alternar entre o botão com o
-              ícone buger e o botão com icone x */}
               {isBurgerClicked
                 ? (
                   <abbr title="Feche o Menu">
@@ -90,23 +77,10 @@ function Header({ defaultPositionHeader }) {
                   <abbr title="Abra o Menu">
                     <button id="iconBurgerBtn" type="button" onClick={() => setIsBurgerClicked(!isBurgerClicked)}>
                       <GiHamburgerMenu id="hamburgerIcon" />
-                      {/* <img id="logoBurgerImg" src={covaleroBurger} alt="logo" /> */}
                     </button>
                   </abbr>
                 )}
             </div>
-            {/* {console.log('xablau', isBurgerClicked)} */}
-            {/* {
-              isBurgerClicked
-              && (
-                <div id="menuBurgerDiv">
-                  <a href="/">Principal</a>
-                  <a href="/about">Sobre</a>
-                  <a href="/projetos">Projetos</a>
-                  <a href="/contact">Contato</a>
-                </div>
-              )
-            } */}
           </MenuBurgerS>
         )
         : (

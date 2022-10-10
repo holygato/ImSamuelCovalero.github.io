@@ -83,7 +83,7 @@ function Header({ defaultPositionHeader }) {
             <div id="logoAndModeDiv">
               <div>
                 <a href="/">
-                  <img id="logo" src="./images/covaleroLogo.svg" alt="Logo Covalero" />
+                  <img id="logo" src="/images/covaleroLogo.svg" alt="Logo Covalero" />
                 </a>
               </div>
               <div id="modeBtn">

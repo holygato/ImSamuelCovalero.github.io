@@ -8,7 +8,7 @@ function HamburgerMenu() {
       <a href="/about">Sobre</a>
       <a href="/projetos">Projetos</a>
       <a id="contatoA" href="/contact">Contato</a>
-      <img id="logo" src="./images/covaleroLogo.svg" alt="Logo Covalero" />
+      <img id="logo" src="/images/covaleroLogo.svg" alt="Logo Covalero" />
     </MenuBurgerContentS>
   );
 }

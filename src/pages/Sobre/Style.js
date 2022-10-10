@@ -40,6 +40,7 @@ export const SobreS = styled.div`
     box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
     border-radius: 8px;
     padding: 20px;
+    margin-top: 20px;
     h1 {
       font-size: 32px;
       margin-bottom: 15px;

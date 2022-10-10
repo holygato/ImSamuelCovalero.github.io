@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const DivExterna = styled.div`
   /* border: 3px solid green; */
-  height: ${(props) => (props.smallScreen ? '99vh' : '100vh')};
+  height: ${(props) => (props.smallScreen ? '98vh' : '100vh')};
   width: 100%;
   display: grid;
   /* grid-template-columns: repeat(auto-fit, (120px, 1fr)); */
@@ -25,8 +25,8 @@ export const ProjetosS = styled.div`
   @media (max-width: 580px) {
     min-height: 97vh;
   }
-  height: ${(props) => (props.smallScreen ? '92vh' : '100%')};
-  @media (max-height: 980px) {
+  height: ${(props) => (props.smallScreen ? '91vh' : '100%')};
+  @media (max-height: 880px) {
     min-height: 980px;
   }
   transition: all 0.3s;

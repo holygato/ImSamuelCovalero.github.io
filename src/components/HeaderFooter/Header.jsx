@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { TbLetterX } from 'react-icons/tb';
@@ -11,7 +11,6 @@ function Header({ defaultPositionHeader }) {
   const {
     theme, setTheme, setSmallScreen, smallScreen, setIsBurgerClicked, isBurgerClicked,
   } = useContext(PortfolioContext);
-  const [mountedComponent, setMountedComponent] = useState(false);
 
   // Cria uma função que utiliza o useMediaQuery para verificar se o display está menor do que 768px
   // e seta como true isScreenSmall
@@ -45,11 +44,8 @@ function Header({ defaultPositionHeader }) {
     const localTheme = window.localStorage.getItem('theme');
     if (localTheme) {
       setTheme(localTheme);
-      setMountedComponent(true);
     }
   }, []);
-
-  if (!mountedComponent) return <div />;
 
   return (
     <div>

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.dedffc83.css",
-    "main.js": "./static/js/main.3c686106.js",
+    "main.js": "./static/js/main.d568e946.js",
     "static/media/myPicture.png": "./static/media/myPicture.06eb9af21d381fe01909.png",
     "static/media/conthrax-sb.ttf": "./static/media/conthrax-sb.a2d57358d4c314d0ed39.ttf",
     "static/media/neuropol.otf": "./static/media/neuropol.20d65c2970bd3c91ca88.otf",
@@ -13,10 +13,10 @@
     "static/media/revicons.woff": "./static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "./index.html",
     "main.dedffc83.css.map": "./static/css/main.dedffc83.css.map",
-    "main.3c686106.js.map": "./static/js/main.3c686106.js.map"
+    "main.d568e946.js.map": "./static/js/main.d568e946.js.map"
   },
   "entrypoints": [
     "static/css/main.dedffc83.css",
-    "static/js/main.3c686106.js"
+    "static/js/main.d568e946.js"
   ]
 }

@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.908c04ea.css",
-    "main.js": "/static/js/main.ef1e7f4a.js",
-    "static/media/myPicture.png": "/static/media/myPicture.06eb9af21d381fe01909.png",
-    "static/media/conthrax-sb.ttf": "/static/media/conthrax-sb.a2d57358d4c314d0ed39.ttf",
-    "static/media/neuropol.otf": "/static/media/neuropol.20d65c2970bd3c91ca88.otf",
-    "static/media/curriculum.pdf": "/static/media/curriculum.40584ca0dc8cd48e705c.pdf",
-    "static/media/techno_capture.ttf": "/static/media/techno_capture.29f9ca231d328b267c9c.ttf",
-    "static/media/myPicture2.jpg": "/static/media/myPicture2.77693b4cf21c817247bd.jpg",
-    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
-    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
-    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
-    "index.html": "/index.html",
-    "main.908c04ea.css.map": "/static/css/main.908c04ea.css.map",
-    "main.ef1e7f4a.js.map": "/static/js/main.ef1e7f4a.js.map"
+    "main.css": "./static/css/main.dedffc83.css",
+    "main.js": "./static/js/main.20489c3c.js",
+    "static/media/myPicture.png": "./static/media/myPicture.06eb9af21d381fe01909.png",
+    "static/media/conthrax-sb.ttf": "./static/media/conthrax-sb.a2d57358d4c314d0ed39.ttf",
+    "static/media/neuropol.otf": "./static/media/neuropol.20d65c2970bd3c91ca88.otf",
+    "static/media/curriculum.pdf": "./static/media/curriculum.40584ca0dc8cd48e705c.pdf",
+    "static/media/techno_capture.ttf": "./static/media/techno_capture.29f9ca231d328b267c9c.ttf",
+    "static/media/myPicture2.jpg": "./static/media/myPicture2.77693b4cf21c817247bd.jpg",
+    "static/media/revicons.eot": "./static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "./static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "./static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "./index.html",
+    "main.dedffc83.css.map": "./static/css/main.dedffc83.css.map",
+    "main.20489c3c.js.map": "./static/js/main.20489c3c.js.map"
   },
   "entrypoints": [
-    "static/css/main.908c04ea.css",
-    "static/js/main.ef1e7f4a.js"
+    "static/css/main.dedffc83.css",
+    "static/js/main.20489c3c.js"
   ]
 }

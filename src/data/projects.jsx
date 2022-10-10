@@ -5,9 +5,9 @@
 // import starwarsImg from '../images/starwars.png';
 // import appReceitasImg from '../images/appReceitas.png';
 // Se for trabalhar com os gifs importados da pasta images no src
-// import trybetunesGif from '../images/trybetunes.gif';
-// import appReceitasGif from '../images/appReceitas.gif';
-// import starwarsGif from '../images/starwars.gif';
+import trybetunesGif from '../images/trybetunes.gif';
+import appReceitasGif from '../images/appReceitas.gif';
+import starwarsGif from '../images/starwars.gif';
 // import metawalletGif from '../images/metawallet.gif';
 // import triviaGif from '../images/trivia.gif';
 
@@ -19,7 +19,7 @@ const projetos = [
     nome: 'Trybetunes',
     titulo: 'Aplicativo de player de músicas',
     description: 'Trybetunes é um projeto/aplicação desenvolvida no curso da Trybe em React.js que acessa uma API de músicas e cria um ambiente em que o usuário pode, dentro de sua conta, ouvir e favoritar músicas.',
-    imagem: `${IMAGES_URL}/trybetunes.gif`,
+    imagem: trybetunesGif,
     skills: ['JavaScript', 'React', 'Styled Components CSS'],
     stack: 'Front-end',
     linkApp: 'https://project-tryetunes.vercel.app/',
@@ -30,7 +30,7 @@ const projetos = [
     nome: 'Meta Wallet',
     titulo: 'Aplicativo de carteira de controle de gastos',
     description: 'MetaWallet é um projeto/aplicação desenvolvida no curso da Trybe em React.js para finanças e controle de gastos. Utilizou uma API para a cotação em tempo real das moedas.',
-    imagem: `${IMAGES_URL}/metawallet.gif`,
+    imagem: appReceitasGif,
     skills: ['JavaScript', 'React', 'Redux', 'Styled Components CSS'],
     stack: 'Front-end',
     linkApp: 'https://project-trybewallet-drab.vercel.app/',
@@ -41,7 +41,7 @@ const projetos = [
     nome: 'Trivia',
     titulo: 'Aplicativo de jogo de perguntas e respostas',
     description: 'Trivia é um projeto/aplicação desenvolvida no curso da Trybe em React.js que acessa uma API de perguntas e respostas e cria um ambiente onde o usuário pode jogar e ganhar pontos.',
-    imagem: `${IMAGES_URL}/trivia.gif`,
+    imagem: starwarsGif,
     skills: ['JavaScript', 'React', 'Redux', 'Tailwind CSS', 'React Testing Library'],
     stack: 'Front-end',
     linkApp: 'https://project-trivia-dun.vercel.app/',

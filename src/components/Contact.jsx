@@ -59,8 +59,8 @@ function Contact() {
         </label>
         <label htmlFor="gitHub">
           {' '}
-          <abbr title="https://github.com/holygato">
-            <a href="https://github.com/holygato" target="_blank" rel="noreferrer">
+          <abbr title="https://github.com/imsamuelcovalero">
+            <a href="https://github.com/imsamuelcovalero" target="_blank" rel="noreferrer">
               GitHub:
               <FaGithub />
             </a>

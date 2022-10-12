@@ -214,6 +214,10 @@ export const PrincipalS = styled.div`
         width: 350px;
         height: 200px;
       }
+      @media (max-width: 780px) {
+        width: 90vw;
+        height: 200px;
+      }
       border-radius: 10px;
       border: 2px solid var(--buttonBorder);
       box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
@@ -467,7 +471,7 @@ export const PrincipalS = styled.div`
         cursor: pointer;
       }
     }
-    h2 {
+    #projectName {
       font-size: 24px !important;
       @media (max-width: 968px) {
         font-size: 18px !important;

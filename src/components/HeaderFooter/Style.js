@@ -206,8 +206,8 @@ export const FooterS = styled.div`
   gap: 10px;
   #phrase {
     font-size: 14px;
-    @media (max-width: 568px) {
-      font-size: 11px;
+    @media (max-width: 640px) {
+      font-size: 9px;
     }
     margin-left: 10px;
     margin-top: 4px;
@@ -217,7 +217,7 @@ export const FooterS = styled.div`
     display: flex;
     margin-left: auto;
     margin-right: 10px;
-    font-size: 10px;
+    font-size: 8px;
   }
   // coloca box-shadow apenas borda superior do componente
   box-shadow: 0px -2px 2px var(--buttonBorder);

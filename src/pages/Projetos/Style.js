@@ -21,6 +21,9 @@ export const ProjetosS = styled.div`
   /* border: ${(props) => (props.smallScreen ? '1px solid red' : '1px solid blue')}; */
   width: ${(props) => (props.smallScreen ? '100vw' : '80vw')};
   height: ${(props) => (props.smallScreen ? '92vh' : '96vh')};
+  @media (max-width: 768px) {
+    height: 100%;
+  }
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
@@ -41,6 +44,9 @@ export const ProjetosS = styled.div`
     justify-content: center;
     justify-items: center;
     text-align: center;
+    @media (max-width: 768px) {
+      min-height: 100vh;
+    }
   }
 `;
 
@@ -51,11 +57,23 @@ export const ProjectCardS = styled.div`
   justify-content: center;
   width: 100%;
   height: 80vh;
+  @media (max-width: 768px) {
+    min-height: 100%;
+  }
   gap: 20px; 
   padding: 10px; 
   margin-right: 20px;
   #projectName {
     font-size: 28px;
+    @media (max-width: 768px) {
+      font-size: 18px !important;
+    }
+  }
+  #title {
+    font-size: 18px;
+    @media (max-width: 768px) {
+      font-size: 12px !important;
+    }
   }
   #verDetalhes {
     background-color: var(--tertiary);
@@ -98,8 +116,8 @@ export const ProjectImageS = styled.div`
   width: 480px;
   height: 400px;
   @media (max-width: 768px) {
-    width: 380px;
-    height: 300px;
+    width: 280px;
+    height: 200px;
   }
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
   border-radius: 4px;

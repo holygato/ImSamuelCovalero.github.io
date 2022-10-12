@@ -21,6 +21,10 @@ export const ContatoS = styled.div`
   /* border: ${(props) => (props.smallScreen ? '1px solid red' : '1px solid blue')}; */
   width: ${(props) => (props.smallScreen ? '100%' : '80vw')};
   height: ${(props) => (props.smallScreen ? '93vh' : '97vh')};
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 89vh;
+  }
   transition: all 0.3s;
   display: flex;
   flex-direction: column;

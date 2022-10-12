@@ -96,11 +96,15 @@ export const SobreS = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    @media (max-width: 768px) {
+      width: 98vw;
+    }
     #skillsTitle {
       text-align: center;
       font-size: 24px;
       @media (max-width: 768px) {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
     #skills {
@@ -109,10 +113,16 @@ export const SobreS = styled.div`
       justify-content: center;
       padding: 10px;
       gap: 20px;
+      @media (max-width: 768px) {
+        width: 98vw;
+      }
       #tecnologiesPosition {
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (max-width: 768px) {
+          width: 25vw;
+        }
         #subTitle {
           display: flex;
           text-align: center;
@@ -120,13 +130,11 @@ export const SobreS = styled.div`
           align-items: center;
           margin-bottom: 10px;
           font-size: 14px;
-          @media (max-width: 768px) {
-            font-size: 12px;
-          }
           width: 150px;
           height: 45px;
           @media (max-width: 768px) {
-            width: 120px;
+            font-size: 12px;
+            width: 100px;
             height: 40px;
           }
           border-radius: 8px;
@@ -136,6 +144,10 @@ export const SobreS = styled.div`
         img {
           border-radius: 3px;
           box-shadow: 0 1px 3px rgb(145 103 172 / 12%), 0 1px 2px rgb(145 103 172 / 24%);
+          @media (max-width: 668px) {
+            height: 25px;
+            max-width: 110px;
+          }
         }
       }
       @media (max-width: 768px) {

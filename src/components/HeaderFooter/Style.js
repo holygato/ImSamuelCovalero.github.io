@@ -4,8 +4,6 @@ export const NormalMenuS = styled.div`
   grid-area: h;
   position: sticky;
   top: 0;
-  // recebe a prop isFooterRelative e se for true o height recebe 100vh
-  // por padrão recebe 97vh
   /* border: 1px solid red; */
   height: ${(props) => (props.defaultPositionHeader ? '90vh' : '100vh')};
   @media (max-height: 700px) {
@@ -21,7 +19,6 @@ export const NormalMenuS = styled.div`
   /* box-shadow: 0 0 1px 0px var(--buttonBorder); */
 
   #logoAndModeDiv {
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +37,6 @@ export const NormalMenuS = styled.div`
     }
 
     #modeBtn {
-      /* border: 1px solid green; */
       top: 60px;
       @media (max-height: 700px) {
         position: fixed;
@@ -151,7 +147,6 @@ export const MenuBurgerContentS = styled.div`
   align-items: center;
   text-align: center;
   border-bottom: 1px solid #a7a9be;
-  // aplica box-shadow na borda esquerda do componente
   box-shadow: 0 0 2px 0px var(--buttonBorder);
   top: 35px;
   position: absolute;
@@ -170,7 +165,6 @@ export const MenuBurgerContentS = styled.div`
   }
   a:hover {
     color: var(--tertiary);
-    // adiciona estilização no hover dos links
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 
   }
@@ -195,6 +189,7 @@ export const MenuBurgerContentS = styled.div`
 export const FooterS = styled.div`
   // recebe isWheelActive como propriedade e caso seja true deixa a posição relativa
   position: ${(props) => (props.isFooterRelative ? 'relative' : 'fixed')};
+  /* border-top: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,8 +201,9 @@ export const FooterS = styled.div`
   gap: 10px;
   #phrase {
     font-size: 14px;
-    @media (max-width: 640px) {
+    @media (max-width: 700px) {
       font-size: 9px;
+      margin-left: 25px;
     }
     margin-left: 10px;
     margin-top: 4px;

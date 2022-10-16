@@ -11,8 +11,8 @@ function Content() {
     <Routes>
       <Route exact path="/" element={<Principal />} />
       <Route path="/projetos" element={<Projetos />} />
-      <Route path="/about" element={<Sobre />} />
-      <Route path="/contact" element={<Contato />} />
+      <Route path="/sobre" element={<Sobre />} />
+      <Route path="/contato" element={<Contato />} />
       <Route path="/projetos/:projectId" element={<ProjectDetails />} />
     </Routes>
   );

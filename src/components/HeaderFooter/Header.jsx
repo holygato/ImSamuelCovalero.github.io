@@ -1,15 +1,15 @@
 import React, { useContext, useEffect } from 'react';
-import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { TbLetterX } from 'react-icons/tb';
 import PropTypes from 'prop-types';
 import { useMediaQuery } from 'react-responsive';
 import PortfolioContext from '../../context/PortfolioContext';
 import { NormalMenuS, MenuBurgerS } from './Style';
+import ThemeComponent from '../ThemeComponent';
 
 function Header({ defaultPositionHeader }) {
   const {
-    theme, setTheme, setSmallScreen, smallScreen, setIsBurgerClicked, isBurgerClicked,
+    setSmallScreen, smallScreen, setIsBurgerClicked, isBurgerClicked,
   } = useContext(PortfolioContext);
 
   // Cria uma função que utiliza o useMediaQuery para verificar se o display está menor do que 768px
@@ -26,38 +26,13 @@ function Header({ defaultPositionHeader }) {
     }
   }, [isSmallScreen]);
 
-  const setMode = (mode) => {
-    window.localStorage.setItem('theme', mode);
-    setTheme(mode);
-  };
-
-  // cria função para chamar o setMode e trocar o tema
-  const themeToggler = () => {
-    if (theme === 'light') {
-      setMode('dark');
-    } else {
-      setMode('light');
-    }
-  };
-
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem('theme');
-    if (localTheme) {
-      setTheme(localTheme);
-    }
-  }, []);
-
   return (
     <div>
       {smallScreen
         ? (
           <MenuBurgerS>
             <div id="modeBtnBurger">
-              <abbr title="Mode">
-                {theme === 'light'
-                  ? <MdDarkMode id="modeIcon" onClick={themeToggler} />
-                  : <MdLightMode id="modeIcon" onClick={themeToggler} />}
-              </abbr>
+              <ThemeComponent />
             </div>
             <div id="logoBurger">
               {isBurgerClicked
@@ -86,19 +61,13 @@ function Header({ defaultPositionHeader }) {
                   <img id="logo" src="/images/covaleroLogo.svg" alt="Logo Covalero" />
                 </a>
               </div>
-              <div id="modeBtn">
-                <abbr title="Mode">
-                  {theme === 'light'
-                    ? <MdDarkMode id="modeIcon" onClick={themeToggler} />
-                    : <MdLightMode id="modeIcon" onClick={themeToggler} />}
-                </abbr>
-              </div>
+              <ThemeComponent />
             </div>
             <div id="navegation">
               <a href="/">Principal</a>
-              <a href="/about">Sobre</a>
+              <a href="/sobre">Sobre</a>
               <a href="/projetos">Projetos</a>
-              <a href="/contact">Contato</a>
+              <a href="/contato">Contato</a>
             </div>
           </NormalMenuS>
         )}

@@ -117,7 +117,7 @@ function Principal() {
             e utilizo e terá acesso a alguns projetos que desenvolvi.
           </p>
           <div id="contactMe">
-            <button id="contacteMeBtn" type="button" onClick={() => navigate('/contact')}>Me Contacte!</button>
+            <button id="contacteMeBtn" type="button" onClick={() => navigate('/contato')}>Me Contacte!</button>
           </div>
           {!isWheelActive && !isPageOnBottom && (
             <div>
@@ -142,7 +142,7 @@ function Principal() {
           </div>
           <div id="divSobremimCurriculo">
             <h1>Saiba mais sobre mim...</h1>
-            <button id="sobreMimBtn" type="button" onClick={() => navigate('/about')}>Sobre mim</button>
+            <button id="sobreMimBtn" type="button" onClick={() => navigate('/sobre')}>Sobre mim</button>
             <div>
               <a href={curriculum} target="_blank" rel="noreferrer">
                 <button id="curriculum" type="button">

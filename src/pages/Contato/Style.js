@@ -45,6 +45,9 @@ export const ContatoS = styled.div`
     abbr[title] {
       text-decoration: none;
     }
+    @media (max-width: 768px) {
+      width: 95vw;
+    }
   }
   #h1Title {
     margin-bottom: 15px;

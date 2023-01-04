@@ -509,7 +509,7 @@ export const PrincipalS = styled.div`
   */
   #contatosS {
     /* border: 1px solid red; */
-    width: 100%;
+    width: 80%;
     height: 100vh;
     justify-content: center;
     justify-items: center;

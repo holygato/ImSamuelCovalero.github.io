@@ -4,7 +4,7 @@ import React, {
 import { AiOutlineDownload } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 import { TbArrowBigDownLines } from 'react-icons/tb';
-import curriculum from '../../data/curriculum.pdf';
+import curriculum from '../../data/CV2023.pdf';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
 import { DivExterna, PrincipalS } from './Style';

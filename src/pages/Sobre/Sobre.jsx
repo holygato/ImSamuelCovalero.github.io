@@ -5,7 +5,7 @@ import { AiOutlineDownload } from 'react-icons/ai';
 import Header from '../../components/HeaderFooter/Header';
 import Footer from '../../components/HeaderFooter/Footer';
 import { DivExterna, SobreS } from './Style';
-import curriculum from '../../data/curriculum.pdf';
+import curriculum from '../../data/CV2023.pdf';
 import MySkills from '../../components/MySkills';
 import ToMainBtn from '../../components/toMainBtn';
 import myPicture2 from '../../images/myPicture2.jpg';

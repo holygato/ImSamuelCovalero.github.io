@@ -1,7 +1,6 @@
 import React from 'react';
 
 function MySkills() {
-  // teste
   const tecnologiesAlreadyKnowed = [
     { nome: 'VSCode', imagem: 'https://img.shields.io/badge/Visual_Studio_Code-0078d7?style=for-the-badge&logo=visual-studio-code&logoColor=white' },
     { nome: 'Trello', imagem: 'https://img.shields.io/badge/Trello-0052CC?style=for-the-badge&logo=trello&logoColor=white' },

@@ -1,4 +1,4 @@
-# Bem-vindo ao Portfólio de Samuel Covalero
+# Bem-vindo ao Portfólio de Samuel Covalero dos Reis
 
 Este portfólio é uma aplicação web em React.js que apresenta minhas habilidades, experiências e projetos desenvolvidos durante meu aprendizado na Trybe. O aplicativo é responsivo e se adapta a diversos tamanhos de tela, desde dispositivos móveis até telas maiores. Ele também possui temas claro e escuro e muda para um cabeçalho superior com menu "hamburger" quando a largura da tela é inferior a 768 pixels.
 
@@ -88,4 +88,4 @@ Agora, você pode acessar a aplicação no seu navegador através do endereço `
 Este projeto utilizou a [Especificação de Commits Convencionais](https://www.conventionalcommits.org/en/v1.0.0/), com alguns tipos da [convenção Angular](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines). Além disso, foi utilizado o pacote [conventional-commit-cli](https://www.npmjs.com/package/conventional-commit-cli) para ajudar a seguir a convenção de commits. É importante utilizar a convenção de commits em projetos para manter o histórico de commits organizado e facilitar a leitura e o entendimento do que foi desenvolvido.
 
 ### Lint
-- O projeto foi desenvolvido seguindo os padrões de Clean Code especificados pelo [Lint da Trybe](https://github.com/betrybe/eslint-config-trybe).
+- O projeto foi desenvolvido seguindo os padrões de Clean Code especificados pelo [Lint do Airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).

@@ -32,7 +32,7 @@ Este portfólio é uma aplicação web em React.js que apresenta minhas habilida
 
 ## Contexto
 
-O __Portfólio de Samuel Covalero__ é um espaço onde compartilho minhas habilidades, experiências e projetos desenvolvidos durante meu aprendizado na Trybe. O aplicativo é dividido em seções que apresentam informações sobre mim, meus projetos de frontend, habilidades técnicas e como entrar em contato comigo. Além disso, estou aberto a oportunidades de emprego.
+O __meu Portfólio__ é um espaço onde compartilho minhas habilidades, experiências e projetos desenvolvidos. O aplicativo é dividido em seções que apresentam informações sobre mim, alguns projetos que desenvolvi, habilidades técnicas, linguagens e tecnologias que conheço, estou estudando e pretendo aprender, acesso ao meu currículum e como entrar em contato comigo.
 
 ## Tecnologias e Ferramentas Utilizadas
 
@@ -42,7 +42,7 @@ Este projeto utiliza as seguintes tecnologias e ferramentas:
 - [Styled Components](https://styled-components.com/) | Biblioteca para estilização do CSS.
 - [Context API](https://pt-br.reactjs.org/docs/context.html) | API utilizada para gerenciamento de estado.
 
-O React.js foi escolhido por ser uma das bibliotecas mais populares e amplamente utilizadas para criar interfaces de usuário. Além disso, o React.js é fácil de aprender e possui uma grande comunidade de desenvolvedores, o que torna mais fácil encontrar soluções para problemas comuns. O Styled Components foi escolhido porque permite que os desenvolvedores escrevam o CSS em formato de componente, o que torna o código mais legível e fácil de entender. A API dos planetas de Star Wars foi acessada para obter informações precisas e detalhadas sobre os planetas presentes no universo Star Wars. A Context API foi utilizada para gerenciamento de estado, permitindo que informações importantes da aplicação sejam compartilhadas entre diferentes componentes, sem a necessidade de passá-las manualmente através de props. Isso torna o código mais limpo e fácil de entender.
+O React.js foi escolhido como biblioteca para criar interfaces de usuário devido à sua popularidade, facilidade de aprendizado e ampla comunidade de desenvolvedores, facilitando a busca por soluções para problemas comuns. Já o Styled Components, que permite escrever o CSS em formato de componente, torna o código mais legível e fácil de entender. Por fim, a Context API foi utilizada para gerenciamento de estado, permitindo compartilhar informações importantes da aplicação entre diferentes componentes sem a necessidade de passá-las manualmente através de props, resultando em um código mais limpo e fácil de compreender.
 
 ## Instalação e Execução
 ### Download do projeto

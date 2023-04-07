@@ -45,20 +45,43 @@ Este projeto utiliza as seguintes tecnologias e ferramentas:
 O React.js foi escolhido como biblioteca para criar interfaces de usuário devido à sua popularidade, facilidade de aprendizado e ampla comunidade de desenvolvedores, facilitando a busca por soluções para problemas comuns. Já o Styled Components, que permite escrever o CSS em formato de componente, torna o código mais legível e fácil de entender. Por fim, a Context API foi utilizada para gerenciamento de estado, permitindo compartilhar informações importantes da aplicação entre diferentes componentes sem a necessidade de passá-las manualmente através de props, resultando em um código mais limpo e fácil de compreender.
 
 ## Instalação e Execução
-### Download do projeto
+
+Esta aplicação possui um Dockerfile e pode ser executada usando o Docker ou diretamente no seu ambiente de desenvolvimento. Siga as instruções abaixo de acordo com a sua preferência.
+
+### Sem Docker
+
+#### Download do projeto
 ```
 git clone git@github.com:imsamuelcovalero/imsamuelcovalero.github.io
 ```
-### Instalar dependências
+#### Instalar dependências
 ```
 cd imsamuelcovalero.github.io
 npm install
 ```
-### Rodar a aplicação
+#### Rodar a aplicação
 ```
 cd imsamuelcovalero.github.io
 npm start
 ```
+
+### Usando Docker
+
+Se você deseja utilizar o Docker para rodar a aplicação, siga os passos abaixo:
+
+1. Construa a imagem do Docker com o comando:
+```docker build -t <nome-da-imagem> .```
+Substitua `<nome-da-imagem>` pelo nome que deseja dar à imagem do Docker. Não esqueça do ponto no final, pois ele indica o caminho do Dockerfile.
+
+2. Execute o container pela primeira vez utilizando o comando:
+```docker run -d --name <nome-do-container> -p <porta-local>:3000 -v $(pwd):/app <nome-da-imagem>```
+Substitua `<nome-do-container>` pelo nome que deseja dar ao container e `<porta-local>` pela porta em que deseja executar o aplicativo no localhost. Lembre-se de usar o mesmo `<nome-da-imagem>` utilizado no passo anterior.
+
+3. Para as próximas vezes em que desejar executar a aplicação, utilize o comando:
+```docker container start <id-container ou nome-do-container>```
+Substitua `<id-container ou nome-do-container>` pelo ID ou nome do container criado anteriormente.
+
+Agora, você pode acessar a aplicação no seu navegador através do endereço `http://localhost:<porta-local>/`.
 
 ## Notas
 ### Git, GitHub e Histórico de Commits

@@ -3,7 +3,7 @@
 Este portfólio é uma aplicação web em React.js que apresenta minhas habilidades, experiências e projetos desenvolvidos durante meu aprendizado na Trybe. O aplicativo é responsivo e se adapta a diversos tamanhos de tela, desde dispositivos móveis até telas maiores. Ele também possui temas claro e escuro e muda para um cabeçalho superior com menu "hamburger" quando a largura da tela é inferior a 768 pixels.
 
 > - Veja o post sobre a aplicação [no LinkedIn aqui.](https://www.linkedin.com/posts/samuelcovalero_frontend-css-frontend-activity-6986069228311207936-lOwP?utm_source=share&utm_medium=member_desktop)
-> - Acesse o [deploy da aplicação aqui](https://project-star-wars-planets-search.vercel.app/)
+> - Acesse o [deploy da aplicação aqui](https://imsamuelcovalero.vercel.app/)
 
 <details>
 <summary>Informações para utilizar a aplicação no deploy</summary><br>

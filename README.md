@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Bem-vindo ao Portfólio de Samuel Covalero
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este portfólio é uma aplicação web em React.js que apresenta minhas habilidades, experiências e projetos desenvolvidos durante meu aprendizado na Trybe. O aplicativo é responsivo e se adapta a diversos tamanhos de tela, desde dispositivos móveis até telas maiores. Ele também possui temas claro e escuro e muda para um cabeçalho superior com menu "hamburger" quando a largura da tela é inferior a 768 pixels.
 
-## Available Scripts
+> - Veja o post sobre a aplicação [no LinkedIn aqui.](https://www.linkedin.com/posts/samuelcovalero_frontend-css-frontend-activity-6986069228311207936-lOwP?utm_source=share&utm_medium=member_desktop)
+> - Acesse o [deploy da aplicação aqui](https://project-star-wars-planets-search.vercel.app/)
 
-In the project directory, you can run:
+<details>
+<summary>Informações para utilizar a aplicação no deploy</summary><br>
+ 
+ - Não precisa logar, basta acessar e navegar.
+ 
+</details>
 
-### `npm start`
+## Sumário
+- [Portfólio de Samuel Covalero](#bem-vindo-ao-portfólio-de-samuel-covalero)
+- [Visualização](#visualização)
+- [Contexto](#contexto)
+- [Tecnologias e Ferramentas Utilizadas](#tecnologias-e-ferramentas-utilizadas)
+- [Instalação e Execução](#instalação-e-execução)
+- [Notas](#notas)
+  - [Git, GitHub e Histórico de Commits](#git-github-e-histórico-de-commits)
+  - [Lint](#lint)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Visualização
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<div align="center">
 
-### `npm test`
+![portfolio](https://user-images.githubusercontent.com/98184355/230674423-38e1815b-6320-4c55-b871-807b6ca2f4a7.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</div>
 
-### `npm run build`
+## Contexto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O __meu Portfólio__ é um espaço onde compartilho minhas habilidades, experiências e projetos desenvolvidos. O aplicativo é dividido em seções que apresentam informações sobre mim, alguns projetos que desenvolvi, habilidades técnicas, linguagens e tecnologias que conheço, estou estudando e pretendo aprender, acesso ao meu currículum e como entrar em contato comigo.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tecnologias e Ferramentas Utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Este projeto utiliza as seguintes tecnologias e ferramentas:
 
-### `npm run eject`
+- [React.js](https://reactjs.org/docs/getting-started.html) | Biblioteca para criar interfaces de usuário.
+- [Styled Components](https://styled-components.com/) | Biblioteca para estilização do CSS.
+- [Context API](https://pt-br.reactjs.org/docs/context.html) | API utilizada para gerenciamento de estado.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+O React.js foi escolhido como biblioteca para criar interfaces de usuário devido à sua popularidade, facilidade de aprendizado e ampla comunidade de desenvolvedores, facilitando a busca por soluções para problemas comuns. Já o Styled Components, que permite escrever o CSS em formato de componente, torna o código mais legível e fácil de entender. Por fim, a Context API foi utilizada para gerenciamento de estado, permitindo compartilhar informações importantes da aplicação entre diferentes componentes sem a necessidade de passá-las manualmente através de props, resultando em um código mais limpo e fácil de compreender.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Instalação e Execução
+### Download do projeto
+```
+git clone git@github.com:imsamuelcovalero/imsamuelcovalero.github.io
+```
+### Instalar dependências
+```
+cd imsamuelcovalero.github.io
+npm install
+```
+### Rodar a aplicação
+```
+cd imsamuelcovalero.github.io
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Notas
+### Git, GitHub e Histórico de Commits
+Este projeto utilizou a [Especificação de Commits Convencionais](https://www.conventionalcommits.org/en/v1.0.0/), com alguns tipos da [convenção Angular](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines). Além disso, foi utilizado o pacote [conventional-commit-cli](https://www.npmjs.com/package/conventional-commit-cli) para ajudar a seguir a convenção de commits. É importante utilizar a convenção de commits em projetos para manter o histórico de commits organizado e facilitar a leitura e o entendimento do que foi desenvolvido.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Lint
+- O projeto foi desenvolvido seguindo os padrões de Clean Code especificados pelo [Lint da Trybe](https://github.com/betrybe/eslint-config-trybe).

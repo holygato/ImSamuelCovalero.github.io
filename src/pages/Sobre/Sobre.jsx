@@ -54,9 +54,8 @@ function Sobre() {
           <img id="myPicture" src={myPicture2} alt="Foto de Samuel Covalero dos Reis" />
           <p>
             Olá, meu nome é Samuel Covalero dos Reis, resido em São Carlos, SP.
-            Sou formado em Engenharia da Computação e
-            atualmente estudo Desenvolvimento Web na Trybe, buscando atuar como desenvolvedor
-            Full Stack.
+            Sou desenvolvedor Full Stack, formado em Engenharia da Computação e
+            completei o curso de Desenvolvimento Web na Trybe.
           </p>
           <br />
           <p>

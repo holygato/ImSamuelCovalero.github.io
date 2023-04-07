@@ -134,8 +134,8 @@ export const ProjectImageS = styled.div`
     width: 480px;
     height: 400px;
     @media (max-width: 768px) {
-      width: 380px;
-      height: 300px;
+      width: 280px;
+      height: 200px;
     }
     background-color: ${(props) => (props.isHover ? 'rgb(216 212 242 / 72%)' : 'transparent')};
   }

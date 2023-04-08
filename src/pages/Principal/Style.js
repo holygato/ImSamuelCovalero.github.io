@@ -211,11 +211,11 @@ export const PrincipalS = styled.div`
       width: 648px;
       height: 400px;
       @media (max-width: 1688px) {
-        width: 350px;
-        height: 200px;
+        width: 405px;
+        height: 250px;
       }
       @media (max-width: 780px) {
-        width: 90vw;
+        max-width: 70vw;
         height: 200px;
       }
       border-radius: 10px;

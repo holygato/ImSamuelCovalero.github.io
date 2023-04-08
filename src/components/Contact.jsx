@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
+import {
+  FaLinkedin, FaGithub, FaWhatsapp, FaInstagram,
+} from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
 import copy from 'copy-to-clipboard';
 
@@ -81,6 +83,15 @@ function Contact() {
             <a href="https://api.whatsapp.com/send?phone=5511984478895" target="_blank" rel="noreferrer" onClick={HandleCopyWhats}>
               WhatsApp:
               <FaWhatsapp />
+            </a>
+          </abbr>
+        </label>
+        <label htmlFor="instagram">
+          {' '}
+          <abbr title="https://www.instagram.com/imsamuelcovalero/">
+            <a href="https://www.instagram.com/imsamuelcovalero/" target="_blank" rel="noreferrer">
+              Instagram:
+              <FaInstagram />
             </a>
           </abbr>
         </label>

@@ -27,7 +27,7 @@ function Principal() {
 
   const prevScrollY = useRef(0);
 
-  // Cria um useEffect para verificar se está no final da página
+  // useEffect para verificar se está no final da página
   // e seta como true isPageOnBottom
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +51,7 @@ function Principal() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [goingUp]);
 
-  // Cria um useEffectque seta isWheelActive como false após 5 segundos de inatividade no scroll
+  // useEffect que seta isWheelActive como false após 5 segundos de inatividade no scroll
   useEffect(() => {
     if (isWheelActive) {
       setTimeout(() => {
@@ -60,7 +60,7 @@ function Principal() {
     }
   }, [isWheelActive]);
 
-  // Cria um useEffect para verificar se o scroll ativo e seta como true isWheelActive
+  // useEffect para verificar se o scroll ativo e seta como true isWheelActive
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -82,7 +82,7 @@ function Principal() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [goingUp]);
 
-  // Cria um useEffect para verificar se está no topo da página
+  // useEffect para verificar se está no topo da página
   // e seta como false setIsFooterRelative e setIsWheelActive
   useEffect(() => {
     const handleScroll = () => {

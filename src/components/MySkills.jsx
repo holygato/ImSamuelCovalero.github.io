@@ -37,13 +37,14 @@ function MySkills() {
   const tecnologiesLearning = [
     { nome: 'VueJS', imagem: 'https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D' },
     { nome: 'Artificial Intelligence', imagem: 'https://img.shields.io/badge/AI-000000?style=for-the-badge&logo=ai&logoColor=white' },
+    { nome: 'AngularJS', imagem: 'https://img.shields.io/badge/AngularJS-E23237?style=for-the-badge&logo=angularjs&logoColor=white' },
   ];
 
   const tecnologiesLearningSoon = [
+    { nome: 'NextJS', imagem: 'https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white' },
     { nome: 'C#', imagem: 'https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white' },
     { nome: 'Java', imagem: 'https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white' },
-    { nome: 'NextJS', imagem: 'https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white' },
-    { nome: 'Angular', imagem: 'https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white' },
+    // { nome: 'Angular', imagem: 'https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white' },
   ];
 
   return (
